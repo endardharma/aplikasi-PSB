@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\AutentikasiController;
 use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 

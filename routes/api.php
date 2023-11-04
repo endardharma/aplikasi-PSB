@@ -3,7 +3,7 @@
 use App\Http\Controllers\AutentikasiController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +27,6 @@ Route::prefix('otentikasi')->group(function() {
 Route::middleware(['auth:sanctum'])->group(function(){
     Route::prefix('dashboard')->group(function(){
         Route::get("/home", [DashboardController::class, 'index']);
-        Route::get("/profil", [DashboardController::class, 'profil']);
+        Route::get("/profil", [DashboardController::class, 'profile']);
     });
 });
