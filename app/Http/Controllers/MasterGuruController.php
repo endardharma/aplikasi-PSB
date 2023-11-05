@@ -22,14 +22,17 @@ class MasterGuruController extends Controller
         $i = 1;
         foreach($guru as $g)
         {
+            $cari = User::where('nip',$g->nip)->first();
+
             $item['id'] = $g->id;
             $item['nomor_urut'] = $i;
             $item['nip'] = $g->nip;
-            $item['name'] = $g->name;
+            $item['nama'] = $g->name;
             $item['jenkel'] = $g->jenkel;
             $item['status_pegawai'] = $g->status_pegawai;
             $item['jabatan'] = $g->jabatan;
             $item['is_active'] = $g->is_active == 1 ? 'Aktif' : 'Tidak Aktif';
+            $item['email'] = $cari->email;
             $data[] = $item;
             $i++;
         }
@@ -81,5 +84,42 @@ class MasterGuruController extends Controller
             'success' => true,
             'message' => 'Berhasil menambahkan data guru',
         ],201);
+    }
+
+    public function update(Request $request)
+    {
+        $cari = MasterGuru::where('id',$request->id)->first();
+        if(!$cari)
+        {
+            return response()->json([
+                'success' => false,
+                'message' => 'Data guru tidak ditemukan, pastikan id guru valid',
+            ],400);
+        }else{
+            $find = User::where('nip',$cari->nip)->first();
+            $find->name = $request->name != null ? $request->name : $find->name;
+            $find->email = $request->email != null ? $request->email : $find->email;
+            $request->password != null ? $find->password = Hash::make($request->password) : true;
+            $request->nip != null ? $find->nip = $request->nip : true;
+            $find->save();
+
+            $cari->nip = $request->nip != null ? $request->nip : $cari->nip;
+            $cari->name = $request->name != null ? $request->name : $cari->name;
+            $cari->jenkel = $request->jenkel != null ? $request->jenkel : $cari->jenkel;
+            $cari->status_pegawai = $request->status_pegawai != null ? $request->status_pegawai : $cari->status_pegawai;
+            $cari->jabatan = $request->jabatan != null ? $request->jabatan : $cari->jabatan;
+            $cari->is_active = $request->is_active != null ? $request->is_active : $cari->is_active;
+            $cari->save();
+
+            return response()->json([
+                'success' => true,
+                'message' => 'Berhasil menambahkan data guru',
+            ],201);
+        }
+    }
+
+    public function hapus($id)
+    {
+        //
     }
 }

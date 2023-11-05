@@ -1202,7 +1202,7 @@ License: You must have a valid license purchased only from themeforest(the above
                         </div>
                     </div>
                     <!-- END: HTML Table Data -->
-                    <!-- BEGIN: Modal Update Content -->
+                    <!-- BEGIN: Modal Create Content -->
                     <div id="modal-create" class="modal" tabindex="-1" aria-hidden="true" role="dialog">
                         <div class="modal-dialog">
                             <div class="modal-content">
@@ -1250,10 +1250,10 @@ License: You must have a valid license purchased only from themeforest(the above
                                     </div>
                                     <div class="col-span-12 sm:col-span-12">
                                         <label for="modal-form-1" class="form-label">Status Akun</label>
-                                        <select class="form-select create-jenkel" required>
+                                        <select class="form-select create-is_active" required>
                                             <option selected disabled> --- Pilih Jenis Status Akun --- </option>
-                                            <option value="true"> Aktif </option>
-                                            <option value="false"> Tidak Aktif </option>
+                                            <option value="1"> Aktif </option>
+                                            <option value="0"> Tidak Aktif </option>
                                         </select>
                                     </div>
                                 </div>
@@ -1262,6 +1262,103 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <div class="modal-footer text-right">
                                     <button type="button" data-dismiss="modal" class="btn btn-outline-secondary w-20 mr-1">Batal</button>
                                     <button type="button" class="btn btn-primary w-20 btn-create">Simpan</button>
+                                </div>
+                                <!-- END: Modal Footer -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END: Modal Content -->
+                    <!-- BEGIN: Modal Update Sukses Content -->
+                    <div id="success-create-modal-preview" class="modal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body p-0">
+                                    <div class="p-5 text-center">
+                                        <i data-feather="check-circle" class="w-16 h-16 text-theme-10 mx-auto mt-3"></i>
+                                        <div class="text-3xl mt-5">Berhasil membuat data guru baru!</div>
+                                        <div class="text-gray-600 mt-2 create-sukses"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END: Modal Content -->
+                    <!-- BEGIN: Modal Update Gagal Content -->
+                    <div id="warning-create-modal-preview" class="modal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body p-0">
+                                    <div class="p-5 text-center">
+                                        <i data-feather="x-circle" class="w-16 h-16 text-theme-23 mx-auto mt-3"></i>
+                                        <div class="text-3xl mt-5">Oops...Gagal membuat data guru baru!</div>
+                                        <div class="text-gray-600 mt-2 create-gagal"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END: Modal Content -->
+                    <!-- BEGIN: Modal Update Content -->
+                    <div id="modal-update" class="modal" tabindex="-1" aria-hidden="true" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <!-- BEGIN: Modal Header -->
+                                <div class="modal-header">
+                                    <h2 class="font-medium text-base mr-auto">
+                                        Form Update Data Guru
+                                    </h2>
+                                    <a data-dismiss="modal" href="javascript:;"> <i data-feather="x" class="w-8 h-8 text-gray-500"></i> </a>
+                                </div>
+                                <!-- END: Modal Header -->
+                                <!-- BEGIN: Modal Body -->
+                                <div class="modal-body grid grid-cols-12 gap-4 gap-y-3">
+                                    <div class="col-span-12 sm:col-span-12">
+                                        <label for="modal-form-1" class="form-label">Nama Guru</label>
+                                        <input type="hidden" class="form-control update-id" required>
+                                        <input type="text" class="form-control update-name" placeholder="Beny Putra Spd" required>
+                                    </div>
+                                    <div class="col-span-12 sm:col-span-12">
+                                        <label for="modal-form-1" class="form-label">Email Guru</label>
+                                        <input type="text" class="form-control update-email" placeholder="beny@mail.com" required>
+                                    </div>
+                                    <div class="col-span-12 sm:col-span-12">
+                                        <label for="modal-form-1" class="form-label">Password</label>
+                                        <input type="password" class="form-control update-password" placeholder="********" required>
+                                    </div>
+                                    <div class="col-span-12 sm:col-span-12">
+                                        <label for="modal-form-1" class="form-label">NIP</label>
+                                        <input type="number" class="form-control update-nip" placeholder="123456789" required>
+                                    </div>
+                                    <div class="col-span-12 sm:col-span-12">
+                                        <label for="modal-form-1" class="form-label">Jenis Kelamin</label>
+                                        <select class="form-select update-jenkel" required>
+                                            <option selected disabled> --- Pilih Jenis Kelamin --- </option>
+                                            <option value="L"> Laki-Laki </option>
+                                            <option value="P"> Perempuan </option>
+                                        </select>
+                                    </div>
+                                    <div class="col-span-12 sm:col-span-12">
+                                        <label for="modal-form-1" class="form-label">Status Pegawai</label>
+                                        <input type="text" class="form-control update-status-pegawai" placeholder="Guru Fisika Modern" required>
+                                    </div>
+                                    <div class="col-span-12 sm:col-span-12">
+                                        <label for="modal-form-1" class="form-label">Jabatan</label>
+                                        <input type="text" class="form-control update-jabatan" placeholder="Guru PNS" required>
+                                    </div>
+                                    <div class="col-span-12 sm:col-span-12">
+                                        <label for="modal-form-1" class="form-label">Status Akun</label>
+                                        <select class="form-select update-is_active" required>
+                                            <option selected disabled> --- Pilih Jenis Status Akun --- </option>
+                                            <option value="1"> Aktif </option>
+                                            <option value="0"> Tidak Aktif </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <!-- END: Modal Body -->
+                                <!-- BEGIN: Modal Footer -->
+                                <div class="modal-footer text-right">
+                                    <button type="button" data-dismiss="modal" class="btn btn-outline-secondary w-20 mr-1">Batal</button>
+                                    <button type="button" class="btn btn-primary w-20 btn-create">Update</button>
                                 </div>
                                 <!-- END: Modal Footer -->
                             </div>
@@ -1360,15 +1457,24 @@ License: You must have a valid license purchased only from themeforest(the above
                 // Button Simpan Portfolio
                 $(".btn-create").click(function() {
                     // Ajax update
-                    var title = $('.create-title').val();
-                    var deskripsi = $('.create-deskripsi').val();
-                    var pc = $('#fileInput')[0];
-                    var gambar = pc.files[0];
+                    var name = $('.create-name').val();
+                    var email = $('.create-email').val();
+                    var password = $('.create-password').val();
+                    var nip = $('.create-nip').val();
+                    var jenkel = $('.create-jenkel').val();
+                    var status_pegawai = $('.create-status-pegawai').val();
+                    var jabatan = $('.create-jabatan').val();
+                    var is_active = $('.create-is_active').val();
 
                     var formData = new FormData();
-                    formData.append('title', title);
-                    formData.append('deskripsi', deskripsi);
-                    formData.append('gambar', gambar);
+                    formData.append('name', name);
+                    formData.append('email', email);
+                    formData.append('password', password);
+                    formData.append('nip', nip);
+                    formData.append('jenkel', jenkel);
+                    formData.append('status_pegawai', status_pegawai);
+                    formData.append('jabatan', jabatan);
+                    formData.append('is_active', is_active);
 
                     // Kirim permintaan pembaruan produk ke API
                     $.ajax({
@@ -1445,11 +1551,12 @@ License: You must have a valid license purchased only from themeforest(the above
                                 id: item[i].id,
                                 nomor_urut: item[i].nomor_urut,
                                 nip: item[i].nip,
-                                name: item[i].name,
+                                nama: item[i].nama,
                                 jenkel: item[i].jenkel,
                                 status_pegawai: item[i].status_pegawai,
                                 jabatan: item[i].jabatan,
                                 is_active: item[i].is_active,
+                                email: item[i].email,
                             };
 
                             // Push the object to the data array
@@ -1467,9 +1574,9 @@ License: You must have a valid license purchased only from themeforest(the above
                     var table = $('#data-table').DataTable({
                         data: rowDataArray,
                         columns: [
-                            { data: 'nomer_urut', className: 'text-center' },
+                            { data: 'nomor_urut', className: 'text-center' },
                             { data: 'nip', className: 'text-center' },
-                            { data: 'name', className: 'text-center' },
+                            { data: 'nama', className: 'text-center' },
                             { data: 'jenkel', className: 'text-center' },
                             { data: 'status_pegawai', className: 'text-center' },
                             { data: 'jabatan', className: 'text-center' },
@@ -1479,7 +1586,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 render: function (data, type, row) {
 
                                     // Create action buttons
-                                    var editBtn = '<button class="btn btn-primary btn-edit" data-id="' + data.id + '" data-name="' + data.name + '" data-jenkel="' + data.jenkel + '" data-status_pegawai="' + data.status_pegawai + '" data-jabatan="' + data.jabatan + '" data-is_active="' + data.is_active + '"><i data-feather="edit" class="w-4 h-4"></i></button>';
+                                    var editBtn = '<button class="btn btn-primary btn-edit" data-id="' + data.id + '" data-nama="' + data.nama + '" data-jenkel="' + data.jenkel + '" data-status-pegawai="' + data.status_pegawai + '" data-jabatan="' + data.jabatan + '" data-is_active="' + data.is_active + '" data-email="' + data.email + '" data-nip="' + data.nip + '"><i data-feather="edit" class="w-4 h-4"></i></button>';
                                     var deleteBtn = '<button class="btn btn-danger btn-delete" data-id="' + data.id + '"><i data-feather="trash-2" class="w-4 h-4"></i></button>';
 
                                     // Combine the buttons
@@ -1496,125 +1603,99 @@ License: You must have a valid license purchased only from themeforest(the above
                     $('#data-table').on('click', '.btn-edit', function() {
                         cash("#modal-update").modal("show");
                         var id = $(this).attr("data-id");
-                        var title = $(this).attr("data-title");
-                        var deskripsi = $(this).attr("data-deskripsi");
+                        var name = $(this).attr("data-nama");
+                        var jenkel = $(this).attr("data-jenkel");
+                        var status_pegawai = $(this).attr("data-status-pegawai");
+                        var jabatan = $(this).attr("data-jabatan");
+                        var is_active = $(this).attr("data-is_active");
+                        var email = $(this).attr("data-email");
+                        var nip = $(this).attr("data-nip");
+
+                        var stt = 1;
+                        if(is_active == 'Aktif')
+                        {
+                            stt = 1;
+                        }else{
+                            stt = 0;
+                        }
 
                         // Handle edit action
                         $('.update-id').val(id);
-                        $('.update-title').val(title);
-                        $('.update-deskripsi').val(deskripsi);
+                        $('.update-name').val(name);
+                        $('.update-jenkel').val(jenkel);
+                        $('.update-status-pegawai').val(status_pegawai);
+                        $('.update-jabatan').val(jabatan);
+                        $('.update-is_active').val(stt);
+                        $('.update-email').val(email);
+                        $('.update-nip').val(nip);
                     });
 
                     // Tombol Update Admin
                     $(".btn-update").click(function() {
                         // Ajax update
                         var id = $('.update-id').val();
-                        var title = $('.update-title').val();
-                        var deskripsi = $('.update-deskripsi').val();
-                        var gambar = $('#fileInput1')[0];
-                        var gport = gambar.files[0];
+                        var name = $('.update-name').val();
+                        var jenkel = $('.update-jenkel').val();
+                        var status_pegawai = $('.update-status_pegawai').val();
+                        var jabatan = $('.update-jabatan').val();
+                        var is_active = $('.update-is_active').val();
+                        var email = $('.update-email').val();
+                        var nip = $('.update-nip').val();
+                        var password = $('.password').val();
 
-                        if(gport)
-                        {
-                            var formData = new FormData();
-                            formData.append('title', title);
-                            formData.append('deskripsi', deskripsi);
-                            formData.append('gambar', gambar);
+                        var formData = new FormData();
+                        formData.append('name', name);
+                        formData.append('jenkel', jenkel);
+                        formData.append('status_pegawai', status_pegawai);
+                        formData.append('jabatan', jabatan);
+                        formData.append('is_active', is_active);
+                        formData.append('email', email);
+                        formData.append('nip', nip);
+                        formData.append('password', password);
 
-                            // Kirim permintaan pembaruan produk ke API
-                            $.ajax({
-                                url: "http://127.0.0.1:8000/api/portfolio/update?id=" + id,
-                                type: 'POST',
-                                headers: {
-                                    "Authorization": "Bearer " + token
-                                },
-                                data: formData,
-                                processData: false,
-                                contentType: false,
-                                success: function(response) {
-                                    // Show the modal
-                                    $('.update-sukses').text(response.message);
-                                    cash("#success-update-modal-preview").modal("show");
+                        // Kirim permintaan pembaruan produk ke API
+                        $.ajax({
+                            url: "http://127.0.0.1:8000/api/master-guru/update-guru?id=" + id,
+                            type: 'POST',
+                            headers: {
+                                "Authorization": "Bearer " + token
+                            },
+                            data: formData,
+                            processData: false,
+                            contentType: false,
+                            success: function(response) {
+                                // Show the modal
+                                $('.update-sukses').text(response.message);
+                                cash("#success-update-modal-preview").modal("show");
 
-                                    setTimeout(function() {
-                                        cash("#success-update-modal-preview").modal("hide");
+                                setTimeout(function() {
+                                    cash("#success-update-modal-preview").modal("hide");
 
-                                        location.reload();
-                                    }, 3000); // 3000 milliseconds = 3 seconds
-                                },
-                                error: function(xhr, status, error) {
-                                    // Tangani kesalahan dalam permintaan Ajax itu sendiri
-                                    console.log(error);
+                                    location.reload();
+                                }, 3000); // 3000 milliseconds = 3 seconds
+                            },
+                            error: function(xhr, status, error) {
+                                // Tangani kesalahan dalam permintaan Ajax itu sendiri
+                                console.log(error);
 
-                                    // Tampilkan pesan kesalahan yang dikirim oleh server
-                                    var response = JSON.parse(xhr.responseText);
-                                    if (response.success === false && response.message) {
-                                        $('.update-gagal').text(response.message);
-                                        cash("#warning-update-modal-preview").modal("show");
-
-                                        setTimeout(function() {
-                                            cash("#warning-update-modal-preview").modal("hide");
-
-                                            location.reload();
-                                        }, 5000); // 5000 milliseconds = 5 seconds
-                                    } else {
-                                        // Tangani kesalahan lainnya jika ada
-                                        // Contoh: pesan kesalahan bawaan dari permintaan Ajax
-                                        alert('Terjadi kesalahan lainnya: ' + error);
-                                    }
-                                }
-                            });
-                        }else{
-
-                            var formData = new FormData();
-                            formData.append('title', title);
-                            formData.append('deskripsi', deskripsi);
-                            formData.append('gambar', '');
-
-                            // Kirim permintaan pembaruan produk ke API
-                            $.ajax({
-                                url: "http://127.0.0.1:8000/api/portfolio/update?id=" + id,
-                                type: 'POST',
-                                headers: {
-                                    "Authorization": "Bearer " + token
-                                },
-                                data: formData,
-                                processData: false,
-                                contentType: false,
-                                success: function(response) {
-                                    // Show the modal
-                                    $('.update-sukses').text(response.message);
-                                    cash("#success-update-modal-preview").modal("show");
+                                // Tampilkan pesan kesalahan yang dikirim oleh server
+                                var response = JSON.parse(xhr.responseText);
+                                if (response.success === false && response.message) {
+                                    $('.update-gagal').text(response.message);
+                                    cash("#warning-update-modal-preview").modal("show");
 
                                     setTimeout(function() {
-                                        cash("#success-update-modal-preview").modal("hide");
+                                        cash("#warning-update-modal-preview").modal("hide");
 
                                         location.reload();
-                                    }, 3000); // 3000 milliseconds = 3 seconds
-                                },
-                                error: function(xhr, status, error) {
-                                    // Tangani kesalahan dalam permintaan Ajax itu sendiri
-                                    console.log(error);
-
-                                    // Tampilkan pesan kesalahan yang dikirim oleh server
-                                    var response = JSON.parse(xhr.responseText);
-                                    if (response.success === false && response.message) {
-                                        $('.update-gagal').text(response.message);
-                                        cash("#warning-update-modal-preview").modal("show");
-
-                                        setTimeout(function() {
-                                            cash("#warning-update-modal-preview").modal("hide");
-
-                                            location.reload();
-                                        }, 5000); // 5000 milliseconds = 5 seconds
-                                    } else {
-                                        // Tangani kesalahan lainnya jika ada
-                                        // Contoh: pesan kesalahan bawaan dari permintaan Ajax
-                                        alert('Terjadi kesalahan lainnya: ' + error);
-                                    }
+                                    }, 5000); // 5000 milliseconds = 5 seconds
+                                } else {
+                                    // Tangani kesalahan lainnya jika ada
+                                    // Contoh: pesan kesalahan bawaan dari permintaan Ajax
+                                    alert('Terjadi kesalahan lainnya: ' + error);
                                 }
-                            });
-                        }
+                            }
+                        });
                     });
 
                     // Button Hapus data
