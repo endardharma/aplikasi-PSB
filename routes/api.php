@@ -4,6 +4,7 @@ use App\Http\Controllers\AutentikasiController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\MasterGuruController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,5 +29,10 @@ Route::middleware(['auth:sanctum'])->group(function(){
     Route::prefix('dashboard')->group(function(){
         Route::get("/home", [DashboardController::class, 'index']);
         Route::get("/profil", [DashboardController::class, 'profile']);
+    });
+
+    Route::prefix('master-guru')->group(function(){
+        Route::get("/list", [MasterGuruController::class, 'listGuru']);
+        Route::post("/tambah-guru", [MasterGuruController::class, 'addguru']);
     });
 });

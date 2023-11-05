@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\AutentikasiController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\MasterGuruController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,3 +23,4 @@ Route::get('/', function () {
 
 Route::get('/login/admin', [AutentikasiController::class,'login'])->name('login');
 Route::get('/halaman/dashboard', [DashboardController::class,'index'])->name('dashboard');
+Route::get('/halaman/master-guru', [MasterGuruController::class,'index'])->name('masterguru');

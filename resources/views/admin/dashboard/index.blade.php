@@ -538,94 +538,6 @@ License: You must have a valid license purchased only from themeforest(the above
                 <!-- BEGIN: Breadcrumb -->
                 <div class="-intro-x breadcrumb mr-auto"> <a href="">Application</a> <i data-feather="chevron-right" class="breadcrumb__icon"></i> <a href="" class="breadcrumb--active">Dashboard</a> </div>
                 <!-- END: Breadcrumb -->
-                <!-- BEGIN: Search -->
-                <div class="intro-x relative mr-3 sm:mr-6">
-                    <div class="search hidden sm:block">
-                        <input type="text" class="search__input form-control dark:bg-dark-1 border-transparent placeholder-theme-8" placeholder="Search...">
-                        <i data-feather="search" class="search__icon dark:text-gray-300"></i>
-                    </div>
-                    <a class="notification sm:hidden" href=""> <i data-feather="search" class="notification__icon dark:text-gray-300"></i> </a>
-                    <div class="search-result">
-                        <div class="search-result__content">
-                            <div class="search-result__content__title">Pages</div>
-                            <div class="mb-5">
-                                <a href="" class="flex items-center">
-                                    <div class="w-8 h-8 bg-theme-29 text-theme-10 flex items-center justify-center rounded-full"> <i class="w-4 h-4" data-feather="inbox"></i> </div>
-                                    <div class="ml-3">Mail Settings</div>
-                                </a>
-                                <a href="" class="flex items-center mt-2">
-                                    <div class="w-8 h-8 bg-theme-30 text-theme-24 flex items-center justify-center rounded-full"> <i class="w-4 h-4" data-feather="users"></i> </div>
-                                    <div class="ml-3">Users & Permissions</div>
-                                </a>
-                                <a href="" class="flex items-center mt-2">
-                                    <div class="w-8 h-8 bg-theme-31 text-theme-26 flex items-center justify-center rounded-full"> <i class="w-4 h-4" data-feather="credit-card"></i> </div>
-                                    <div class="ml-3">Transactions Report</div>
-                                </a>
-                            </div>
-                            <div class="search-result__content__title">Users</div>
-                            <div class="mb-5">
-                                <a href="" class="flex items-center mt-2">
-                                    <div class="w-8 h-8 image-fit">
-                                        <img alt="Icewall Tailwind HTML Admin Template" class="rounded-full" src="{{ asset('template/dist/images/profile-2.jpg') }}">
-                                    </div>
-                                    <div class="ml-3">Sylvester Stallone</div>
-                                    <div class="ml-auto w-48 truncate text-gray-600 text-xs text-right">sylvesterstallone@left4code.com</div>
-                                </a>
-                                <a href="" class="flex items-center mt-2">
-                                    <div class="w-8 h-8 image-fit">
-                                        <img alt="Icewall Tailwind HTML Admin Template" class="rounded-full" src="{{ asset('template/dist/images/profile-11.jpg') }}">
-                                    </div>
-                                    <div class="ml-3">Johnny Depp</div>
-                                    <div class="ml-auto w-48 truncate text-gray-600 text-xs text-right">johnnydepp@left4code.com</div>
-                                </a>
-                                <a href="" class="flex items-center mt-2">
-                                    <div class="w-8 h-8 image-fit">
-                                        <img alt="Icewall Tailwind HTML Admin Template" class="rounded-full" src="{{ asset('template/dist/images/profile-12.jpg') }}">
-                                    </div>
-                                    <div class="ml-3">Hugh Jackman</div>
-                                    <div class="ml-auto w-48 truncate text-gray-600 text-xs text-right">hughjackman@left4code.com</div>
-                                </a>
-                                <a href="" class="flex items-center mt-2">
-                                    <div class="w-8 h-8 image-fit">
-                                        <img alt="Icewall Tailwind HTML Admin Template" class="rounded-full" src="{{ asset('template/dist/images/profile-1.jpg') }}">
-                                    </div>
-                                    <div class="ml-3">Nicolas Cage</div>
-                                    <div class="ml-auto w-48 truncate text-gray-600 text-xs text-right">nicolascage@left4code.com</div>
-                                </a>
-                            </div>
-                            <div class="search-result__content__title">Products</div>
-                            <a href="" class="flex items-center mt-2">
-                                <div class="w-8 h-8 image-fit">
-                                    <img alt="Icewall Tailwind HTML Admin Template" class="rounded-full" src="{{ asset('template/dist/images/preview-13.jpg') }}">
-                                </div>
-                                <div class="ml-3">Nikon Z6</div>
-                                <div class="ml-auto w-48 truncate text-gray-600 text-xs text-right">Photography</div>
-                            </a>
-                            <a href="" class="flex items-center mt-2">
-                                <div class="w-8 h-8 image-fit">
-                                    <img alt="Icewall Tailwind HTML Admin Template" class="rounded-full" src="{{ asset('template/dist/images/preview-3.jpg') }}">
-                                </div>
-                                <div class="ml-3">Nike Air Max 270</div>
-                                <div class="ml-auto w-48 truncate text-gray-600 text-xs text-right">Sport &amp; Outdoor</div>
-                            </a>
-                            <a href="" class="flex items-center mt-2">
-                                <div class="w-8 h-8 image-fit">
-                                    <img alt="Icewall Tailwind HTML Admin Template" class="rounded-full" src="{{ asset('template/dist/images/preview-13.jpg') }}">
-                                </div>
-                                <div class="ml-3">Sony A7 III</div>
-                                <div class="ml-auto w-48 truncate text-gray-600 text-xs text-right">Photography</div>
-                            </a>
-                            <a href="" class="flex items-center mt-2">
-                                <div class="w-8 h-8 image-fit">
-                                    <img alt="Icewall Tailwind HTML Admin Template" class="rounded-full" src="{{ asset('template/dist/images/preview-14.jpg') }}">
-                                </div>
-                                <div class="ml-3">Nike Air Max 270</div>
-                                <div class="ml-auto w-48 truncate text-gray-600 text-xs text-right">Sport &amp; Outdoor</div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- END: Search -->
                 <!-- BEGIN: Notifications -->
                 <div class="intro-x dropdown mr-4 sm:mr-6">
                     <div class="dropdown-toggle notification notification--bullet cursor-pointer" role="button" aria-expanded="false"> <i data-feather="bell" class="notification__icon dark:text-gray-300"></i> </div>
@@ -734,29 +646,12 @@ License: You must have a valid license purchased only from themeforest(the above
                 <nav class="side-nav">
                     <ul>
                         <li>
-                            <a href="javascript:;.html" class="side-menu side-menu--active">
-                                <div class="side-menu__icon"> <i data-feather="home"></i> </div>
-                                <div class="side-menu__title">
-                                    Dashboard
-                                    <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
-                                </div>
+                            <a href="{{ route('dashboard') }}" class="side-menu side-menu--active">
+                                <div class="side-menu__icon"> <i data-feather="monitor"></i> </div>
+                                <div class="side-menu__title"> Dashboard </div>
                             </a>
-                            <ul class="side-menu__sub-open">
-                                <li>
-                                    <a href="index.html" class="side-menu side-menu--active">
-                                        <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
-                                        <div class="side-menu__title"> Overview 1 </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="side-menu-light-dashboard-overview-2.html" class="side-menu">
-                                        <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
-                                        <div class="side-menu__title"> Overview 2 </div>
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
-                        <li>
+                        {{-- <li>
                             <a href="javascript:;" class="side-menu">
                                 <div class="side-menu__icon"> <i data-feather="box"></i> </div>
                                 <div class="side-menu__title">
@@ -784,11 +679,11 @@ License: You must have a valid license purchased only from themeforest(the above
                                     </a>
                                 </li>
                             </ul>
-                        </li>
+                        </li> --}}
                         <li>
-                            <a href="side-menu-light-inbox.html" class="side-menu">
+                            <a href="{{ route('masterguru') }}" class="side-menu">
                                 <div class="side-menu__icon"> <i data-feather="inbox"></i> </div>
-                                <div class="side-menu__title"> Inbox </div>
+                                <div class="side-menu__title"> Master Guru </div>
                             </a>
                         </li>
                         <li>
