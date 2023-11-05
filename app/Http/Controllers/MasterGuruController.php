@@ -120,6 +120,14 @@ class MasterGuruController extends Controller
 
     public function hapus($id)
     {
-        //
+        $cari = MasterGuru::where('id',$id)->first();
+        if(!$cari)
+        {
+            return response()->json([
+                ''
+            ])
+        }else{
+            //
+        }
     }
 }

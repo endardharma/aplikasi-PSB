@@ -35,5 +35,6 @@ Route::middleware(['auth:sanctum'])->group(function(){
         Route::get("/list", [MasterGuruController::class, 'listGuru']);
         Route::post("/tambah-guru", [MasterGuruController::class, 'addguru']);
         Route::post("/update-guru", [MasterGuruController::class, 'update']);
+        Route::delete("/hapus/{id}", [MasterGuruController::class, 'hapus']);
     });
 });
