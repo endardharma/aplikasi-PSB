@@ -124,10 +124,25 @@ class MasterGuruController extends Controller
         if(!$cari)
         {
             return response()->json([
-                ''
-            ])
+                'success' => false,
+                'message' => 'Data master guru tidak ditemukan',
+            ],400);
         }else{
-            //
+            $user = User::where('nip',$cari->nip)->delete();
+            $hapus = MasterGuru::where('nip',$cari->nip)->delete();
+
+            if($user && $hapus)
+            {
+                return response()->json([
+                    'success' => true,
+                    'message' => 'Berhasil menghapus data master guru',
+                ],201);
+            }else{
+                return response()->json([
+                    'success' => true,
+                    'message' => 'Terjadi kesalahan saat menghapud data master guru',
+                ],400);
+            }
         }
     }
 }
