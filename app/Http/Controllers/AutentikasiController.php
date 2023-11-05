@@ -9,6 +9,11 @@ use Illuminate\Http\Request;
 
 class AutentikasiController extends Controller
 {
+    public function login()
+    {
+        return view('login');
+    }
+
     public function cekLogin(Request $request)
     {
         //set validation
@@ -52,5 +57,5 @@ class AutentikasiController extends Controller
             'message' => 'Login SuperAdmin Berhasil.....Selamat Datang',
             'token' => $token,
         ], 201);
-    }  
+    }
 }

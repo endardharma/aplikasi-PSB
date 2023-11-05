@@ -12,7 +12,7 @@ License: You must have a valid license purchased only from themeforest(the above
     <!-- BEGIN: Head -->
     <head>
         <meta charset="utf-8">
-        <link href="dist/images/logo.svg" rel="shortcut icon">
+        <link href="{{ asset('template/dist/images/logo.svg') }}" rel="shortcut icon">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="Icewall admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
         <meta name="keywords" content="admin template, Icewall Admin Template, dashboard template, flat admin template, responsive admin template, web app">
@@ -20,6 +20,7 @@ License: You must have a valid license purchased only from themeforest(the above
         <title>Dashboard - Icewall - Tailwind HTML Admin Template</title>
         <!-- BEGIN: CSS Assets-->
         <link rel="stylesheet" href="{{ asset('template/dist/css/app.css') }}" />
+        <link href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" rel="stylesheet">
         <!-- END: CSS Assets-->
     </head>
     <!-- END: Head -->
@@ -538,94 +539,6 @@ License: You must have a valid license purchased only from themeforest(the above
                 <!-- BEGIN: Breadcrumb -->
                 <div class="-intro-x breadcrumb mr-auto"> <a href="">Application</a> <i data-feather="chevron-right" class="breadcrumb__icon"></i> <a href="" class="breadcrumb--active">Dashboard</a> </div>
                 <!-- END: Breadcrumb -->
-                <!-- BEGIN: Search -->
-                <div class="intro-x relative mr-3 sm:mr-6">
-                    <div class="search hidden sm:block">
-                        <input type="text" class="search__input form-control dark:bg-dark-1 border-transparent placeholder-theme-8" placeholder="Search...">
-                        <i data-feather="search" class="search__icon dark:text-gray-300"></i> 
-                    </div>
-                    <a class="notification sm:hidden" href=""> <i data-feather="search" class="notification__icon dark:text-gray-300"></i> </a>
-                    <div class="search-result">
-                        <div class="search-result__content">
-                            <div class="search-result__content__title">Pages</div>
-                            <div class="mb-5">
-                                <a href="" class="flex items-center">
-                                    <div class="w-8 h-8 bg-theme-29 text-theme-10 flex items-center justify-center rounded-full"> <i class="w-4 h-4" data-feather="inbox"></i> </div>
-                                    <div class="ml-3">Mail Settings</div>
-                                </a>
-                                <a href="" class="flex items-center mt-2">
-                                    <div class="w-8 h-8 bg-theme-30 text-theme-24 flex items-center justify-center rounded-full"> <i class="w-4 h-4" data-feather="users"></i> </div>
-                                    <div class="ml-3">Users & Permissions</div>
-                                </a>
-                                <a href="" class="flex items-center mt-2">
-                                    <div class="w-8 h-8 bg-theme-31 text-theme-26 flex items-center justify-center rounded-full"> <i class="w-4 h-4" data-feather="credit-card"></i> </div>
-                                    <div class="ml-3">Transactions Report</div>
-                                </a>
-                            </div>
-                            <div class="search-result__content__title">Users</div>
-                            <div class="mb-5">
-                                <a href="" class="flex items-center mt-2">
-                                    <div class="w-8 h-8 image-fit">
-                                        <img alt="Icewall Tailwind HTML Admin Template" class="rounded-full" src="{{ asset('template/dist/images/profile-11.jpg') }}">
-                                    </div>
-                                    <div class="ml-3">Kevin Spacey</div>
-                                    <div class="ml-auto w-48 truncate text-gray-600 text-xs text-right">kevinspacey@left4code.com</div>
-                                </a>
-                                <a href="" class="flex items-center mt-2">
-                                    <div class="w-8 h-8 image-fit">
-                                        <img alt="Icewall Tailwind HTML Admin Template" class="rounded-full" src="{{ asset('template/dist/images/profile-12.jpg') }}">
-                                    </div>
-                                    <div class="ml-3">Al Pacino</div>
-                                    <div class="ml-auto w-48 truncate text-gray-600 text-xs text-right">alpacino@left4code.com</div>
-                                </a>
-                                <a href="" class="flex items-center mt-2">
-                                    <div class="w-8 h-8 image-fit">
-                                        <img alt="Icewall Tailwind HTML Admin Template" class="rounded-full" src="{{ asset('template/dist/images/profile-1.jpg') }}">
-                                    </div>
-                                    <div class="ml-3">Kevin Spacey</div>
-                                    <div class="ml-auto w-48 truncate text-gray-600 text-xs text-right">kevinspacey@left4code.com</div>
-                                </a>
-                                <a href="" class="flex items-center mt-2">
-                                    <div class="w-8 h-8 image-fit">
-                                        <img alt="Icewall Tailwind HTML Admin Template" class="rounded-full" src="{{ asset('template/dist/images/profile-15.jpg') }}">
-                                    </div>
-                                    <div class="ml-3">Johnny Depp</div>
-                                    <div class="ml-auto w-48 truncate text-gray-600 text-xs text-right">johnnydepp@left4code.com</div>
-                                </a>
-                            </div>
-                            <div class="search-result__content__title">Products</div>
-                            <a href="" class="flex items-center mt-2">
-                                <div class="w-8 h-8 image-fit">
-                                    <img alt="Icewall Tailwind HTML Admin Template" class="rounded-full" src="{{ asset('template/dist/images/preview-10.jpg') }}">
-                                </div>
-                                <div class="ml-3">Nike Tanjun</div>
-                                <div class="ml-auto w-48 truncate text-gray-600 text-xs text-right">Sport &amp; Outdoor</div>
-                            </a>
-                            <a href="" class="flex items-center mt-2">
-                                <div class="w-8 h-8 image-fit">
-                                    <img alt="Icewall Tailwind HTML Admin Template" class="rounded-full" src="{{ asset('template/dist/images/preview-11.jpg') }}">
-                                </div>
-                                <div class="ml-3">Samsung Q90 QLED TV</div>
-                                <div class="ml-auto w-48 truncate text-gray-600 text-xs text-right">Electronic</div>
-                            </a>
-                            <a href="" class="flex items-center mt-2">
-                                <div class="w-8 h-8 image-fit">
-                                    <img alt="Icewall Tailwind HTML Admin Template" class="rounded-full" src="{{ asset('template/dist/images/preview-8.jpg') }}">
-                                </div>
-                                <div class="ml-3">Nike Air Max 270</div>
-                                <div class="ml-auto w-48 truncate text-gray-600 text-xs text-right">Sport &amp; Outdoor</div>
-                            </a>
-                            <a href="" class="flex items-center mt-2">
-                                <div class="w-8 h-8 image-fit">
-                                    <img alt="Icewall Tailwind HTML Admin Template" class="rounded-full" src="{{ asset('template/dist/images/preview-5.jpg') }}">
-                                </div>
-                                <div class="ml-3">Apple MacBook Pro 13</div>
-                                <div class="ml-auto w-48 truncate text-gray-600 text-xs text-right">PC &amp; Laptop</div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- END: Search -->
                 <!-- BEGIN: Notifications -->
                 <div class="intro-x dropdown mr-4 sm:mr-6">
                     <div class="dropdown-toggle notification notification--bullet cursor-pointer" role="button" aria-expanded="false"> <i data-feather="bell" class="notification__icon dark:text-gray-300"></i> </div>
@@ -639,7 +552,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 </div>
                                 <div class="ml-2 overflow-hidden">
                                     <div class="flex items-center">
-                                        <a href="javascript:;" class="font-medium truncate mr-5">Kevin Spacey</a> 
+                                        <a href="javascript:;" class="font-medium truncate mr-5">Kevin Spacey</a>
                                         <div class="text-xs text-gray-500 ml-auto whitespace-nowrap">05:09 AM</div>
                                     </div>
                                     <div class="w-full truncate text-gray-600 mt-0.5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#039;s standard dummy text ever since the 1500</div>
@@ -652,7 +565,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 </div>
                                 <div class="ml-2 overflow-hidden">
                                     <div class="flex items-center">
-                                        <a href="javascript:;" class="font-medium truncate mr-5">Al Pacino</a> 
+                                        <a href="javascript:;" class="font-medium truncate mr-5">Al Pacino</a>
                                         <div class="text-xs text-gray-500 ml-auto whitespace-nowrap">01:10 PM</div>
                                     </div>
                                     <div class="w-full truncate text-gray-600 mt-0.5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#039;s standard dummy text ever since the 1500</div>
@@ -665,7 +578,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 </div>
                                 <div class="ml-2 overflow-hidden">
                                     <div class="flex items-center">
-                                        <a href="javascript:;" class="font-medium truncate mr-5">Kevin Spacey</a> 
+                                        <a href="javascript:;" class="font-medium truncate mr-5">Kevin Spacey</a>
                                         <div class="text-xs text-gray-500 ml-auto whitespace-nowrap">01:10 PM</div>
                                     </div>
                                     <div class="w-full truncate text-gray-600 mt-0.5">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem </div>
@@ -678,7 +591,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 </div>
                                 <div class="ml-2 overflow-hidden">
                                     <div class="flex items-center">
-                                        <a href="javascript:;" class="font-medium truncate mr-5">Johnny Depp</a> 
+                                        <a href="javascript:;" class="font-medium truncate mr-5">Johnny Depp</a>
                                         <div class="text-xs text-gray-500 ml-auto whitespace-nowrap">01:10 PM</div>
                                     </div>
                                     <div class="w-full truncate text-gray-600 mt-0.5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#039;s standard dummy text ever since the 1500</div>
@@ -691,7 +604,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 </div>
                                 <div class="ml-2 overflow-hidden">
                                     <div class="flex items-center">
-                                        <a href="javascript:;" class="font-medium truncate mr-5">Arnold Schwarzenegger</a> 
+                                        <a href="javascript:;" class="font-medium truncate mr-5">Arnold Schwarzenegger</a>
                                         <div class="text-xs text-gray-500 ml-auto whitespace-nowrap">05:09 AM</div>
                                     </div>
                                     <div class="w-full truncate text-gray-600 mt-0.5">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem </div>
@@ -709,8 +622,8 @@ License: You must have a valid license purchased only from themeforest(the above
                     <div class="dropdown-menu w-56">
                         <div class="dropdown-menu__content box bg-theme-11 dark:bg-dark-6 text-white">
                             <div class="p-4 border-b border-theme-12 dark:border-dark-3">
-                                <div class="font-medium">Kevin Spacey</div>
-                                <div class="text-xs text-theme-13 mt-0.5 dark:text-gray-600">DevOps Engineer</div>
+                                <div class="font-medium nama-user"></div>
+                                <div class="text-xs text-theme-13 mt-0.5 dark:text-gray-600 role-user"></div>
                             </div>
                             <div class="p-2">
                                 <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 dark:hover:bg-dark-3 rounded-md"> <i data-feather="user" class="w-4 h-4 mr-2"></i> Profile </a>
@@ -734,33 +647,16 @@ License: You must have a valid license purchased only from themeforest(the above
                 <nav class="side-nav">
                     <ul>
                         <li>
-                            <a href="javascript:;" class="side-menu">
-                                <div class="side-menu__icon"> <i data-feather="home"></i> </div>
-                                <div class="side-menu__title">
-                                    Dashboard 
-                                    <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
-                                </div>
+                            <a href="{{ route('dashboard') }}" class="side-menu side-menu--active">
+                                <div class="side-menu__icon"> <i data-feather="monitor"></i> </div>
+                                <div class="side-menu__title"> Dashboard </div>
                             </a>
-                            <ul class="">
-                                <li>
-                                    <a href="index.html" class="side-menu">
-                                        <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
-                                        <div class="side-menu__title"> Overview 1 </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="side-menu-light-dashboard-overview-2.html" class="side-menu">
-                                        <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
-                                        <div class="side-menu__title"> Overview 2 </div>
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
-                        <li>
+                        {{-- <li>
                             <a href="javascript:;" class="side-menu">
                                 <div class="side-menu__icon"> <i data-feather="box"></i> </div>
                                 <div class="side-menu__title">
-                                    Menu Layout 
+                                    Menu Layout
                                     <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
                                 </div>
                             </a>
@@ -784,11 +680,11 @@ License: You must have a valid license purchased only from themeforest(the above
                                     </a>
                                 </li>
                             </ul>
-                        </li>
+                        </li> --}}
                         <li>
-                            <a href="side-menu-light-inbox.html" class="side-menu">
+                            <a href="{{ route('masterguru') }}" class="side-menu">
                                 <div class="side-menu__icon"> <i data-feather="inbox"></i> </div>
-                                <div class="side-menu__title"> Inbox </div>
+                                <div class="side-menu__title"> Master Guru </div>
                             </a>
                         </li>
                         <li>
@@ -826,7 +722,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             <a href="javascript:;" class="side-menu">
                                 <div class="side-menu__icon"> <i data-feather="edit"></i> </div>
                                 <div class="side-menu__title">
-                                    Crud 
+                                    Crud
                                     <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
                                 </div>
                             </a>
@@ -849,7 +745,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             <a href="javascript:;" class="side-menu">
                                 <div class="side-menu__icon"> <i data-feather="users"></i> </div>
                                 <div class="side-menu__title">
-                                    Users 
+                                    Users
                                     <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
                                 </div>
                             </a>
@@ -878,7 +774,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             <a href="javascript:;" class="side-menu">
                                 <div class="side-menu__icon"> <i data-feather="trello"></i> </div>
                                 <div class="side-menu__title">
-                                    Profile 
+                                    Profile
                                     <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
                                 </div>
                             </a>
@@ -907,7 +803,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             <a href="javascript:;" class="side-menu">
                                 <div class="side-menu__icon"> <i data-feather="layout"></i> </div>
                                 <div class="side-menu__title">
-                                    Pages 
+                                    Pages
                                     <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
                                 </div>
                             </a>
@@ -916,7 +812,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <a href="javascript:;" class="side-menu">
                                         <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                         <div class="side-menu__title">
-                                            Wizards 
+                                            Wizards
                                             <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
                                         </div>
                                     </a>
@@ -945,7 +841,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <a href="javascript:;" class="side-menu">
                                         <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                         <div class="side-menu__title">
-                                            Blog 
+                                            Blog
                                             <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
                                         </div>
                                     </a>
@@ -974,7 +870,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <a href="javascript:;" class="side-menu">
                                         <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                         <div class="side-menu__title">
-                                            Pricing 
+                                            Pricing
                                             <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
                                         </div>
                                     </a>
@@ -997,7 +893,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <a href="javascript:;" class="side-menu">
                                         <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                         <div class="side-menu__title">
-                                            Invoice 
+                                            Invoice
                                             <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
                                         </div>
                                     </a>
@@ -1020,7 +916,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <a href="javascript:;" class="side-menu">
                                         <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                         <div class="side-menu__title">
-                                            FAQ 
+                                            FAQ
                                             <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
                                         </div>
                                     </a>
@@ -1079,23 +975,23 @@ License: You must have a valid license purchased only from themeforest(the above
                         </li>
                         <li class="side-nav__devider my-6"></li>
                         <li>
-                            <a href="javascript:;.html" class="side-menu side-menu--active">
+                            <a href="javascript:;" class="side-menu">
                                 <div class="side-menu__icon"> <i data-feather="inbox"></i> </div>
                                 <div class="side-menu__title">
-                                    Components 
+                                    Components
                                     <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
                                 </div>
                             </a>
-                            <ul class="side-menu__sub-open">
+                            <ul class="">
                                 <li>
-                                    <a href="javascript:;.html" class="side-menu side-menu--active">
+                                    <a href="javascript:;" class="side-menu">
                                         <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                         <div class="side-menu__title">
-                                            Table 
+                                            Table
                                             <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
                                         </div>
                                     </a>
-                                    <ul class="side-menu__sub-open">
+                                    <ul class="">
                                         <li>
                                             <a href="side-menu-light-regular-table.html" class="side-menu">
                                                 <div class="side-menu__icon"> <i data-feather="zap"></i> </div>
@@ -1103,7 +999,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="side-menu-light-tabulator.html" class="side-menu side-menu--active">
+                                            <a href="side-menu-light-tabulator.html" class="side-menu">
                                                 <div class="side-menu__icon"> <i data-feather="zap"></i> </div>
                                                 <div class="side-menu__title">Tabulator</div>
                                             </a>
@@ -1114,7 +1010,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <a href="javascript:;" class="side-menu">
                                         <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                         <div class="side-menu__title">
-                                            Overlay 
+                                            Overlay
                                             <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
                                         </div>
                                     </a>
@@ -1199,7 +1095,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             <a href="javascript:;" class="side-menu">
                                 <div class="side-menu__icon"> <i data-feather="sidebar"></i> </div>
                                 <div class="side-menu__title">
-                                    Forms 
+                                    Forms
                                     <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
                                 </div>
                             </a>
@@ -1246,7 +1142,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             <a href="javascript:;" class="side-menu">
                                 <div class="side-menu__icon"> <i data-feather="hard-drive"></i> </div>
                                 <div class="side-menu__title">
-                                    Widgets 
+                                    Widgets
                                     <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
                                 </div>
                             </a>
@@ -1278,90 +1174,576 @@ License: You must have a valid license purchased only from themeforest(the above
                 <div class="content">
                     <div class="intro-y flex flex-col sm:flex-row items-center mt-8">
                         <h2 class="text-lg font-medium mr-auto">
-                            Tabulator
+                            List Master Guru
                         </h2>
                         <div class="w-full sm:w-auto flex mt-4 sm:mt-0">
-                            <button class="btn btn-primary shadow-md mr-2">Add New Product</button>
-                            <div class="dropdown ml-auto sm:ml-0">
-                                <button class="dropdown-toggle btn px-2 box text-gray-700 dark:text-gray-300" aria-expanded="false">
-                                    <span class="w-5 h-5 flex items-center justify-center"> <i class="w-4 h-4" data-feather="plus"></i> </span>
-                                </button>
-                                <div class="dropdown-menu w-40">
-                                    <div class="dropdown-menu__content box dark:bg-dark-1 p-2">
-                                        <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="file-plus" class="w-4 h-4 mr-2"></i> New Category </a>
-                                        <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="users" class="w-4 h-4 mr-2"></i> New Group </a>
-                                    </div>
-                                </div>
-                            </div>
+                            <button class="btn btn-primary shadow-md mr-2 modal-guru">Tambah Guru</button>
                         </div>
                     </div>
                     <!-- BEGIN: HTML Table Data -->
                     <div class="intro-y box p-5 mt-5">
-                        <div class="flex flex-col sm:flex-row sm:items-end xl:items-start">
-                            <form id="tabulator-html-filter-form" class="xl:flex sm:mr-auto" >
-                                <div class="sm:flex items-center sm:mr-4">
-                                    <label class="w-12 flex-none xl:w-auto xl:flex-initial mr-2">Field</label>
-                                    <select id="tabulator-html-filter-field" class="form-select w-full sm:w-32 xxl:w-full mt-2 sm:mt-0 sm:w-auto">
-                                        <option value="name">Name</option>
-                                        <option value="category">Category</option>
-                                        <option value="remaining_stock">Remaining Stock</option>
-                                    </select>
+                        <div class="overflow-x-auto scrollbar-hidden">
+                            <table id="data-table" class="table table-striped" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Nip</th>
+                                        <th>Nama Guru</th>
+                                        <th>Jenis Kelamin</th>
+                                        <th>Status Pegawai</th>
+                                        <th>Jabatan</th>
+                                        <th>Status</th>
+                                        <th>Aksi</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- END: HTML Table Data -->
+                    <!-- BEGIN: Modal Create Content -->
+                    <div id="modal-create" class="modal" tabindex="-1" aria-hidden="true" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <!-- BEGIN: Modal Header -->
+                                <div class="modal-header">
+                                    <h2 class="font-medium text-base mr-auto">
+                                        Form Pembuatan Data Guru
+                                    </h2>
+                                    <a data-dismiss="modal" href="javascript:;"> <i data-feather="x" class="w-8 h-8 text-gray-500"></i> </a>
                                 </div>
-                                <div class="sm:flex items-center sm:mr-4 mt-2 xl:mt-0">
-                                    <label class="w-12 flex-none xl:w-auto xl:flex-initial mr-2">Type</label>
-                                    <select id="tabulator-html-filter-type" class="form-select w-full mt-2 sm:mt-0 sm:w-auto" >
-                                        <option value="like" selected>like</option>
-                                        <option value="=">=</option>
-                                        <option value="<">&lt;</option>
-                                        <option value="<=">&lt;=</option>
-                                        <option value=">">></option>
-                                        <option value=">=">>=</option>
-                                        <option value="!=">!=</option>
-                                    </select>
+                                <!-- END: Modal Header -->
+                                <!-- BEGIN: Modal Body -->
+                                <div class="modal-body grid grid-cols-12 gap-4 gap-y-3">
+                                    <div class="col-span-12 sm:col-span-12">
+                                        <label for="modal-form-1" class="form-label">Nama Guru</label>
+                                        <input type="text" class="form-control create-name" placeholder="Beny Putra Spd" required>
+                                    </div>
+                                    <div class="col-span-12 sm:col-span-12">
+                                        <label for="modal-form-1" class="form-label">Email Guru</label>
+                                        <input type="text" class="form-control create-email" placeholder="beny@mail.com" required>
+                                    </div>
+                                    <div class="col-span-12 sm:col-span-12">
+                                        <label for="modal-form-1" class="form-label">Password</label>
+                                        <input type="password" class="form-control create-password" placeholder="********" required>
+                                    </div>
+                                    <div class="col-span-12 sm:col-span-12">
+                                        <label for="modal-form-1" class="form-label">NIP</label>
+                                        <input type="number" class="form-control create-nip" placeholder="123456789" required>
+                                    </div>
+                                    <div class="col-span-12 sm:col-span-12">
+                                        <label for="modal-form-1" class="form-label">Jenis Kelamin</label>
+                                        <select class="form-select create-jenkel" required>
+                                            <option selected disabled> --- Pilih Jenis Kelamin --- </option>
+                                            <option value="L"> Laki-Laki </option>
+                                            <option value="P"> Perempuan </option>
+                                        </select>
+                                    </div>
+                                    <div class="col-span-12 sm:col-span-12">
+                                        <label for="modal-form-1" class="form-label">Status Pegawai</label>
+                                        <input type="text" class="form-control create-status-pegawai" placeholder="Guru Fisika Modern" required>
+                                    </div>
+                                    <div class="col-span-12 sm:col-span-12">
+                                        <label for="modal-form-1" class="form-label">Jabatan</label>
+                                        <input type="text" class="form-control create-jabatan" placeholder="Guru PNS" required>
+                                    </div>
+                                    <div class="col-span-12 sm:col-span-12">
+                                        <label for="modal-form-1" class="form-label">Status Akun</label>
+                                        <select class="form-select create-is_active" required>
+                                            <option selected disabled> --- Pilih Jenis Status Akun --- </option>
+                                            <option value="1"> Aktif </option>
+                                            <option value="0"> Tidak Aktif </option>
+                                        </select>
+                                    </div>
                                 </div>
-                                <div class="sm:flex items-center sm:mr-4 mt-2 xl:mt-0">
-                                    <label class="w-12 flex-none xl:w-auto xl:flex-initial mr-2">Value</label>
-                                    <input id="tabulator-html-filter-value" type="text" class="form-control sm:w-40 xxl:w-full mt-2 sm:mt-0" placeholder="Search...">
+                                <!-- END: Modal Body -->
+                                <!-- BEGIN: Modal Footer -->
+                                <div class="modal-footer text-right">
+                                    <button type="button" data-dismiss="modal" class="btn btn-outline-secondary w-20 mr-1">Batal</button>
+                                    <button type="button" class="btn btn-primary w-20 btn-create">Simpan</button>
                                 </div>
-                                <div class="mt-2 xl:mt-0">
-                                    <button id="tabulator-html-filter-go" type="button" class="btn btn-primary w-full sm:w-16" >Go</button>
-                                    <button id="tabulator-html-filter-reset" type="button" class="btn btn-secondary w-full sm:w-16 mt-2 sm:mt-0 sm:ml-1" >Reset</button>
-                                </div>
-                            </form>
-                            <div class="flex mt-5 sm:mt-0">
-                                <button id="tabulator-print" class="btn btn-outline-secondary w-1/2 sm:w-auto mr-2"> <i data-feather="printer" class="w-4 h-4 mr-2"></i> Print </button>
-                                <div class="dropdown w-1/2 sm:w-auto">
-                                    <button class="dropdown-toggle btn btn-outline-secondary w-full sm:w-auto" aria-expanded="false"> <i data-feather="file-text" class="w-4 h-4 mr-2"></i> Export <i data-feather="chevron-down" class="w-4 h-4 ml-auto sm:ml-2"></i> </button>
-                                    <div class="dropdown-menu w-40">
-                                        <div class="dropdown-menu__content box dark:bg-dark-1 p-2">
-                                            <a id="tabulator-export-csv" href="javascript:;" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="file-text" class="w-4 h-4 mr-2"></i> Export CSV </a>
-                                            <a id="tabulator-export-json" href="javascript:;" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="file-text" class="w-4 h-4 mr-2"></i> Export JSON </a>
-                                            <a id="tabulator-export-xlsx" href="javascript:;" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="file-text" class="w-4 h-4 mr-2"></i> Export XLSX </a>
-                                            <a id="tabulator-export-html" href="javascript:;" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="file-text" class="w-4 h-4 mr-2"></i> Export HTML </a>
-                                        </div>
+                                <!-- END: Modal Footer -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END: Modal Content -->
+                    <!-- BEGIN: Modal Update Sukses Content -->
+                    <div id="success-create-modal-preview" class="modal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body p-0">
+                                    <div class="p-5 text-center">
+                                        <i data-feather="check-circle" class="w-16 h-16 text-theme-10 mx-auto mt-3"></i>
+                                        <div class="text-3xl mt-5">Berhasil membuat data guru baru!</div>
+                                        <div class="text-gray-600 mt-2 create-sukses"></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="overflow-x-auto scrollbar-hidden">
-                            <div id="tabulator" class="mt-5 table-report table-report--tabulator"></div>
+                    </div>
+                    <!-- END: Modal Content -->
+                    <!-- BEGIN: Modal Update Gagal Content -->
+                    <div id="warning-create-modal-preview" class="modal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body p-0">
+                                    <div class="p-5 text-center">
+                                        <i data-feather="x-circle" class="w-16 h-16 text-theme-23 mx-auto mt-3"></i>
+                                        <div class="text-3xl mt-5">Oops...Gagal membuat data guru baru!</div>
+                                        <div class="text-gray-600 mt-2 create-gagal"></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <!-- END: HTML Table Data -->
+                    <!-- END: Modal Content -->
+                    <!-- BEGIN: Modal Update Content -->
+                    <div id="modal-update" class="modal" tabindex="-1" aria-hidden="true" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <!-- BEGIN: Modal Header -->
+                                <div class="modal-header">
+                                    <h2 class="font-medium text-base mr-auto">
+                                        Form Update Data Guru
+                                    </h2>
+                                    <a data-dismiss="modal" href="javascript:;"> <i data-feather="x" class="w-8 h-8 text-gray-500"></i> </a>
+                                </div>
+                                <!-- END: Modal Header -->
+                                <!-- BEGIN: Modal Body -->
+                                <div class="modal-body grid grid-cols-12 gap-4 gap-y-3">
+                                    <div class="col-span-12 sm:col-span-12">
+                                        <label for="modal-form-1" class="form-label">Nama Guru</label>
+                                        <input type="hidden" class="form-control update-id" required>
+                                        <input type="text" class="form-control update-name" placeholder="Beny Putra Spd" required>
+                                    </div>
+                                    <div class="col-span-12 sm:col-span-12">
+                                        <label for="modal-form-1" class="form-label">Email Guru</label>
+                                        <input type="text" class="form-control update-email" placeholder="beny@mail.com" required>
+                                    </div>
+                                    <div class="col-span-12 sm:col-span-12">
+                                        <label for="modal-form-1" class="form-label">Password</label>
+                                        <input type="password" class="form-control update-password" placeholder="********" required>
+                                    </div>
+                                    <div class="col-span-12 sm:col-span-12">
+                                        <label for="modal-form-1" class="form-label">NIP</label>
+                                        <input type="number" class="form-control update-nip" placeholder="123456789" required>
+                                    </div>
+                                    <div class="col-span-12 sm:col-span-12">
+                                        <label for="modal-form-1" class="form-label">Jenis Kelamin</label>
+                                        <select class="form-select update-jenkel" required>
+                                            <option selected disabled> --- Pilih Jenis Kelamin --- </option>
+                                            <option value="L"> Laki-Laki </option>
+                                            <option value="P"> Perempuan </option>
+                                        </select>
+                                    </div>
+                                    <div class="col-span-12 sm:col-span-12">
+                                        <label for="modal-form-1" class="form-label">Status Pegawai</label>
+                                        <input type="text" class="form-control update-status-pegawai" placeholder="Guru Fisika Modern" required>
+                                    </div>
+                                    <div class="col-span-12 sm:col-span-12">
+                                        <label for="modal-form-1" class="form-label">Jabatan</label>
+                                        <input type="text" class="form-control update-jabatan" placeholder="Guru PNS" required>
+                                    </div>
+                                    <div class="col-span-12 sm:col-span-12">
+                                        <label for="modal-form-1" class="form-label">Status Akun</label>
+                                        <select class="form-select update-is_active" required>
+                                            <option selected disabled> --- Pilih Jenis Status Akun --- </option>
+                                            <option value="1"> Aktif </option>
+                                            <option value="0"> Tidak Aktif </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <!-- END: Modal Body -->
+                                <!-- BEGIN: Modal Footer -->
+                                <div class="modal-footer text-right">
+                                    <button type="button" data-dismiss="modal" class="btn btn-outline-secondary w-20 mr-1">Batal</button>
+                                    <button type="button" class="btn btn-primary w-20 btn-create">Update</button>
+                                </div>
+                                <!-- END: Modal Footer -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END: Modal Content -->
+                    <!-- BEGIN: Modal Update Sukses Content -->
+                    <div id="success-create-modal-preview" class="modal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body p-0">
+                                    <div class="p-5 text-center">
+                                        <i data-feather="check-circle" class="w-16 h-16 text-theme-10 mx-auto mt-3"></i>
+                                        <div class="text-3xl mt-5">Berhasil membuat data guru baru!</div>
+                                        <div class="text-gray-600 mt-2 create-sukses"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END: Modal Content -->
+                    <!-- BEGIN: Modal Update Gagal Content -->
+                    <div id="warning-create-modal-preview" class="modal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body p-0">
+                                    <div class="p-5 text-center">
+                                        <i data-feather="x-circle" class="w-16 h-16 text-theme-23 mx-auto mt-3"></i>
+                                        <div class="text-3xl mt-5">Oops...Gagal membuat data guru baru!</div>
+                                        <div class="text-gray-600 mt-2 create-gagal"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END: Modal Content -->
                 </div>
                 <!-- END: Content -->
             </div>
         </div>
-        <!-- BEGIN: Dark Mode Switcher-->
-        <div data-url="side-menu-dark-tabulator.html" class="dark-mode-switcher cursor-pointer shadow-md fixed bottom-0 right-0 box dark:bg-dark-2 border rounded-full w-40 h-12 flex items-center justify-center z-50 mb-10 mr-10">
-            <div class="mr-4 text-gray-700 dark:text-gray-300">Dark Mode</div>
-            <div class="dark-mode-switcher__toggle border"></div>
-        </div>
-        <!-- END: Dark Mode Switcher-->
         <!-- BEGIN: JS Assets-->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!--manggil JQuery-->
         <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key=["your-google-map-api"]&libraries=places"></script>
+        <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
         <script src="{{ asset('template/dist/js/app.js') }}"></script>
+        <script>
+            $(document).ready(function(){
+                function getCookie(name){
+                    var cookieName = name + "=";
+                    var decodedCookie = decodeURIComponent(document.cookie);
+                    var cookieArray = decodedCookie.split(';');
+
+                    for (var i = 0; i < cookieArray.length; i++){
+                        var cookie = cookieArray[i];
+                        while (cookie.charAt(0) === ' '){
+                            cookie = cookie.substring(1);
+                        }
+                        if (cookie.indexOf(cookieName) === 0){
+                            return cookie.substring(cookieName.length, cookie.length);
+                        }
+                    }
+                }
+                var token = getCookie('token');
+
+                if (token)
+                {
+                    //Token ada dalam cookie, lakukan tindakan yang sesuai
+                    console.log('Token:', token);
+                }else{
+                    window.location.href = "{{ route('login') }}";
+                }
+
+                var url = 'http://127.0.0.1:8000/api/dashboard/profil';
+                fetch(url, {
+                    method: 'GET',
+                    headers: {
+                        'Authorization' : 'Bearer ' + token
+                    }
+                }).then(response => response.json()).then(data => {
+
+                    $('.nama-user').text(data.name);
+                    $('.role-user').text(data.role);
+                    // $('#sambutan').text(data.name);
+
+                }). catch (error => {
+                    console.error('Error:', error);
+                });
+
+                // Modal Create master guru
+                // Modal form create portfolio
+                $(".modal-guru").click(function() {
+                    cash("#modal-create").modal("show");
+                });
+
+                // Button Simpan Portfolio
+                $(".btn-create").click(function() {
+                    // Ajax update
+                    var name = $('.create-name').val();
+                    var email = $('.create-email').val();
+                    var password = $('.create-password').val();
+                    var nip = $('.create-nip').val();
+                    var jenkel = $('.create-jenkel').val();
+                    var status_pegawai = $('.create-status-pegawai').val();
+                    var jabatan = $('.create-jabatan').val();
+                    var is_active = $('.create-is_active').val();
+
+                    var formData = new FormData();
+                    formData.append('name', name);
+                    formData.append('email', email);
+                    formData.append('password', password);
+                    formData.append('nip', nip);
+                    formData.append('jenkel', jenkel);
+                    formData.append('status_pegawai', status_pegawai);
+                    formData.append('jabatan', jabatan);
+                    formData.append('is_active', is_active);
+
+                    // Kirim permintaan pembaruan produk ke API
+                    $.ajax({
+                        url: "http://127.0.0.1:8000/api/master-guru/tambah-guru",
+                        type: 'POST',
+                        headers: {
+                            "Authorization": "Bearer " + token
+                        },
+                        data: formData,
+                        processData: false,
+                        contentType: false,
+                        success: function(response) {
+                            // Show the modal
+                            $('.create-sukses').text(response.message);
+                            cash("#success-create-modal-preview").modal("show");
+
+                            setTimeout(function() {
+                                cash("#success-create-modal-preview").modal("hide");
+
+                                location.reload();
+                            }, 3000); // 3000 milliseconds = 3 seconds
+                        },
+                        error: function(xhr, status, error) {
+                            // Tangani kesalahan dalam permintaan Ajax itu sendiri
+                            console.log(error);
+
+                            // Tampilkan pesan kesalahan yang dikirim oleh server
+                            var response = JSON.parse(xhr.responseText);
+                            if (response.success === false && response.message) {
+                                $('.create-gagal').text(response.message);
+                                cash("#warning-create-modal-preview").modal("show");
+
+                                setTimeout(function() {
+                                    cash("#warning-create-modal-preview").modal("hide");
+
+                                    location.reload();
+                                }, 5000); // 5000 milliseconds = 5 seconds
+                            } else {
+                                // Tangani kesalahan lainnya jika ada
+                                // Contoh: pesan kesalahan bawaan dari permintaan Ajax
+                                alert('Terjadi kesalahan lainnya: ' + error);
+                            }
+                        }
+                    });
+                });
+
+                // Panggil Ajax Master Guru
+                var url = 'http://127.0.0.1:8000/api/master-guru/list';
+                fetch(url, {
+                    method: 'GET',
+                    headers: {
+                        'Authorization': 'Bearer ' + token
+                    }
+                }).then(response => response.json()).then(data => {
+                    // Panggil fungsi untuk mengisi data ke dalam tbody DataTable
+                    populateDataTable(data);
+                }).catch(error => {
+                    console.error('Error:', error);
+                });
+
+                function populateDataTable(data) {
+                    var tableBody = $("#data-body");
+
+                    // Bersihkan isi tbody sebelum mengisi dengan data baru
+                    tableBody.empty();
+
+                    var rowDataArray = []; // Variabel untuk menyimpan objek baris
+
+                    // Perulangan menggunakan $.each()
+                    $.each(data, function(index, item) {
+                        for (let i = 0; i < item.length; i++) {
+                            // // Create an object with the desired properties
+                            var rowData = {
+                                id: item[i].id,
+                                nomor_urut: item[i].nomor_urut,
+                                nip: item[i].nip,
+                                nama: item[i].nama,
+                                jenkel: item[i].jenkel,
+                                status_pegawai: item[i].status_pegawai,
+                                jabatan: item[i].jabatan,
+                                is_active: item[i].is_active,
+                                email: item[i].email,
+                            };
+
+                            // Push the object to the data array
+                            rowDataArray.push(rowData);
+                        }
+                    });
+
+                    var dataTable = $('#data-table').DataTable();
+                    if (dataTable) {
+                        // Destroy DataTable
+                        dataTable.destroy();
+                    }
+
+                    // Initialize DataTable
+                    var table = $('#data-table').DataTable({
+                        data: rowDataArray,
+                        columns: [
+                            { data: 'nomor_urut', className: 'text-center' },
+                            { data: 'nip', className: 'text-center' },
+                            { data: 'nama', className: 'text-center' },
+                            { data: 'jenkel', className: 'text-center' },
+                            { data: 'status_pegawai', className: 'text-center' },
+                            { data: 'jabatan', className: 'text-center' },
+                            { data: 'is_active', className: 'text-center' },
+                            {
+                                data: null,
+                                render: function (data, type, row) {
+
+                                    // Create action buttons
+                                    var editBtn = '<button class="btn btn-primary btn-edit" data-id="' + data.id + '" data-nama="' + data.nama + '" data-jenkel="' + data.jenkel + '" data-status-pegawai="' + data.status_pegawai + '" data-jabatan="' + data.jabatan + '" data-is_active="' + data.is_active + '" data-email="' + data.email + '" data-nip="' + data.nip + '"><i data-feather="edit" class="w-4 h-4"></i></button>';
+                                    var deleteBtn = '<button class="btn btn-danger btn-delete" data-id="' + data.id + '"><i data-feather="trash-2" class="w-4 h-4"></i></button>';
+
+                                    // Combine the buttons
+                                    var actions = editBtn + ' || ' + deleteBtn;
+                                    return actions;
+                                }
+                            }
+                        ]
+                    });
+
+                    feather.replace();
+
+                    // Handle button click events
+                    $('#data-table').on('click', '.btn-edit', function() {
+                        cash("#modal-update").modal("show");
+                        var id = $(this).attr("data-id");
+                        var name = $(this).attr("data-nama");
+                        var jenkel = $(this).attr("data-jenkel");
+                        var status_pegawai = $(this).attr("data-status-pegawai");
+                        var jabatan = $(this).attr("data-jabatan");
+                        var is_active = $(this).attr("data-is_active");
+                        var email = $(this).attr("data-email");
+                        var nip = $(this).attr("data-nip");
+
+                        var stt = 1;
+                        if(is_active == 'Aktif')
+                        {
+                            stt = 1;
+                        }else{
+                            stt = 0;
+                        }
+
+                        // Handle edit action
+                        $('.update-id').val(id);
+                        $('.update-name').val(name);
+                        $('.update-jenkel').val(jenkel);
+                        $('.update-status-pegawai').val(status_pegawai);
+                        $('.update-jabatan').val(jabatan);
+                        $('.update-is_active').val(stt);
+                        $('.update-email').val(email);
+                        $('.update-nip').val(nip);
+                    });
+
+                    // Tombol Update Admin
+                    $(".btn-update").click(function() {
+                        // Ajax update
+                        var id = $('.update-id').val();
+                        var name = $('.update-name').val();
+                        var jenkel = $('.update-jenkel').val();
+                        var status_pegawai = $('.update-status_pegawai').val();
+                        var jabatan = $('.update-jabatan').val();
+                        var is_active = $('.update-is_active').val();
+                        var email = $('.update-email').val();
+                        var nip = $('.update-nip').val();
+                        var password = $('.password').val();
+
+                        var formData = new FormData();
+                        formData.append('name', name);
+                        formData.append('jenkel', jenkel);
+                        formData.append('status_pegawai', status_pegawai);
+                        formData.append('jabatan', jabatan);
+                        formData.append('is_active', is_active);
+                        formData.append('email', email);
+                        formData.append('nip', nip);
+                        formData.append('password', password);
+
+                        // Kirim permintaan pembaruan produk ke API
+                        $.ajax({
+                            url: "http://127.0.0.1:8000/api/master-guru/update-guru?id=" + id,
+                            type: 'POST',
+                            headers: {
+                                "Authorization": "Bearer " + token
+                            },
+                            data: formData,
+                            processData: false,
+                            contentType: false,
+                            success: function(response) {
+                                // Show the modal
+                                $('.update-sukses').text(response.message);
+                                cash("#success-update-modal-preview").modal("show");
+
+                                setTimeout(function() {
+                                    cash("#success-update-modal-preview").modal("hide");
+
+                                    location.reload();
+                                }, 3000); // 3000 milliseconds = 3 seconds
+                            },
+                            error: function(xhr, status, error) {
+                                // Tangani kesalahan dalam permintaan Ajax itu sendiri
+                                console.log(error);
+
+                                // Tampilkan pesan kesalahan yang dikirim oleh server
+                                var response = JSON.parse(xhr.responseText);
+                                if (response.success === false && response.message) {
+                                    $('.update-gagal').text(response.message);
+                                    cash("#warning-update-modal-preview").modal("show");
+
+                                    setTimeout(function() {
+                                        cash("#warning-update-modal-preview").modal("hide");
+
+                                        location.reload();
+                                    }, 5000); // 5000 milliseconds = 5 seconds
+                                } else {
+                                    // Tangani kesalahan lainnya jika ada
+                                    // Contoh: pesan kesalahan bawaan dari permintaan Ajax
+                                    alert('Terjadi kesalahan lainnya: ' + error);
+                                }
+                            }
+                        });
+                    });
+
+                    // Button Hapus data
+                    $('#data-table').on('click', '.btn-delete', function() {
+                        var id = $(this).attr("data-id");
+                        cash("#delete-modal-preview").modal("show");
+                        $('.hapus-btn').show();
+                        $('.hapus-btn').click(function() {
+                            // Ajax delete Api
+                            $.ajax({
+                                url: 'http://127.0.0.1:8000/api/portfolio/hapus/' + id,
+                                type: 'DELETE',
+                                headers: {
+                                    'Authorization': 'Bearer ' + token
+                                },
+                                success: function(response) {
+                                        // Show the modal
+                                        $('.hapus-sukses').text(response.message);
+                                        cash("#success-hapus-modal-preview").modal("show");
+
+                                        setTimeout(function() {
+                                            cash("#success-hapus-modal-preview").modal("hide");
+
+                                            location.reload();
+                                        }, 3000); // 3000 milliseconds = 3 seconds
+                                    },
+                                    error: function(xhr, status, error) {
+                                        // Show error alert
+                                        $('.hapus-gagal').text(response.message);
+                                        cash("#warning-hapus-modal-preview").modal("show");
+
+                                        setTimeout(function() {
+                                            cash("#warning-update-modal-preview").modal("hide");
+
+                                            location.reload();
+                                        }, 5000); // 3000 milliseconds = 3 seconds
+                                    }
+                            });
+                        });
+                    });
+                }
+
+                function logout(name){
+                    document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+                    winddow.location.href = "{{ route('login') }}";
+                }
+            });
+        </script>
         <!-- END: JS Assets-->
     </body>
 </html>

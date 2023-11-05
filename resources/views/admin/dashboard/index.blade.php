@@ -538,94 +538,6 @@ License: You must have a valid license purchased only from themeforest(the above
                 <!-- BEGIN: Breadcrumb -->
                 <div class="-intro-x breadcrumb mr-auto"> <a href="">Application</a> <i data-feather="chevron-right" class="breadcrumb__icon"></i> <a href="" class="breadcrumb--active">Dashboard</a> </div>
                 <!-- END: Breadcrumb -->
-                <!-- BEGIN: Search -->
-                <div class="intro-x relative mr-3 sm:mr-6">
-                    <div class="search hidden sm:block">
-                        <input type="text" class="search__input form-control dark:bg-dark-1 border-transparent placeholder-theme-8" placeholder="Search...">
-                        <i data-feather="search" class="search__icon dark:text-gray-300"></i> 
-                    </div>
-                    <a class="notification sm:hidden" href=""> <i data-feather="search" class="notification__icon dark:text-gray-300"></i> </a>
-                    <div class="search-result">
-                        <div class="search-result__content">
-                            <div class="search-result__content__title">Pages</div>
-                            <div class="mb-5">
-                                <a href="" class="flex items-center">
-                                    <div class="w-8 h-8 bg-theme-29 text-theme-10 flex items-center justify-center rounded-full"> <i class="w-4 h-4" data-feather="inbox"></i> </div>
-                                    <div class="ml-3">Mail Settings</div>
-                                </a>
-                                <a href="" class="flex items-center mt-2">
-                                    <div class="w-8 h-8 bg-theme-30 text-theme-24 flex items-center justify-center rounded-full"> <i class="w-4 h-4" data-feather="users"></i> </div>
-                                    <div class="ml-3">Users & Permissions</div>
-                                </a>
-                                <a href="" class="flex items-center mt-2">
-                                    <div class="w-8 h-8 bg-theme-31 text-theme-26 flex items-center justify-center rounded-full"> <i class="w-4 h-4" data-feather="credit-card"></i> </div>
-                                    <div class="ml-3">Transactions Report</div>
-                                </a>
-                            </div>
-                            <div class="search-result__content__title">Users</div>
-                            <div class="mb-5">
-                                <a href="" class="flex items-center mt-2">
-                                    <div class="w-8 h-8 image-fit">
-                                        <img alt="Icewall Tailwind HTML Admin Template" class="rounded-full" src="{{ asset('template/dist/images/profile-2.jpg') }}">
-                                    </div>
-                                    <div class="ml-3">Sylvester Stallone</div>
-                                    <div class="ml-auto w-48 truncate text-gray-600 text-xs text-right">sylvesterstallone@left4code.com</div>
-                                </a>
-                                <a href="" class="flex items-center mt-2">
-                                    <div class="w-8 h-8 image-fit">
-                                        <img alt="Icewall Tailwind HTML Admin Template" class="rounded-full" src="{{ asset('template/dist/images/profile-11.jpg') }}">
-                                    </div>
-                                    <div class="ml-3">Johnny Depp</div>
-                                    <div class="ml-auto w-48 truncate text-gray-600 text-xs text-right">johnnydepp@left4code.com</div>
-                                </a>
-                                <a href="" class="flex items-center mt-2">
-                                    <div class="w-8 h-8 image-fit">
-                                        <img alt="Icewall Tailwind HTML Admin Template" class="rounded-full" src="{{ asset('template/dist/images/profile-12.jpg') }}">
-                                    </div>
-                                    <div class="ml-3">Hugh Jackman</div>
-                                    <div class="ml-auto w-48 truncate text-gray-600 text-xs text-right">hughjackman@left4code.com</div>
-                                </a>
-                                <a href="" class="flex items-center mt-2">
-                                    <div class="w-8 h-8 image-fit">
-                                        <img alt="Icewall Tailwind HTML Admin Template" class="rounded-full" src="{{ asset('template/dist/images/profile-1.jpg') }}">
-                                    </div>
-                                    <div class="ml-3">Nicolas Cage</div>
-                                    <div class="ml-auto w-48 truncate text-gray-600 text-xs text-right">nicolascage@left4code.com</div>
-                                </a>
-                            </div>
-                            <div class="search-result__content__title">Products</div>
-                            <a href="" class="flex items-center mt-2">
-                                <div class="w-8 h-8 image-fit">
-                                    <img alt="Icewall Tailwind HTML Admin Template" class="rounded-full" src="{{ asset('template/dist/images/preview-13.jpg') }}">
-                                </div>
-                                <div class="ml-3">Nikon Z6</div>
-                                <div class="ml-auto w-48 truncate text-gray-600 text-xs text-right">Photography</div>
-                            </a>
-                            <a href="" class="flex items-center mt-2">
-                                <div class="w-8 h-8 image-fit">
-                                    <img alt="Icewall Tailwind HTML Admin Template" class="rounded-full" src="{{ asset('template/dist/images/preview-3.jpg') }}">
-                                </div>
-                                <div class="ml-3">Nike Air Max 270</div>
-                                <div class="ml-auto w-48 truncate text-gray-600 text-xs text-right">Sport &amp; Outdoor</div>
-                            </a>
-                            <a href="" class="flex items-center mt-2">
-                                <div class="w-8 h-8 image-fit">
-                                    <img alt="Icewall Tailwind HTML Admin Template" class="rounded-full" src="{{ asset('template/dist/images/preview-13.jpg') }}">
-                                </div>
-                                <div class="ml-3">Sony A7 III</div>
-                                <div class="ml-auto w-48 truncate text-gray-600 text-xs text-right">Photography</div>
-                            </a>
-                            <a href="" class="flex items-center mt-2">
-                                <div class="w-8 h-8 image-fit">
-                                    <img alt="Icewall Tailwind HTML Admin Template" class="rounded-full" src="{{ asset('template/dist/images/preview-14.jpg') }}">
-                                </div>
-                                <div class="ml-3">Nike Air Max 270</div>
-                                <div class="ml-auto w-48 truncate text-gray-600 text-xs text-right">Sport &amp; Outdoor</div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- END: Search -->
                 <!-- BEGIN: Notifications -->
                 <div class="intro-x dropdown mr-4 sm:mr-6">
                     <div class="dropdown-toggle notification notification--bullet cursor-pointer" role="button" aria-expanded="false"> <i data-feather="bell" class="notification__icon dark:text-gray-300"></i> </div>
@@ -639,7 +551,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 </div>
                                 <div class="ml-2 overflow-hidden">
                                     <div class="flex items-center">
-                                        <a href="javascript:;" class="font-medium truncate mr-5">Sylvester Stallone</a> 
+                                        <a href="javascript:;" class="font-medium truncate mr-5">Sylvester Stallone</a>
                                         <div class="text-xs text-gray-500 ml-auto whitespace-nowrap">01:10 PM</div>
                                     </div>
                                     <div class="w-full truncate text-gray-600 mt-0.5">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 20</div>
@@ -652,7 +564,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 </div>
                                 <div class="ml-2 overflow-hidden">
                                     <div class="flex items-center">
-                                        <a href="javascript:;" class="font-medium truncate mr-5">Johnny Depp</a> 
+                                        <a href="javascript:;" class="font-medium truncate mr-5">Johnny Depp</a>
                                         <div class="text-xs text-gray-500 ml-auto whitespace-nowrap">01:10 PM</div>
                                     </div>
                                     <div class="w-full truncate text-gray-600 mt-0.5">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 20</div>
@@ -665,7 +577,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 </div>
                                 <div class="ml-2 overflow-hidden">
                                     <div class="flex items-center">
-                                        <a href="javascript:;" class="font-medium truncate mr-5">Hugh Jackman</a> 
+                                        <a href="javascript:;" class="font-medium truncate mr-5">Hugh Jackman</a>
                                         <div class="text-xs text-gray-500 ml-auto whitespace-nowrap">01:10 PM</div>
                                     </div>
                                     <div class="w-full truncate text-gray-600 mt-0.5">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem </div>
@@ -678,7 +590,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 </div>
                                 <div class="ml-2 overflow-hidden">
                                     <div class="flex items-center">
-                                        <a href="javascript:;" class="font-medium truncate mr-5">Nicolas Cage</a> 
+                                        <a href="javascript:;" class="font-medium truncate mr-5">Nicolas Cage</a>
                                         <div class="text-xs text-gray-500 ml-auto whitespace-nowrap">01:10 PM</div>
                                     </div>
                                     <div class="w-full truncate text-gray-600 mt-0.5">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomi</div>
@@ -691,7 +603,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 </div>
                                 <div class="ml-2 overflow-hidden">
                                     <div class="flex items-center">
-                                        <a href="javascript:;" class="font-medium truncate mr-5">Kevin Spacey</a> 
+                                        <a href="javascript:;" class="font-medium truncate mr-5">Kevin Spacey</a>
                                         <div class="text-xs text-gray-500 ml-auto whitespace-nowrap">01:10 PM</div>
                                     </div>
                                     <div class="w-full truncate text-gray-600 mt-0.5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#039;s standard dummy text ever since the 1500</div>
@@ -734,33 +646,16 @@ License: You must have a valid license purchased only from themeforest(the above
                 <nav class="side-nav">
                     <ul>
                         <li>
-                            <a href="javascript:;.html" class="side-menu side-menu--active">
-                                <div class="side-menu__icon"> <i data-feather="home"></i> </div>
-                                <div class="side-menu__title">
-                                    Dashboard 
-                                    <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
-                                </div>
+                            <a href="{{ route('dashboard') }}" class="side-menu side-menu--active">
+                                <div class="side-menu__icon"> <i data-feather="monitor"></i> </div>
+                                <div class="side-menu__title"> Dashboard </div>
                             </a>
-                            <ul class="side-menu__sub-open">
-                                <li>
-                                    <a href="index.html" class="side-menu side-menu--active">
-                                        <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
-                                        <div class="side-menu__title"> Overview 1 </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="side-menu-light-dashboard-overview-2.html" class="side-menu">
-                                        <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
-                                        <div class="side-menu__title"> Overview 2 </div>
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
-                        <li>
+                        {{-- <li>
                             <a href="javascript:;" class="side-menu">
                                 <div class="side-menu__icon"> <i data-feather="box"></i> </div>
                                 <div class="side-menu__title">
-                                    Menu Layout 
+                                    Menu Layout
                                     <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
                                 </div>
                             </a>
@@ -784,11 +679,11 @@ License: You must have a valid license purchased only from themeforest(the above
                                     </a>
                                 </li>
                             </ul>
-                        </li>
+                        </li> --}}
                         <li>
-                            <a href="side-menu-light-inbox.html" class="side-menu">
+                            <a href="{{ route('masterguru') }}" class="side-menu">
                                 <div class="side-menu__icon"> <i data-feather="inbox"></i> </div>
-                                <div class="side-menu__title"> Inbox </div>
+                                <div class="side-menu__title"> Master Guru </div>
                             </a>
                         </li>
                         <li>
@@ -826,7 +721,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             <a href="javascript:;" class="side-menu">
                                 <div class="side-menu__icon"> <i data-feather="edit"></i> </div>
                                 <div class="side-menu__title">
-                                    Crud 
+                                    Crud
                                     <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
                                 </div>
                             </a>
@@ -849,7 +744,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             <a href="javascript:;" class="side-menu">
                                 <div class="side-menu__icon"> <i data-feather="users"></i> </div>
                                 <div class="side-menu__title">
-                                    Users 
+                                    Users
                                     <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
                                 </div>
                             </a>
@@ -878,7 +773,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             <a href="javascript:;" class="side-menu">
                                 <div class="side-menu__icon"> <i data-feather="trello"></i> </div>
                                 <div class="side-menu__title">
-                                    Profile 
+                                    Profile
                                     <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
                                 </div>
                             </a>
@@ -907,7 +802,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             <a href="javascript:;" class="side-menu">
                                 <div class="side-menu__icon"> <i data-feather="layout"></i> </div>
                                 <div class="side-menu__title">
-                                    Pages 
+                                    Pages
                                     <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
                                 </div>
                             </a>
@@ -916,7 +811,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <a href="javascript:;" class="side-menu">
                                         <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                         <div class="side-menu__title">
-                                            Wizards 
+                                            Wizards
                                             <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
                                         </div>
                                     </a>
@@ -945,7 +840,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <a href="javascript:;" class="side-menu">
                                         <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                         <div class="side-menu__title">
-                                            Blog 
+                                            Blog
                                             <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
                                         </div>
                                     </a>
@@ -974,7 +869,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <a href="javascript:;" class="side-menu">
                                         <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                         <div class="side-menu__title">
-                                            Pricing 
+                                            Pricing
                                             <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
                                         </div>
                                     </a>
@@ -997,7 +892,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <a href="javascript:;" class="side-menu">
                                         <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                         <div class="side-menu__title">
-                                            Invoice 
+                                            Invoice
                                             <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
                                         </div>
                                     </a>
@@ -1020,7 +915,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <a href="javascript:;" class="side-menu">
                                         <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                         <div class="side-menu__title">
-                                            FAQ 
+                                            FAQ
                                             <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
                                         </div>
                                     </a>
@@ -1082,7 +977,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             <a href="javascript:;" class="side-menu">
                                 <div class="side-menu__icon"> <i data-feather="inbox"></i> </div>
                                 <div class="side-menu__title">
-                                    Components 
+                                    Components
                                     <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
                                 </div>
                             </a>
@@ -1091,7 +986,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <a href="javascript:;" class="side-menu">
                                         <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                         <div class="side-menu__title">
-                                            Table 
+                                            Table
                                             <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
                                         </div>
                                     </a>
@@ -1114,7 +1009,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <a href="javascript:;" class="side-menu">
                                         <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                         <div class="side-menu__title">
-                                            Overlay 
+                                            Overlay
                                             <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
                                         </div>
                                     </a>
@@ -1199,7 +1094,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             <a href="javascript:;" class="side-menu">
                                 <div class="side-menu__icon"> <i data-feather="sidebar"></i> </div>
                                 <div class="side-menu__title">
-                                    Forms 
+                                    Forms
                                     <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
                                 </div>
                             </a>
@@ -1246,7 +1141,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             <a href="javascript:;" class="side-menu">
                                 <div class="side-menu__icon"> <i data-feather="hard-drive"></i> </div>
                                 <div class="side-menu__title">
-                                    Widgets 
+                                    Widgets
                                     <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
                                 </div>
                             </a>
@@ -1282,7 +1177,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <!-- BEGIN: Notification -->
                                 <div class="col-span-12 mt-6 -mb-6 intro-y">
                                     <div class="alert alert-dismissible show box bg-theme-26 text-white flex items-center mb-6" role="alert">
-                                        <span>Introducing new dashboard! Download now at <a href="https://themeforest.net/item/midone-jquery-tailwindcss-html-admin-template/26366820" class="underline ml-1" target="blank">themeforest.net</a>.</span>
+                                        <span>Hallo <b id="sambutan"></b>... Selamat datang dalam aplikasi PSB</span>
                                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"> <i data-feather="x" class="w-4 h-4"></i> </button>
                                     </div>
                                 </div>
@@ -1304,12 +1199,12 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <div class="report-box-2 intro-y mt-12 sm:mt-5">
                                         <div class="box sm:flex">
                                             <div class="px-8 py-12 flex flex-col justify-center flex-1">
-                                                <i data-feather="shopping-bag" class="w-10 h-10 text-theme-23"></i> 
+                                                <i data-feather="shopping-bag" class="w-10 h-10 text-theme-23"></i>
                                                 <div class="relative text-3xl font-bold mt-12 pl-4"> <span class="absolute text-xl top-0 left-0">$</span> 54.143 </div>
                                                 <div class="report-box-2__indicator bg-theme-10 tooltip cursor-pointer" title="47% Higher than last month"> 47% <i data-feather="chevron-up" class="w-4 h-4 ml-0.5"></i> </div>
                                                 <div class="mt-4 text-gray-600 dark:text-gray-600">Sales earnings this month after associated author fees, & before taxes.</div>
                                                 <button class="btn btn-outline-secondary relative justify-start rounded-full mt-12">
-                                                    Download Reports 
+                                                    Download Reports
                                                     <span class="w-8 h-8 absolute flex justify-center items-center bg-theme-17 dark:bg-theme-26 text-white rounded-full right-0 top-0 bottom-0 my-auto ml-auto mr-0.5"> <i data-feather="arrow-right" class="w-4 h-4"></i> </span>
                                                 </button>
                                             </div>
@@ -1350,12 +1245,12 @@ License: You must have a valid license purchased only from themeforest(the above
                                         <h2 class="text-lg font-medium truncate mr-5">
                                             Visitors
                                         </h2>
-                                        <a href="" class="ml-auto text-theme-26 dark:text-theme-33 truncate">View on Map</a> 
+                                        <a href="" class="ml-auto text-theme-26 dark:text-theme-33 truncate">View on Map</a>
                                     </div>
                                     <div class="report-box-2 intro-y mt-5">
                                         <div class="box p-5">
                                             <div class="flex items-center">
-                                                Realtime active users 
+                                                Realtime active users
                                                 <div class="dropdown ml-auto">
                                                     <a class="dropdown-toggle w-5 h-5 block -mr-2" href="javascript:;" aria-expanded="false"> <i data-feather="more-vertical" class="w-5 h-5 text-gray-600 dark:text-gray-300"></i> </a>
                                                     <div class="dropdown-menu w-40">
@@ -1407,7 +1302,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                         <h2 class="text-lg font-medium truncate mr-5">
                                             Users By Age
                                         </h2>
-                                        <a href="" class="ml-auto text-theme-26 dark:text-theme-33 truncate">Show More</a> 
+                                        <a href="" class="ml-auto text-theme-26 dark:text-theme-33 truncate">Show More</a>
                                     </div>
                                     <div class="report-box-2 intro-y mt-5">
                                         <div class="box p-5">
@@ -1424,21 +1319,21 @@ License: You must have a valid license purchased only from themeforest(the above
                                                     <div class="mt-5">
                                                         <div class="flex items-center">
                                                             <div class="w-2 h-2 bg-theme-17 rounded-full mr-3"></div>
-                                                            <span class="truncate">17 - 30 Years old</span> 
+                                                            <span class="truncate">17 - 30 Years old</span>
                                                             <div class="h-px flex-1 border border-r border-dashed border-gray-300 mx-3 xl:hidden"></div>
-                                                            <span class="font-medium xl:ml-auto">62%</span> 
+                                                            <span class="font-medium xl:ml-auto">62%</span>
                                                         </div>
                                                         <div class="flex items-center mt-4">
                                                             <div class="w-2 h-2 bg-theme-35 rounded-full mr-3"></div>
-                                                            <span class="truncate">31 - 50 Years old</span> 
+                                                            <span class="truncate">31 - 50 Years old</span>
                                                             <div class="h-px flex-1 border border-r border-dashed border-gray-300 mx-3 xl:hidden"></div>
-                                                            <span class="font-medium xl:ml-auto">33%</span> 
+                                                            <span class="font-medium xl:ml-auto">33%</span>
                                                         </div>
                                                         <div class="flex items-center mt-4">
                                                             <div class="w-2 h-2 bg-theme-23 rounded-full mr-3"></div>
-                                                            <span class="truncate">>= 50 Years old</span> 
+                                                            <span class="truncate">>= 50 Years old</span>
                                                             <div class="h-px flex-1 border border-r border-dashed border-gray-300 mx-3 xl:hidden"></div>
-                                                            <span class="font-medium xl:ml-auto">10%</span> 
+                                                            <span class="font-medium xl:ml-auto">10%</span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1454,13 +1349,13 @@ License: You must have a valid license purchased only from themeforest(the above
                                             Official Store
                                         </h2>
                                         <div class="sm:ml-auto mt-3 sm:mt-0 relative text-gray-700 dark:text-gray-300">
-                                            <i data-feather="map-pin" class="w-4 h-4 z-10 absolute my-auto inset-y-0 ml-3 left-0"></i> 
+                                            <i data-feather="map-pin" class="w-4 h-4 z-10 absolute my-auto inset-y-0 ml-3 left-0"></i>
                                             <input type="text" class="form-control sm:w-40 box pl-10" placeholder="Filter by city">
                                         </div>
                                     </div>
                                     <div class="intro-y box p-5 mt-12 sm:mt-5">
                                         <div>250 Official stores in 21 countries, click the marker to see location details.</div>
-                                        <div class="report-maps mt-5 bg-gray-200 rounded-md" data-center="-6.2425342, 106.8626478" data-sources="/dist/json/location.json"></div>
+                                        {{-- <div class="report-maps mt-5 bg-gray-200 rounded-md" data-center="-6.2425342, 106.8626478" data-sources="/dist/json/location.json"></div> --}}
                                     </div>
                                 </div>
                                 <!-- END: Official Store -->
@@ -1520,7 +1415,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                 <div class="py-1 px-2 rounded-full text-xs bg-theme-10 text-white cursor-pointer font-medium">137 Sales</div>
                                             </div>
                                         </div>
-                                        <a href="" class="intro-y w-full block text-center rounded-md py-4 border border-dotted border-theme-27 dark:border-dark-5 text-theme-28 dark:text-gray-600">View More</a> 
+                                        <a href="" class="intro-y w-full block text-center rounded-md py-4 border border-dotted border-theme-27 dark:border-dark-5 text-theme-28 dark:text-gray-600">View More</a>
                                     </div>
                                 </div>
                                 <!-- END: Weekly Best Sellers -->
@@ -1541,7 +1436,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                         <div class="w-full sm:w-60 leading-relaxed text-gray-600 mt-2">Get a IDR 100,000 voucher by inviting your friends to fund #BecomeMember</div>
                                         <div class="w-48 relative mt-6 cursor-pointer tooltip" title="Copy referral link">
                                             <input class="form-control" value="https://dashboard.in">
-                                            <i data-feather="copy" class="absolute right-0 top-0 bottom-0 my-auto mr-4 w-4 h-4"></i> 
+                                            <i data-feather="copy" class="absolute right-0 top-0 bottom-0 my-auto mr-4 w-4 h-4"></i>
                                         </div>
                                         <img class="hidden sm:block absolute top-0 right-0 w-1/2 mt-1 -mr-12" alt="Icewall Tailwind HTML Admin Template" src="{{ asset('template/dist/images/phone-illustration.svg') }}">
                                     </div>
@@ -1585,7 +1480,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                         </div>
                                                     </td>
                                                     <td>
-                                                        <a href="" class="font-medium whitespace-nowrap">Samsung Galaxy S20 Ultra</a> 
+                                                        <a href="" class="font-medium whitespace-nowrap">Samsung Galaxy S20 Ultra</a>
                                                         <div class="text-gray-600 text-xs whitespace-nowrap mt-0.5">Smartphone &amp; Tablet</div>
                                                     </td>
                                                     <td class="text-center">50</td>
@@ -1614,7 +1509,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                         </div>
                                                     </td>
                                                     <td>
-                                                        <a href="" class="font-medium whitespace-nowrap">Nike Tanjun</a> 
+                                                        <a href="" class="font-medium whitespace-nowrap">Nike Tanjun</a>
                                                         <div class="text-gray-600 text-xs whitespace-nowrap mt-0.5">Sport &amp; Outdoor</div>
                                                     </td>
                                                     <td class="text-center">50</td>
@@ -1643,7 +1538,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                         </div>
                                                     </td>
                                                     <td>
-                                                        <a href="" class="font-medium whitespace-nowrap">Nike Air Max 270</a> 
+                                                        <a href="" class="font-medium whitespace-nowrap">Nike Air Max 270</a>
                                                         <div class="text-gray-600 text-xs whitespace-nowrap mt-0.5">Sport &amp; Outdoor</div>
                                                     </td>
                                                     <td class="text-center">50</td>
@@ -1672,7 +1567,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                         </div>
                                                     </td>
                                                     <td>
-                                                        <a href="" class="font-medium whitespace-nowrap">Dell XPS 13</a> 
+                                                        <a href="" class="font-medium whitespace-nowrap">Dell XPS 13</a>
                                                         <div class="text-gray-600 text-xs whitespace-nowrap mt-0.5">PC &amp; Laptop</div>
                                                     </td>
                                                     <td class="text-center">101</td>
@@ -1773,7 +1668,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                             <h2 class="text-lg font-medium truncate mr-5">
                                                 Recent Activities
                                             </h2>
-                                            <a href="" class="ml-auto text-theme-26 dark:text-theme-33 truncate">Show More</a> 
+                                            <a href="" class="ml-auto text-theme-26 dark:text-theme-33 truncate">Show More</a>
                                         </div>
                                         <div class="report-timeline mt-5 relative">
                                             <div class="intro-x relative flex items-center mb-3">
@@ -1917,7 +1812,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                     <div class="text-theme-24">+$21</div>
                                                 </div>
                                             </div>
-                                            <a href="" class="intro-x w-full block text-center rounded-md py-3 border border-dotted border-theme-27 dark:border-dark-5 text-theme-28 dark:text-gray-600">View More</a> 
+                                            <a href="" class="intro-x w-full block text-center rounded-md py-3 border border-dotted border-theme-27 dark:border-dark-5 text-theme-28 dark:text-gray-600">View More</a>
                                         </div>
                                     </div>
                                     <!-- END: Transactions -->
@@ -1933,9 +1828,9 @@ License: You must have a valid license purchased only from themeforest(the above
                                             <div class="intro-x box">
                                                 <div class="p-5">
                                                     <div class="flex">
-                                                        <i data-feather="chevron-left" class="w-5 h-5 text-gray-600"></i> 
+                                                        <i data-feather="chevron-left" class="w-5 h-5 text-gray-600"></i>
                                                         <div class="font-medium text-base mx-auto">April</div>
-                                                        <i data-feather="chevron-right" class="w-5 h-5 text-gray-600"></i> 
+                                                        <i data-feather="chevron-right" class="w-5 h-5 text-gray-600"></i>
                                                     </div>
                                                     <div class="grid grid-cols-7 gap-4 mt-5 text-center">
                                                         <div class="font-medium">Su</div>
@@ -1992,21 +1887,21 @@ License: You must have a valid license purchased only from themeforest(the above
                                                 <div class="border-t border-gray-200 dark:border-dark-5 p-5">
                                                     <div class="flex items-center">
                                                         <div class="w-2 h-2 bg-theme-22 rounded-full mr-3"></div>
-                                                        <span class="truncate">UI/UX Workshop</span> 
+                                                        <span class="truncate">UI/UX Workshop</span>
                                                         <div class="h-px flex-1 border border-r border-dashed border-gray-300 mx-3 xl:hidden"></div>
-                                                        <span class="font-medium xl:ml-auto">23th</span> 
+                                                        <span class="font-medium xl:ml-auto">23th</span>
                                                     </div>
                                                     <div class="flex items-center mt-4">
                                                         <div class="w-2 h-2 bg-theme-26 dark:bg-theme-10 rounded-full mr-3"></div>
-                                                        <span class="truncate">VueJs Frontend Development</span> 
+                                                        <span class="truncate">VueJs Frontend Development</span>
                                                         <div class="h-px flex-1 border border-r border-dashed border-gray-300 mx-3 xl:hidden"></div>
-                                                        <span class="font-medium xl:ml-auto">10th</span> 
+                                                        <span class="font-medium xl:ml-auto">10th</span>
                                                     </div>
                                                     <div class="flex items-center mt-4">
                                                         <div class="w-2 h-2 bg-theme-23 rounded-full mr-3"></div>
-                                                        <span class="truncate">Laravel Rest API</span> 
+                                                        <span class="truncate">Laravel Rest API</span>
                                                         <div class="h-px flex-1 border border-r border-dashed border-gray-300 mx-3 xl:hidden"></div>
-                                                        <span class="font-medium xl:ml-auto">31th</span> 
+                                                        <span class="font-medium xl:ml-auto">31th</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -2021,15 +1916,8 @@ License: You must have a valid license purchased only from themeforest(the above
                 <!-- END: Content -->
             </div>
         </div>
-        <!-- BEGIN: Dark Mode Switcher-->
-        <div data-url="side-menu-dark-dashboard-overview-1.html" class="dark-mode-switcher cursor-pointer shadow-md fixed bottom-0 right-0 box dark:bg-dark-2 border rounded-full w-40 h-12 flex items-center justify-center z-50 mb-10 mr-10">
-            <div class="mr-4 text-gray-700 dark:text-gray-300">Dark Mode</div>
-            <div class="dark-mode-switcher__toggle border"></div>
-        </div>
-        <!-- END: Dark Mode Switcher-->
         <!-- BEGIN: JS Assets-->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!--manggil JQuery-->
-        <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
         <script src="{{ asset('template/dist/js/app.js') }}"></script>
         <!-- END: JS Assets-->
@@ -2066,14 +1954,14 @@ License: You must have a valid license purchased only from themeforest(the above
                 fetch(url, {
                     method: 'GET',
                     headers: {
-                        'Authorization' : 'Bearer' + token
+                        'Authorization' : 'Bearer ' + token
                     }
                 }).then(response => response.json()).then(data => {
 
                     $('.nama-user').text(data.name);
                     $('.role-user').text(data.role);
                     $('#sambutan').text(data.name);
-                    
+
                 }). catch (error => {
                     console.error('Error:', error);
                 });

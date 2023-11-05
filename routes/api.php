@@ -3,7 +3,8 @@
 use App\Http\Controllers\AutentikasiController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\MasterGuruController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +28,13 @@ Route::prefix('otentikasi')->group(function() {
 Route::middleware(['auth:sanctum'])->group(function(){
     Route::prefix('dashboard')->group(function(){
         Route::get("/home", [DashboardController::class, 'index']);
-        Route::get("/profil", [DashboardController::class, 'profil']);
+        Route::get("/profil", [DashboardController::class, 'profile']);
+    });
+
+    Route::prefix('master-guru')->group(function(){
+        Route::get("/list", [MasterGuruController::class, 'listGuru']);
+        Route::post("/tambah-guru", [MasterGuruController::class, 'addguru']);
+        Route::post("/update-guru", [MasterGuruController::class, 'update']);
+        Route::delete("/hapus/{id}", [MasterGuruController::class, 'hapus']);
     });
 });
