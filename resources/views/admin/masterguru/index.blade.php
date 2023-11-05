@@ -1366,14 +1366,14 @@ License: You must have a valid license purchased only from themeforest(the above
                     </div>
                     <!-- END: Modal Content -->
                     <!-- BEGIN: Modal Update Sukses Content -->
-                    <div id="success-create-modal-preview" class="modal" tabindex="-1" aria-hidden="true">
+                    <div id="success-update-modal-preview" class="modal" tabindex="-1" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-body p-0">
                                     <div class="p-5 text-center">
-                                        <i data-feather="check-circle" class="w-16 h-16 text-theme-10 mx-auto mt-3"></i>
-                                        <div class="text-3xl mt-5">Berhasil membuat data guru baru!</div>
-                                        <div class="text-gray-600 mt-2 create-sukses"></div>
+                                        <i data-feather="check-circle" class="w-16 sh-16 text-theme-10 mx-auto mt-3"></i>
+                                        <div class="text-3xl mt-5">Berhasil update data guru baru!</div>
+                                        <div class="text-gray-600 mt-2 update-sukses"></div>
                                     </div>
                                 </div>
                             </div>
@@ -1381,14 +1381,67 @@ License: You must have a valid license purchased only from themeforest(the above
                     </div>
                     <!-- END: Modal Content -->
                     <!-- BEGIN: Modal Update Gagal Content -->
-                    <div id="warning-create-modal-preview" class="modal" tabindex="-1" aria-hidden="true">
+                    <div id="warning-update-modal-preview" class="modal" tabindex="-1" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-body p-0">
                                     <div class="p-5 text-center">
                                         <i data-feather="x-circle" class="w-16 h-16 text-theme-23 mx-auto mt-3"></i>
-                                        <div class="text-3xl mt-5">Oops...Gagal membuat data guru baru!</div>
-                                        <div class="text-gray-600 mt-2 create-gagal"></div>
+                                        <div class="text-3xl mt-5">Oops...Gagal update data guru baru!</div>
+                                        <div class="text-gray-600 mt-2 update-gagal"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END: Modal Content -->
+                    <!-- BEGIN: Modal Delete Content -->
+                    <div id="delete-modal-preview" class="modal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body p-0">
+                                    <div class="p-5 text-center">
+                                        <i data-feather="x-circle" class="w-16 h-16 text-theme-24 mx-auto mt-3"></i>
+                                        <div class="text-3xl mt-5">Apa kamu yakin ingin hapus data Master Guru ini?</div>
+                                        <div class="text-gray-600 mt-2">
+                                            Apa kamu yakin akan menghapus data Master Guru ini?
+                                            <br>
+                                            Data yang dihapus tidak akan bisa dikembalikan.
+                                        </div>
+                                    </div>
+                                    <div class="px-5 pb-8 text-center">
+                                        <button type="button" data-dismiss="modal" class="btn btn-outline-secondary w-24 dark:border-dark-5 dark:text-gray-300 mr-1">Batalkan</button>
+                                        <button type="button" class="btn btn-danger w-24 hapus-btn">Hapus</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END: Modal Content -->
+                    <!-- BEGIN: Modal Hapus Sukses Content -->
+                    <div id="success-hapus-modal-preview" class="modal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body p-0">
+                                    <div class="p-5 text-center">
+                                        <i data-feather="check-circle" class="w-16 h-16 text-theme-10 mx-auto mt-3"></i>
+                                        <div class="text-3xl mt-5">Hapus Data Master Guru Berhasil!</div>
+                                        <div class="text-gray-600 mt-2 hapus-sukses"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END: Modal Content -->
+                    <!-- BEGIN: Modal Hapus Gagal Content -->
+                    <div id="warning-hapus-modal-preview" class="modal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body p-0">
+                                    <div class="p-5 text-center">
+                                        <i data-feather="x-circle" class="w-16 h-16 text-theme-23 mx-auto mt-3"></i>
+                                        <div class="text-3xl mt-5">Oops...Hapus Data Gagal!</div>
+                                        <div class="text-gray-600 mt-2 hapus-gagal"></div>
                                     </div>
                                 </div>
                             </div>
@@ -1488,11 +1541,11 @@ License: You must have a valid license purchased only from themeforest(the above
                         contentType: false,
                         success: function(response) {
                             // Show the modal
-                            $('.create-sukses').text(response.message);
-                            cash("#success-create-modal-preview").modal("show");
+                            $('.udpate-sukses').text(response.message);
+                            cash("#success-update-modal-preview").modal("show");
 
                             setTimeout(function() {
-                                cash("#success-create-modal-preview").modal("hide");
+                                cash("#success-update-modal-preview").modal("hide");
 
                                 location.reload();
                             }, 3000); // 3000 milliseconds = 3 seconds
@@ -1504,11 +1557,11 @@ License: You must have a valid license purchased only from themeforest(the above
                             // Tampilkan pesan kesalahan yang dikirim oleh server
                             var response = JSON.parse(xhr.responseText);
                             if (response.success === false && response.message) {
-                                $('.create-gagal').text(response.message);
-                                cash("#warning-create-modal-preview").modal("show");
+                                $('.update-gagal').text(response.message);
+                                cash("#warning-update-modal-preview").modal("show");
 
                                 setTimeout(function() {
-                                    cash("#warning-create-modal-preview").modal("hide");
+                                    cash("#warning-update-modal-preview").modal("hide");
 
                                     location.reload();
                                 }, 5000); // 5000 milliseconds = 5 seconds
@@ -1706,7 +1759,7 @@ License: You must have a valid license purchased only from themeforest(the above
                         $('.hapus-btn').click(function() {
                             // Ajax delete Api
                             $.ajax({
-                                url: 'http://127.0.0.1:8000/api/portfolio/hapus/' + id,
+                                url: 'http://127.0.0.1:8000/api/master-guru/hapus/' + id,
                                 type: 'DELETE',
                                 headers: {
                                     'Authorization': 'Bearer ' + token
