@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+    <!-- BEGIN: Head -->
+    <head>
+        <meta charset="utf-8">
+        <link rel="shortcut icon" href="{{ asset('template/dist/images/logo.svg') }}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Icewall admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
+        <meta name="keywords" content="admin template, Icewall Admin Template, dashboard template, flat admin template, responsive admin template, web app">
+        <meta name="author" content="LEFT4CODE">
+        <title> Master Krtieria </title>
+        <!-- BEGIN: CSS Assets -->
+        <link rel="stylesheet" href="{{ asset('template/dist/css/app.css') }}">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+        <!-- END: CSS Assets -->
+    </head>
+    <!-- END: Head -->
+
+    <body class="main">
+        <!-- BEGIN: Mobile Menu -->
+        <div class="mobile-menu md:hidden">
+            <div class="mobile-menu-bar">
+                <a href="" class="flex mr-auto">
+                    <img src="{{ asset('template/dist/images/logo.svg') }}" alt="Icewall Tailwind HTML Admin Template" class="w-6">
+                </a>
+                <a href="javascript:;" id="mobile-menu-toggler"> <i data-feather="bar-chart-2" class="w-8 h-8 text-white transform -rotate-90"></i> </a>
+            </div>
+            <ul class="border-t border-theme-2 py-5 hidden">
+                <li>
+                    <a href="{{ route('dashboard') }}" class="menu">
+                        <div class="menu__icon"> <i data-feather="home"></i> </div>
+                        <div class="menu__title"> Dashboard</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('masterguru') }}" class="menu">
+                        <div class="menu__icon"> <i data-feather="users"></i> </div>
+                        <div class="menu__title"> Master Guru </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('mastersiswa') }}" class="menu">
+                        <div class="menu__icon"> <i data-feather="users"></i> </div>
+                        <div class="menu__title"> Master Siswa </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('mastermapel') }}" class="menu">
+                        <div class="menu__icon"> <i data-feather="inbox"></i> </div>
+                        <div class="menu__title"> Master Mata Pelajaran </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('masterkriteria') }}" class="menu">
+                        <div class="menu__icon"> <i data-feather="slack"></i> </div>
+                        <div class="menu__title"> Master Kriteria </div>
+                    </a>
+                </li>
+                <li class="menu__devider my-6"></li>
+                <li>
+                    <a href="javascript:;" class="menu">
+                        <div class="menu__icon"> <i data-feather="edit"></i> </div>
+                        <div class="menu__title"> 
+                            Data Nilai 
+                        </div>
+                        <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="{{route('nilairaport')}}" class="menu">
+                                <div class="menu__icon"> <i data-feather="plus"></i> </div>
+                                <div class="menu__title"> Nilai Raport</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('nilaiketidakhadiran') }}" class="menu">
+                                <div class="menu__icon"> <i data-feather="plus"></i> </div>
+                                <div class="menu__title"> Tingkat Ketidakhadiran Siswa</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('nilaisikap') }}" class="menu">
+                                <div class="menu__icon"> <i data-feather="plus"></i> </div>
+                                <div class="menu__title"> Sikap </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('nilaiprestasi') }}" class="menu">
+                                <div class="menu__icon"> <i data-feather="plus"></i> </div>
+                                <div class="menu__title"> Prestasi Akademik / Non-Akademik</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('nilaiketerlambatan') }}" class="menu">
+                                <div class="menu__icon"> <i data-feather="plus"></i> </div>
+                                <div class="menu__title"> Keterlambatan mMasuk Sekolah</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('nilaihafalan') }}" class="menu">
+                                <div class="menu__icon"> <i data-feather="plus"></i> </div>
+                                <div class="menu__title"> Hafalan Juz Al-Qur'an</div>
+                            </a>
+                        </li>
+                    </ul>
+                    <li>
+                        <a href="javascript:;" class="menu">
+                            <div class="menu__icon"> <i data-feather="clipboard"></i> </div>
+                            <div class="menu__title"> Penilaian </div>
+                            <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
+                        </a>
+                        <ul class="">
+                            <li>
+                                <a href="{{ route('nilaisemuamapel') }}" class="menu">
+                                    <div class="menu__icon"> <i data-feather="plus"></i> </div>
+                                    <div class="menu__title"> Nilai | Semua Mapel </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{route('nilaiakhir')}}" class="menu">
+                                    <div class="menu__icon"> <i data-feather="plus"></i> </div>
+                                    <div class="menu__title"> Perangkingan </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </li>
+            </ul>
+        </div>
+        <!-- END: Mobile Menu -->
+        <!-- BEGIN: Top Bar -->
+        <div class="top-bar-boxed border-b border-theme-2 -mt-7 md:-mt-5 -m-3 sm:-mx-8 px-3 sm:px-8 md:pt-0 mb-12">
+            <div class="h-full flex items-center">
+                <!-- BEGIN: Logo -->
+                <a href="" class="-intro-x hidden md:flex">
+                    <img src="{{ asset('template/dist/images/logo.svg') }}" alt="Icewall Tailwing HTML Admin Template" class="w-6">
+                    <span class="text-white text-lg ml-3"> APK - <span class="font-medium"> PSB </span> </span>
+                </a>
+                <!-- END: Logo- -->
+                <!-- BEGIN: Breadcrumb -->
+                <div class="-intro-x breadcrumb mr-auto"> <a href=""> Beranda </a> <i data-feather="chevron-right" class="breadcrumb__icon"></i> <a href="" class="breadcrumb--active"> Master Kriteria </a> </div>
+                <!-- END: Breadcrumb -->
+                <!-- BEGIN: Notification -->
+                <div class="intro-x dropdown mr-4 sm:mr-6">
+                    <div class="dropdown-toggle notification notification--bullet cursor-pointer" role="button" aria-expanded="false"> <i data-feather="bell" class="notification__icon dark:text-gray-300"></i> </div>
+                    <div class="notification-content pt-2 dropdown-menu">
+                        <div class="notification-content__box dropdown-menu__content box dark:bg-dark-6"> <!-- menampilkan POP UP -->
+                            <div class="notification-content__title"> Notifikasi </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END: Notification -->
+                <!-- BEGIN: Account Menu -->
+                <div class="intro-x dropdown w-8 h-8">
+                    <div class="dropdown-toggle w-8 h-8 rounded-full overflow-hidden shadow--lg image-fit zoom-in scale-110" role="button" aria-expanded="false">
+                        <img src="{{ asset('template/dist/images/profile-3.jpg') }}" alt="Icewall Tailwind HTML Admin Template">
+                    </div>
+                    <div class="dropdown-menu w-56"> <!-- awal: menampilkan dropwdown menu -->
+                        <div class="dropdown-menu__content box bg-theme-11 dark:bg-dark-6 text-white"> <!--menampilkan dropwdown -->
+                            <div class="p-4 border-b border-theme-12 dark:border-dark-3">
+                                <div class="font-medium nama-user"></div>
+                                <div class="text-xs text-theme-13 mt-0.5 dark:text-gray-600 role-user"></div> <!-- menampilkan ROLE USER pada halaman profile secara otomatis berdasarkan LOGIN -->
+                            </div> 
+                            <div class="p-2"> <!-- menambahkan baris baru dalam 1 halaman dropdown -->
+                                <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 dark:hover:bg-dark-3 rounded-md"> <i data-feather="user" class="w-4 h-4 mr-2"></i> Profile </a>
+                                <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 dark:hover:bg-dark-3 rounded-md"> <i data-feather="edit" class="w-4 h-4 mr-2"></i> Add Account </a>
+                                <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 dark:hover:bg-dark-3 rounded-md"> <i data-feather="lock" class="w-4 h-4 mr-2"></i> Reset Password </a>
+                            </div>
+                            <div class="p-2 border-t border-theme-12 dark:boder-dark-3">
+                                <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 dark:hover:bg-dark-3 rounded-md"> <i data-feather="toggle-right" class="w-4 h-4 mr-2"></i> Logout </a>
+                            </div>
+                        </div>
+                    </div> <!-- END: menampilkan dropwdown menu -->
+                </div>
+                <!-- END: Account Menu -->
+            </div>
+        </div>
+        <!-- END: Top Bar -->
+        <div class="wrapper">
+            <div class="wrapper-box">
+                <!-- BEGIN: Side Menu -->   
+                <nav class="side-nav">
+                    <ul>
+                        <li>
+                            <a href="{{ route('dashboard') }}" class="side-menu">
+                                <div class="side-menu__icon"><i data-feather="monitor"></i></div>
+                                <div class="side-menu__title"> Dashboard</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('masterguru') }}" class="side-menu">
+                                <div class="side-menu__icon"><i data-feather="users"></i></div>
+                                <div class="side-menu__title"> Master Guru</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('mastersiswa') }}" class="side-menu">
+                                <div class="side-menu__icon"><i data-feather="users"></i></div>
+                                <div class="side-menu__title"> Master Siswa</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('mastermapel') }}" class="side-menu">
+                                <div class="side-menu__icon"><i data-feather="inbox"></i></div>
+                                <div class="side-menu__title"> Master Matapelajaran</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('masterkriteria') }}" class="side-menu side-menu--active">
+                                <div class="side-menu__icon"><i data-feather="slack"></i></div>
+                                <div class="side-menu__title"> Master Kriteria</div>
+                            </a>
+                        </li>
+                        <li class="side-nav__devider my-6"></li>
+                        <li>
+                            <a href="javascript:;" class="side-menu">
+                                <div class="side-menu__icon"><i data-feather="edit"></i></div>
+                                <div class="side-menu__title">
+                                    Data Nilai
+                                    <div class="side-menu__sub-icon"><i data-feather="chevron-down"></i></div>
+                                </div>
+                            </a>
+                            <ul class="">
+                                <li>
+                                    <a href="{{route('nilairaport')}}" class="side-menu">
+                                        <div class="side-menu__icon"><i data-feather="plus"></i></div>
+                                        <div class="side-menu__title"> Nilai Raport </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('nilaiketidakhadiran') }}" class="side-menu">
+                                        <div class="side-menu__icon"><i data-feather="plus"></i></div>
+                                        <div class="side-menu__title"> Tingkat Ketidakhadiran </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('nilaisikap') }}" class="side-menu">
+                                        <div class="side-menu__icon"><i data-feather="plus"></i></div>
+                                        <div class="side-menu__title"> Sikap </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('nilaiprestasi') }}" class="side-menu">
+                                        <div class="side-menu__icon"> <i data-feather="plus"></i> </div>
+                                        <div class="side-menu__title"> Prestasi Akademik / Non-Akademik </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('nilaiketerlambatan') }}" class="side-menu">
+                                        <div class="side-menu__icon"><i data-feather="plus"></i></div>
+                                        <div class="side-menu__title"> Keterlambatan Masuk Sekolah </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('nilaihafalan') }}" class="side-menu">
+                                        <div class="side-menu__icon"><i data-feather="plus"></i></div>
+                                        <div class="side-menu__title"> Hafalan Juz Al-Qur'an </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="side-menu">
+                                <div class="side-menu__icon"> <i data-feather="clipboard"></i> </div>
+                                <div class="side-menu__title">
+                                    Penilaian
+                                    <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
+                                </div>
+                            </a>
+                            <ul class="">
+                                <li>
+                                    <a href="{{ route('nilaisemuamapel') }}" class="side-menu">
+                                        <div class="side-menu__icon"> <i data-feather="plus"></i> </div>
+                                        <div class="side-menu__title"> Nilai | Semua Mapel </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('nilaiakhir') }}" class="side-menu">
+                                        <div class="side-menu__icon"> <i data-feather="plus"></i> </div>
+                                        <div class="side-menu__title"> Perangkingan </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- END: Side Menu -->
+                <!-- BEGIN: Content -->
+                <div class="content">
+                    <div class="intro-y flex flex-col sm:flex-row items-center mt-8">
+                        <h2 class="text-lg font-medium mr-auto">
+                            List Data Master Kriteria
+                        </h2>
+                        <div class="w-full sm:w-auto flex mt-4 sm:mt-0">
+                            <div class="intro-y col-span-12 flex flex-weap sm:flex-nowrap items-center mt-2">
+                                <button class="btn btn-primary shadow-md mr-2 modal-kriteria">
+                                    <span class="w-5 h-5 flex items-center justify center"><i class="w-4 h-4" data-feather="user-plus"></i></span>
+                                </button>
+                                <div class="w-full sm:w-auto mt-3 sm:mt-0 sm:ml-auto md:ml-0">
+                                    <div class="w-56 relative text-gray-700 dar:text-gray-300">
+                                        <input type="text" class="form-control w-56 bpx pr-10 placeholder-theme-8" placeholder="Cari.....">
+                                        <i class="w-4 h-4 absolute my-auto inset-y-0 mr-3 right-0" data-feather="search"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="intro-y flex flex-col sm:flex-row items-center mt-5">
+                        <div class="intro-y col-span-12 flex flex-wrap sm:flex-nowrap items-center mr-auto">
+                            <select class="form-select create-is_active" required>
+                                <option selected disabled> Kelas </option>
+                                <option value="10"> 10 </option>
+                                <option value="11"> 11 </option>
+                                <option value="12"> 12 </option>
+                            </select>
+                        </div>
+                        <div class="intro-y col-span-12 flex flex-wrap sm:flex-nowrap items-center mr-auto">
+                            <select class="form-select create-is_active" required>
+                                <option selected disabled> Jurusan </option>
+                                <option value="IPA"> IPA </option>
+                                <option value="IPS"> IPS </option>
+                            </select>
+                        </div>
+                        <div class="intro-y col-span-12 flex flex-wrap sm:flex-nowrap items-center mr-auto">
+                            <select class="form-select create-is_active" required>
+                                <option selected disabled> Semester </option>
+                                <option value="Ganjil"> Ganjil </option>
+                                <option value="Genap"> Genap </option>
+                            </select>
+                        </div>
+                        <div class="intro-y col-span-12 flex flex-wrap sm:flex-nowrap items-center mr-auto">
+                            <select class="form-select create-is_active" required>
+                                <option selected disabled> Tahun Ajar </option>
+                                <option value="2023"> 2023 </option>
+                                <option value="2024"> 2024 </option>
+                                <option value="2025"> 2025 </option>
+                            </select>
+                        </div>
+                        <div class="intro-y col-span-12 flex flex-wrap sm:flex-nowrap items-center mr-auto">
+                            <button class="btn btn-primary shadow-md mr-2 modal-cari">
+                                <span class="w-5 h-5 flex items-center justify center"><i class="w-4 h-4" data-feather="search"></i></span>
+                                Cari
+                            </button>
+                        </div>
+                        <div class="w-full sm:w-auto mt-3 sm:mt-0 sm:ml-auto md:ml-0">
+                            <div class="w-56 relative text-gray-700 dark:text-gray-300">
+                            </div>
+                        </div>
+                        <div class="w-full sm:w-auto flex mt-4 sm:mt-0">
+                            <div class="intro-y col-span-12 flex flex-wrap sm:flex-nowrap items-center">
+                                <button type="button" class="btn btn-primary btn-md shadow-md mr-2" data-toggle="popover" title="Not Approved" data-content="Data Has Not Been Approved">PDF</button>
+                                <button type="button" class="btn btn-primary btn-md shadow-md mr-2" data-toggle="popover" title="Not Approved" data-content="Data Has Not Been Approved">Excel</button>
+                                <div class="w-full sm:w-auto mt-3 sm:mt-0 sm:ml-auto md:ml-0">
+                                    <div class="w-56 relative text-gray-700 dark:text-gray-300">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- BEGIN: HTML Table Data -->
+                    <div class="intro-y box p-1 mt-5">
+                        <div class="overflow-x-auto svrollbar-hidden">
+                            <table id="data-table" class="table table-striped" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Nama Kriteria</th>
+                                        <th>Bobot</th>
+                                        <th>Atribut</th>
+                                        <th>Kelas</th>
+                                        <th>Jurusan</th>
+                                        <th>Semester</th>
+                                        <th>Tahun Ajar</th>
+                                        <th>Aksi</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- END: HTML Table Data -->
+                    <!-- BEGIN: MOdal Create Content -->
+                    <div id="modal-create" class="modal" tabindex="-1" aria-hidden="true" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <!-- BEGIN: Modal Header -->
+                                <div class="modal-header">
+                                    <h2 class="font-medium text-base mr-auto">
+                                        Form Tambah Data Kriteria
+                                    </h2>
+                                    <a href="javascript:;" data-dismiss="modal"><i data-feather="x" class="w-8 h-8 text-gray-500"></i></a>
+                                </div>
+                                <!-- END: Modal Header -->
+                                <!-- BEGIN: Modal Body -->
+                                <div class="modal-body grid grid-cols-12 gap-4 gap-y-3">
+                                    <div class="col-span-12 sm:col-span-12">
+                                        <label for="modal-form-1" class="form-label">Kode Kriteria</label>
+                                        <input type="text" class="form-control create-kode" placeholder="Masukkan Kode Kriteria Kriteria (K-...)" required>
+                                    </div>
+                                    <div class="col-span-12 sm:col-span-12">
+                                        <label for="modal-form-1" class="form-label">Nama Kriteria</label>
+                                        <input type="text" class="form-control create-name" placeholder="Masukkan Nama Kriteria" required>
+                                    </div>
+                                    <div class="col-span-12 sm:col-span-12">
+                                        <label for="modal-form-1" class="form-label">Bobot Kriteria</label>
+                                        <input type="text" class="form-control create-bobot" placeholder="Masukkan Bobot Kriteria" required>
+                                    </div>
+                                    <div class="col-span-12 sm:col-span-12">
+                                        <label for="modal-form-1" class="form-label">Atribut Kriteria</label>
+                                        <select class="form-select create-jenkel" required>
+                                            <option selected disabled> --- Pilih Atribut Kriteria ---</option>
+                                            <option value="Benefit"> Benefit </option>
+                                            <option value="Cost"> Cost </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <!-- END: Modal Body -->
+                                <!-- BEGIN: Modal Footer -->
+                                <div class="modal-footer text-right">
+                                    <button type="button" data-dismiss="modal" class="btn btn-outline-secondary w-20 mr-1">Batal</button>
+                                    <button type="button" class="btn btn-primary w-20 btn-create">Simpan</button>
+                                </div>
+                                <!-- END: Modal Footer -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END: Modal Content -->
+                    <!-- BEGIN: Modal Update Sukses Content -->
+                    <div id="success-create-modal-preview" class="modal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body p-0">
+                                    <div class="p-5 text-center">
+                                        <i data-feather="check-circle" class="w-16 h-16 text-theme-10 mx-auto mt-3"></i>
+                                        <div class="text-3xl mt-5">Berhasil Menambahkan Data Kriteria Baru!</div>
+                                        <div class="text-gray-600 mt-2 create-sukses"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END: Modal Update Sukses Contet -->
+                    <!-- BEGIN: Modal Update Gagal Content -->
+                    <div id="warning-create-modal-preview" class="modal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body p-0">
+                                    <div class="p-5 text-center">
+                                        <i data-feather="x-circle" class="w-16 h-16 text-theme-23 mx-auto mt-3"></i>
+                                        <div class="text-3xl mt-5">Oops...Gagal Menambahkan Data Kriteria Baru!</div>
+                                        <div class="text-gray-600 mt-2 create-gagal"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END: Modal Content -->
+                    <!-- BEGIN: Modal Update Content -->
+                    <div id="modal-update" class="modal" tabindex="-1" aria-hidden="true" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <!-- BEGIN: Modal Header -->
+                                <div class="modal-header">
+                                    <h2 class="font-medium text-base mr-auto">
+                                        Form Update Data Kriteria
+                                    </h2>
+                                    <a href="javascript:;" data-dismiss="modal"><i data-feather="x" class="w-8 h-8 text-gray-500"></i></a>
+                                </div>
+                                <!-- END: Modal Header -->
+                                <!-- BEGIN: Modal Body -->
+                                <div class="modal-body grid grid-cols-12 gap-4 gap-y-3">
+                                    <div class="col-span-12 sm:col-span-12">
+                                        <label for="modal-form-1" class="form-label">Kode Kriteria</label>
+                                        <input type="text" class="form-control update-kode" placeholder="Masukkan Kode Kriteria Kriteria (K-...)" required>
+                                    </div>
+                                    <div class="col-span-12 sm:col-span-12">
+                                        <label for="modal-form-1" class="form-label">Nama Kriteria</label>
+                                        <input type="text" class="form-control update-name" placeholder="Masukkan Nama Kriteria" required>
+                                    </div>
+                                    <div class="col-span-12 sm:col-span-12">
+                                        <label for="modal-form-1" class="form-label">Bobot Kriteria</label>
+                                        <input type="text" class="form-control update-bobot" placeholder="Masukkan Bobot Kriteria" required>
+                                    </div>
+                                    <div class="col-span-12 sm:col-span-12">
+                                        <label for="modal-form-1" class="form-label">Atribut Kriteria</label>
+                                        <select class="form-select update-jenkel" required>
+                                            <option selected disabled> --- Pilih Atribut Kriteria ---</option>
+                                            <option value="Benefit"> Benefit </option>
+                                            <option value="Cost"> Cost </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <!-- END: Modal Body -->
+                                <!-- BEGIN: Modal Footer -->
+                                <div class="modal-footer text-right">
+                                    <button type="button" data-dismiss="modal" class="btn btn-outline-secondary w-20 mr-1">Batal</button>
+                                    <button type="button" class="btn btn-primary w-20 btn-update">Update</button>
+                                </div>
+                                <!-- END: Modal Footer -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END: Modal Content -->
+                    <!-- BEGIN: Modal update Sukses Content -->
+                    <div id="success-update-modal-preview" class="modal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body p-0">
+                                    <div class="p-5 text-center">
+                                        <i data-feather="check-circle" class="w-16 sh-16 text-theme-10 mx-auto mt-3"></i>
+                                        <div class="text-3xl mt-5">Berhasil update data kriteria baru!</div>
+                                        <div class="text-gray-600 mt-2 update-sukses"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END: Modal Content -->
+                    <!-- BEGIN: Modal Update Gagal Content -->
+                    <div id="warning-update-modal-preview" class="modal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body p-0">
+                                    <div class="p-5 text-center">
+                                        <i data-feather="x-circle" class="w-16 h-16 text-theme-23 mx-auto mt-3"></i>
+                                        <div class="text-3xl mt-5">Oops...Gagal update data guru baru!</div>
+                                        <div class="text-gray-600 mt-2 update-gagal"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END: Modal Content -->
+                    <!-- BEGIN: modal Delete Content -->
+                    <div id="delete-modal-preview" class="modal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body p-0">
+                                    <div class="p-5 text-center">
+                                        <i data-feather="x-circle" class="w-16 h-16 text-theme-24 mx-auto mt-3"></i>
+                                        <div class="text-3xl mt-5">Apa kamu yakin ingin hapus data Master Kriteria ini?</div>
+                                        <div class="text-gray-600 mt-2">
+                                            Apa kamu yakin akan menghapus data Master Kriteria ini?
+                                            <br>
+                                            Data yang dihapus tidak akan bisa dikembalikan.
+                                        </div>
+                                    </div>
+                                    <div class="px-5 pb-8 text-center">
+                                        <button type="button" data-dismiss="modal" class="btn btn-outline-secondary w-24 dark:border-dark-5 dark:text-gray-300 mr-1">Batalkan</button>
+                                        <button type="button" class="btn btn-danger w-24 hapus-btn">Hapus</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END: Modal Content -->
+                    <!-- BEGIN: Modal Hapus Sukses Content -->
+                    <div id="success-hapus-modal-preview" class="modal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body p-0">
+                                    <div class="p-5 text-center">
+                                        <i data-feather="check-circle" class="w-16 h-16 text-theme-10 mx-auto mt-3"></i>
+                                        <div class="text-3xl mt-5">Hapus Data Master Kriteria Berhasil!</div>
+                                        <div class="text-gray-600 mt-2 hapus-sukses"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END: Modal Content -->
+                    <!-- BEGIN: Modal Hapus Gagal Content -->
+                    <div id="warning-hapus-modal-preview" class="modal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body p-0">
+                                    <div class="p-5 text-center">
+                                        <i data-feather="x-circle" class="w-16 h-16 text-theme-23 mx-auto mt-3"></i>
+                                        <div class="text-3xl mt-5">Oops...Hapus Data Gagal!</div>
+                                        <div class="text-gray-600 mt-2 hapus-gagal"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END: Modal Content -->
+                </div>
+                <!-- END: COntent -->
+            </div>
+        </div>
+        <!-- BEGIN: JS Asset -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- memanggil JQuery -->
+        <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=["your-google-map-api"]&libraries=places"></script>
+        <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+        <script src="{{ asset('template/dist/js/app.js') }}"></script> <!-- menampilkan logo.svg JS -->
+        <script>
+            $(document).ready(function(){
+                function getCookie(name){
+                    var cookieName = name + "=";
+                    var decodedCookie = decodeURIComponent(document.cookie);
+                    var cookieArray = decodedCookie.split(';');
+
+                    for (var i = 0; i < cookieArray.length; i++){
+                        var cookie = cookieArray[i];
+                        while (cookie.charAt(0) === ' '){
+                            cookie = cookie.substring(1);
+                        }
+                        if (cookie.indexOf(cookieName) === 0) {
+                            return cookie.substring(cookieName.length, cookie.length);
+                        }
+                    }
+                }
+                var token = getCookie('token');
+                
+                if (token)
+                {
+                    //Token ada dalam cookie, lakukan tindakan yang sesuai
+                    console.log('Token:', token);
+                }else{
+                    window.location.href = "{ route('login' )}"
+                }
+
+                var url = 'http://127.0.0.1:8000/api/dashboard/profil';
+                fetch(url, {
+                    method: 'GET',
+                    headers: {
+                        'Authorization' : 'Bearer ' + token
+                    }
+                }).then(response => response.json()).then(data => {
+                    $('.nama-user').text(data.name);
+                    $('.role-user').text(data.role);
+                }).catch(error => {
+                    console.error ('Error: ', error);
+                });
+
+                //Modal Form create master kriteria
+                $('.modal-kriteria').click(function() {
+                    cash("#modal-create").modal("show");
+                });
+
+            })
+        </script>
+    </body>
+</html>

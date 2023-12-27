@@ -1,15 +1,6 @@
 <!DOCTYPE html>
-<!--
-Template Name: Icewall - HTML Admin Dashboard Template
-Author: Left4code
-Website: http://www.left4code.com/
-Contact: muhammadrizki@left4code.com
-Purchase: https://themeforest.net/user/left4code/portfolio
-Renew Support: https://themeforest.net/user/left4code/portfolio
-License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
--->
 <html lang="en" class="light">
-    <!-- BEGIN: Head -->
+    <!-- BEGIN: head -->
     <head>
         <meta charset="utf-8">
         <link href="{{ asset('template/dist/images/logo.svg') }}" rel="shortcut icon">
@@ -17,30 +8,31 @@ License: You must have a valid license purchased only from themeforest(the above
         <meta name="description" content="Icewall admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
         <meta name="keywords" content="admin template, Icewall Admin Template, dashboard template, flat admin template, responsive admin template, web app">
         <meta name="author" content="LEFT4CODE">
-        <title>Dashboard - AdminSuper</title>
+        <title> Nilai Akhir | Perangkingan</title>
         <!-- BEGIN: CSS Assets-->
         <link rel="stylesheet" href="{{ asset('template/dist/css/app.css') }}" />
+        <link href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" rel="stylesheet">
         <!-- END: CSS Assets-->
     </head>
-    <!-- END: Head -->
+    <!-- BEGIN: head -->
     <body class="main">
-        <!-- BEGIN: Mobile Menu -->
+        <!-- BEGIN: mobile menu -->
         <div class="mobile-menu md:hidden">
             <div class="mobile-menu-bar">
                 <a href="" class="flex mr-auto">
-                    <img alt="Icewall Tailwind HTML Admin Template" class="w-6" src="{{ asset('template/dist/images/logo.svg') }}">
+                    <img src="{{ asset('template/dist/images/logo.svg')}}" class="w-6">
                 </a>
-                <a href="javascript:;" id="mobile-menu-toggler"> <i data-feather="bar-chart-2" class="w-8 h-8 text-white transform -rotate-90"></i> </a>
+                <a href="javascript:;" id="mobile-menu-toggler"><i data-feather="bar-chart-2" class="w-8 h-8 text-white transform -rotate-90"></i></a>
             </div>
             <ul class="border-t border-theme-2 py-5 hidden">
                 <li>
                     <a href="{{ route('dashboard') }}" class="menu">
                         <div class="menu__icon"> <i data-feather="home"></i> </div>
-                        <div class="menu__title"> Dashboard </i> </div>  <!-- menampilkan halaman drop down <i data-feather="chevron-down" class="menu__sub-icon">-->
+                        <div class="menu__title"> Dashboard </div>  <!-- menampilkan halaman drop down <i data-feather="chevron-down" class="menu__sub-icon">-->
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('masterguru')}}" class="menu">
+                    <a href="{{ route('masterguru') }}" class="menu">
                         <div class="menu__icon"> <i data-feather="users"></i> </div>
                         <div class="menu__title"> Master Guru </div>
                     </a>
@@ -52,13 +44,13 @@ License: You must have a valid license purchased only from themeforest(the above
                     </a>
                 </li>
                 <li>
-                    <a href="{{route('mastermapel')}}" class="menu">
+                    <a href="{{ route('mastermapel') }}" class="menu">
                         <div class="menu__icon"> <i data-feather="inbox"></i> </div>
                         <div class="menu__title"> Master Mata Pelajaran </div>
                     </a>
                 </li>
                 <li>
-                    <a href="{{route('masterkriteria')}}" class="menu">
+                    <a href="{{route('masterkriteria') }}" class="menu">
                         <div class="menu__icon"> <i data-feather="slack"></i> </div>
                         <div class="menu__title"> Master Kriteria </div>
                     </a>
@@ -67,19 +59,22 @@ License: You must have a valid license purchased only from themeforest(the above
                 <li>
                     <a href="javascript:;" class="menu">
                         <div class="menu__icon"> <i data-feather="edit"></i> </div>
-                        <div class="menu__title"> Data Nilai <i data-feather="chevron-down" class="menu__sub-icon"></i> </div>
+                        <div class="menu__title"> 
+                            Data Nilai 
+                        </div>
+                        <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
                     </a>
                     <ul class="">
                         <li>
                             <a href="{{route('nilairaport')}}" class="menu">
                                 <div class="menu__icon"> <i data-feather="plus"></i> </div>
-                                <div class="menu__title"> Nilai Raport </div>
+                                <div class="menu__title"> Nilai Raport</div>
                             </a>
                         </li>
                         <li>
                             <a href="{{ route('nilaiketidakhadiran') }}" class="menu">
                                 <div class="menu__icon"> <i data-feather="plus"></i> </div>
-                                <div class="menu__title"> Tingkat Ketidakhadiran </div>
+                                <div class="menu__title"> Tingkat Ketidakhadiran Siswa</div>
                             </a>
                         </li>
                         <li>
@@ -91,26 +86,27 @@ License: You must have a valid license purchased only from themeforest(the above
                         <li>
                             <a href="{{ route('nilaiprestasi') }}" class="menu">
                                 <div class="menu__icon"> <i data-feather="plus"></i> </div>
-                                <div class="menu__title"> Prestasi Akademik / Non-Akademik </div>
+                                <div class="menu__title"> Prestasi Akademik / Non-Akademik</div>
                             </a>
                         </li>
                         <li>
                             <a href="{{ route('nilaiketerlambatan') }}" class="menu">
                                 <div class="menu__icon"> <i data-feather="plus"></i> </div>
-                                <div class="menu__title"> Keterlambatan Masuk Sekolah </div>
+                                <div class="menu__title"> Keterlambatan mMasuk Sekolah</div>
                             </a>
                         </li>
                         <li>
                             <a href="{{ route('nilaihafalan') }}" class="menu">
                                 <div class="menu__icon"> <i data-feather="plus"></i> </div>
-                                <div class="menu__title"> Hafalan Juz Al-Qur'an </div>
+                                <div class="menu__title"> Hafalan Juz Al-Qur'an</div>
                             </a>
                         </li>
                     </ul>
                     <li>
                         <a href="javascript:;" class="menu">
                             <div class="menu__icon"> <i data-feather="clipboard"></i> </div>
-                            <div class="menu__title"> Penilaian <i data-feather="chevron-down" class="menu__sub-icon"></i></div>
+                            <div class="menu__title"> Penilaian </div>
+                            <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
                         </a>
                         <ul class="">
                             <li>
@@ -130,45 +126,44 @@ License: You must have a valid license purchased only from themeforest(the above
                 </li>
             </ul>
         </div>
-        <!-- END: Mobile Menu -->
-        <!-- BEGIN: Top Bar -->
+        <!-- END: mobile menu -->
+        <!-- BEGIN: top bar -->
         <div class="top-bar-boxed border-b border-theme-2 -mt-7 md:-mt-5 -mx-3 sm:-mx-8 px-3 sm:px-8 md:pt-0 mb-12">
             <div class="h-full flex items-center">
-                <!-- BEGIN: Logo -->
+                <!-- BEGIN: logo -->
                 <a href="" class="-intro-x hidden md:flex">
-                    <img alt="Icewall Tailwind HTML Admin Template" class="w-6" src="{{ asset('template/dist/images/logo.svg') }}">
-                    <span class="text-white text-lg ml-3"> APK - <span class="font-medium">PSB</span> </span>
+                    <img src="{{ asset('template/dist/images/logo.svg') }}" class="w-6">
+                    <span class="text-white text-lg ml-3">APK - <span class="font-medium">PSB</span></span>
                 </a>
-                <!-- END: Logo -->
-                <!-- BEGIN: Breadcrumb -->
-                <div class="-intro-x breadcrumb mr-auto"> <a href="">Beranda</a> <i data-feather="chevron-right" class="breadcrumb__icon"></i> <a href="" class="breadcrumb--active">Dashboard</a> </div>
-                <!-- END: Breadcrumb -->
-                <!-- BEGIN: Notifications -->
+                <!-- END: logo -->
+                <!-- BEGIN: breadcrumb -->
+                <div class="-intro-x breadcrumb mr-auto"><a href="">Beranda</a><i data-feather="chevron-right" class="breadcrumb__icon"></i><a href="" class="breadcrumb--active">Nilai Akhir | Perangkingan</a></div>
+                <!-- END: breadcrumb -->
+                <!-- BEGIN: notifikasi -->
                 <div class="intro-x dropdown mr-4 sm:mr-6">
-                    <div class="dropdown-toggle notification notification--bullet cursor-pointer" role="button" aria-expanded="false"> <i data-feather="bell" class="notification__icon dark:text-gray-300"></i> </div>
+                    <div class="dropdown-toggle notification notification--bullet cursor-pointer" role="button" aria-expanded="false"><i data-feather="bell" class="notification__icon dark:text-gray-300"></i></div>
                     <div class="notification-content pt-2 dropdown-menu">
                         <div class="notification-content__box dropdown-menu__content box dark:bg-dark-6">
-                            <div class="notification-content__title">Notifications</div>
+                            <div class="notification-content__title">Notifikasi</div>
                         </div>
                     </div>
                 </div>
-                <!-- END: Notifications -->
-                <!-- BEGIN: Account Menu -->
+                <!-- END: notifikasi -->
+                <!-- BEGIN: account menu -->
                 <div class="intro-x dropdown w-8 h-8">
                     <div class="dropdown-toggle w-8 h-8 rounded-full overflow-hidden shadow-lg image-fit zoom-in scale-110" role="button" aria-expanded="false">
-                        <img alt="Icewall Tailwind HTML Admin Template" src="{{ asset('template/dist/images/profile-14.jpg') }}">
+                        <img src="{{ asset('template/dist/images/profile-3.jpg') }}">
                     </div>
                     <div class="dropdown-menu w-56">
                         <div class="dropdown-menu__content box bg-theme-11 dark:bg-dark-6 text-white">
                             <div class="p-4 border-b border-theme-12 dark:border-dark-3">
-                                <div class="font-medium nama-user"> </div>
-                                <div class="text-xs text-theme-13 mt-0.5 dark:text-gray-600 role-user"> </div>
+                                <div class="font-medium nama-user"></div>
+                                <div class="text-xs text-theme-13 mt-0.5 dark:text-gray-600 role-user"></div>
                             </div>
                             <div class="p-2">
                                 <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 dark:hover:bg-dark-3 rounded-md"> <i data-feather="user" class="w-4 h-4 mr-2"></i> Profile </a>
                                 <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 dark:hover:bg-dark-3 rounded-md"> <i data-feather="edit" class="w-4 h-4 mr-2"></i> Add Account </a>
                                 <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 dark:hover:bg-dark-3 rounded-md"> <i data-feather="lock" class="w-4 h-4 mr-2"></i> Reset Password </a>
-                                {{-- <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 dark:hover:bg-dark-3 rounded-md"> <i data-feather="help-circle" class="w-4 h-4 mr-2"></i> Help </a> --}}
                             </div>
                             <div class="p-2 border-t border-theme-12 dark:border-dark-3">
                                 <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 dark:hover:bg-dark-3 rounded-md"> <i data-feather="toggle-right" class="w-4 h-4 mr-2"></i> Logout </a>
@@ -176,17 +171,17 @@ License: You must have a valid license purchased only from themeforest(the above
                         </div>
                     </div>
                 </div>
-                <!-- END: Account Menu -->
+                <!-- END: account menu -->
             </div>
         </div>
-        <!-- END: Top Bar -->
+        <!-- END: top bar -->
         <div class="wrapper">
             <div class="wrapper-box">
-                <!-- BEGIN: Side Menu -->
+                <!-- BEGIN: side menu -->
                 <nav class="side-nav">
                     <ul>
                         <li>
-                            <a href="{{ route('dashboard') }}" class="side-menu side-menu--active">
+                            <a href="{{ route('dashboard') }}" class="side-menu">
                                 <div class="side-menu__icon"> <i data-feather="monitor"></i> </div>
                                 <div class="side-menu__title"> Dashboard </div>
                             </a>
@@ -204,13 +199,13 @@ License: You must have a valid license purchased only from themeforest(the above
                             </a>
                         </li>
                         <li>
-                            <a href="{{route('mastermapel')}}" class="side-menu">
+                            <a href="{{ route('mastermapel') }}" class="side-menu">
                                 <div class="side-menu__icon"> <i data-feather="inbox"></i> </div>
                                 <div class="side-menu__title"> Master Mata Pelajaran </div>
                             </a>
                         </li>
                         <li>
-                            <a href="{{route('masterkriteria')}}" class="side-menu">
+                            <a href="{{ route('masterkriteria') }}" class="side-menu">
                                 <div class="side-menu__icon"> <i data-feather="slack"></i> </div>
                                 <div class="side-menu__title"> Master Kriteria </div>
                             </a>
@@ -226,7 +221,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             </a>
                             <ul class="">
                                 <li>
-                                    <a href="{{ route('nilairaport') }}" class="side-menu">
+                                    <a href="{{route('nilairaport')}}" class="side-menu">
                                         <div class="side-menu__icon"> <i data-feather="plus"></i> </div>
                                         <div class="side-menu__title"> Nilai Raport </div>
                                     </a>
@@ -264,7 +259,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             </ul>
                         </li>
                         <li>
-                            <a href="javascript:;" class="side-menu">
+                            <a href="javascript:;" class="side-menu side-menu--active">
                                 <div class="side-menu__icon"> <i data-feather="clipboard"></i> </div>
                                 <div class="side-menu__title">
                                     Penilaian
@@ -279,7 +274,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('nilaiakhir') }}" class="side-menu">
+                                    <a href="{{ route('nilaiakhir') }}" class="side-menu side-menu--active">
                                         <div class="side-menu__icon"> <i data-feather="plus"></i> </div>
                                         <div class="side-menu__title"> Perangkingan </div>
                                     </a>
@@ -288,98 +283,153 @@ License: You must have a valid license purchased only from themeforest(the above
                         </li>
                     </ul>
                 </nav>
-                <!-- END: Side Menu -->
-                <!-- BEGIN: Content -->
+                <!-- END: side menu -->
+                <!-- BEGIN: content -->
                 <div class="content">
-                    <div class="grid grid-cols-12 gap-6">
-                        <div class="col-span-12 xxl:col-span-9">
-                            <div class="grid grid-cols-12 gap-6">
-                                <!-- BEGIN: Notification -->
-                                <div class="col-span-12 mt-8">
-                                    <div class="col-span-12 mt-6 -mb-6 intro-y">
-                                        <div class="alert alert-dismissible show box bg-theme-26 text-white flex items-center mb-6" role="alert">
-                                            <span>Hallo <b id="sambutan"></b>... Selamat datang dalam aplikasi PSB</span>
-                                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"> <i data-feather="x" class="w-4 h-4"></i> </button>
+                    <div class="intro-y flex flex-col sm:flex-row items-center mt-8">
+                        <h2 class="text-lg font-medium mr-auto">
+                            List Data Nilai Akhir | Perangkingan
+                        </h2>
+                        <div class="w-full sm:w-auto flex mt-4 sm:mt-0">
+                            <div class="intro-y col-span-12 flex flex-wrap sm:flex-nowrap items-center mt-2">
+                                <!-- BEGIN: preview notifikasi data belum di setujui / not approve -->
+                                {{-- <div class="preview">
+                                    <div class="text-center">
+                                        <!-- BEGIN: Notification Content -->
+                                        <div id="success-notification-content" class="toastify-content hidden flex">
+                                            <i class="text-theme-10" data-feather="x-circle"></i>
+                                            <div class="ml-4 mr-4">
+                                                <div class="font-medium">DATA NOT APRROVED!</div>
+                                                <div class="text-gray-600 mt-1">Data belum di approved oleh Bagian Kurikulum, hubungi Bagian Kurikulum agar segera meng-approved data.</div>
+                                            </div>
                                         </div>
+                                        <!-- END: Notification Content -->
+                                        <!-- BEGIN: Notification Toggle -->
+                                        <button id="success-notification-toggle" class="btn btn-danger mr-4 modal-not_approved"><i data-feather="x-circle" class="mr-2"></i>Not Approved</button>
+                                        <!-- END: Notification Toggle -->
                                     </div>
-                                    <div class="grid grid-cols-12 gap-6 mt-2">
-                                        <div class="col-span-12 sm:col-span-6 xl:col-span-3 intro-y mt-2">
-                                            <div class="report-box zoom-in">
-                                                <div class="box p-5">
-                                                    <div class="flex">
-                                                        <i data-feather="users" class="report-box__icon text-theme-21"></i>
-                                                    </div>
-                                                    <div class="text-base text-gray-600 mt-1"> Siswa</div>
-                                                    <div class="ml-auto">
-                                                        <div class="report-box__indicator bg-theme-10 tooltip cursor-pointer mt-2" title="terdapat 350 siswa di tahun 2023"> 350 <i data-feather="chevron-up" class="w-4 h-4 ml-0.5"></i> </div>
-                                                    </div>
-                                                    {{-- <div class="text-3xl font-bold leading-8 mt-6">350</div> --}}
-                                                </div>
+                                </div> --}}
+                                <!-- END: preview notifikasi data belum di setujui / not approve -->
+                                <!-- BEGIN: preview notifikasi data telah di setujui / approve -->
+                                <div class="preview">
+                                    <div class="text-center">
+                                        <!-- BEGIN: Notification Content -->
+                                        <div id="success-notification-content" class="toastify-content hidden flex">
+                                            <i class="text-theme-10" data-feather="check-circle"></i>
+                                            <div class="ml-2 mr-2 ">
+                                                <div class="font-medium">APRROVED!</div>
+                                                <div class="text-gray-600 mt-1">Data telah di setujui oleh Bagian Kurikulum dan data dapat di cetak serta di publikasikan.</div>
                                             </div>
                                         </div>
-                                        <!-- BEGIN: content jumlah keseluruhan -->
-                                        <div class="col-span-12 sm:col-span-6 xl:col-span-3 intro-y mt-2">
-                                            <div class="report-box zoom-in">
-                                                <div class="box p-5">
-                                                    <div class="flex">
-                                                        <i data-feather="users" class="report-box__icon text-theme-21"></i>
-                                                    </div>
-                                                    <div class="text-base text-gray-600 mt-1"> Guru</div>
-                                                    <div class="ml-auto">
-                                                        <div class="report-box__indicator bg-theme-10 tooltip cursor-pointer mt-2" title="terdapat 6 guru "> 6 <i data-feather="chevron-up" class="w-4 h-4 ml-0.5"></i> </div>
-                                                    </div>
-                                                    {{-- <div class="text-3xl font-bold leading-8 mt-6">350</div> --}}
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-span-12 sm:col-span-6 xl:col-span-3 intro-y mt-2">
-                                            <div class="report-box zoom-in">
-                                                <div class="box p-5">
-                                                    <div class="flex">
-                                                        <i data-feather="slack" class="report-box__icon text-theme-21"></i>
-                                                    </div>
-                                                    <div class="text-base text-gray-600 mt-1"> Kriteria </div>
-                                                    <div class="ml-auto">
-                                                        <div class="report-box__indicator bg-theme-10 tooltip cursor-pointer mt-2" title="terdapat 6 kriteria di tahun 2023"> 6 <i data-feather="chevron-up" class="w-4 h-4 ml-0.5"></i> </div>
-                                                    </div>
-                                                    {{-- <div class="text-3xl font-bold leading-8 mt-6">350</div> --}}
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-span-12 sm:col-span-6 xl:col-span-3 intro-y mt-2">
-                                            <div class="report-box zoom-in">
-                                                <div class="box p-5">
-                                                    <div class="flex">
-                                                        <i data-feather="edit" class="report-box__icon text-theme-21"></i>
-                                                    </div>
-                                                    <div class="text-base text-gray-600 mt-1"> Data Nilai</div>
-                                                    <div class="ml-auto">
-                                                        <div class="report-box__indicator bg-theme-10 tooltip cursor-pointer mt-2" title="terdapat 350 data nilai di tahun 2023"> 350 <i data-feather="chevron-up" class="w-4 h-4 ml-0.5"></i> </div>
-                                                    </div>
-                                                    {{-- <div class="text-3xl font-bold leading-8 mt-6">350</div> --}}
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- END: content jumlah keseluruhan -->
+                                        <!-- END: Notification Content -->
+                                        <!-- BEGIN: Notification Toggle -->
+                                        <button id="success-notification-toggle" class="btn btn-success mr-2 modal-approved"><i data-feather="check-circle" class="mr-2"></i>Approved</button>
+                                        <!-- END: Notification Toggle -->
                                     </div>
                                 </div>
-                                <!-- BEGIN: Notification -->
+                                <!-- BEGIN: preview notifikasi data telah di setujui / approve -->
+                                {{-- <button type="button" class="btn btn-success mr-2" data-toggle="tooltip" data-placement="top" title="data telah di setujui oleh bagian kurikulum dan data dapat di publikasikan serta dapat di cetak.">
+                                    <i data-feather="check-circle" class="mr-2"></i>
+                                    Approved
+                                </button> --}}
+                                <div class="w-full sm:w-auto mt-3 sm:mt-0 sm:ml-auto md:ml-0">
+                                    <div class="w-56 relative text-gray-700 dark:text-gray-300">
+                                        <input type="text" class="form-control w-56 bpx pr-10 placeholder-theme-8" placeholder="Cari.....">
+                                        <i class="w-4 h-4 absolute my-auto inset-y-0 mr-3 right-0" data-feather="search"></i>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="intro-y flex flex-col sm:flex-row items-center mt-5">
+                        <div class="intro-y col-span-12 flex flex-wrap sm:flex-nowrap items-center mr-auto">
+                            <select class="form-select create-is_active" required>
+                                <option selected disabled> Kelas </option>
+                                <option value="10"> 10 </option>
+                                <option value="11"> 11 </option>
+                                <option value="12"> 12 </option>
+                            </select>
+                        </div>
+                        <div class="intro-y col-span-12 flex flex-wrap sm:flex-nowrap items-center mr-auto">
+                            <select class="form-select create-is_active" required>
+                                <option selected disabled> Jurusan </option>
+                                <option value="IPA"> IPA </option>
+                                <option value="IPS"> IPS </option>
+                            </select>
+                        </div>
+                        <div class="intro-y col-span-12 flex flex-wrap sm:flex-nowrap items-center mr-auto">
+                            <select class="form-select create-is_active" required>
+                                <option selected disabled> Semester </option>
+                                <option value="Ganjil"> Ganjil </option>
+                                <option value="Genap"> Genap </option>
+                            </select>
+                        </div>
+                        <div class="intro-y col-span-12 flex flex-wrap sm:flex-nowrap items-center mr-auto">
+                            <select class="form-select create-is_active" required>
+                                <option selected disabled> Tahun Ajar </option>
+                                <option value="2023"> 2023 </option>
+                                <option value="2024"> 2024 </option>
+                                <option value="2025"> 2025 </option>
+                            </select>
+                        </div>
+                        <div class="intro-y col-span-12 flex flex-wrap sm:flex-nowrap items-center mr-auto">
+                            <button class="btn btn-primary shadow-md mr-2 modal-cari">
+                                <span class="w-5 h-5 flex items-center justify center"><i class="w-4 h-4" data-feather="search"></i></span>
+                                Cari
+                            </button>
+                        </div>
+                        <div class="w-full sm:w-auto mt-3 sm:mt-0 sm:ml-auto md:ml-0">
+                            <div class="w-56 relative text-gray-700 dark:text-gray-300">
+                            </div>
+                        </div>
+                        <div class="w-full sm:w-auto flex mt-4 sm:mt-0">
+                            <div class="intro-y col-span-12 flex flex-wrap sm:flex-nowrap items-center">
+                                <button type="button" class="btn btn-primary text-white-700 dark:text-white-300 flex items-center mr-2 modal-pdf"><i data-feather="file-text" class="hidden sm:block w-4 h-4 mr-2"></i> PDF </button>
+                                <button type="button" class="btn btn-primary text-white-700 dark:text-white-300 flex items-center mr-2 modal-excel"><i data-feather="file-text" class="hidden sm:block w-4 h-4 mr-2"></i> EXCEL </button>
+                                {{-- <div class="flex items-center sm:ml-auto mt-3 sm:mt-0 mr-2">
+                                    <button class="btn btn-primary flex items-center text-white-700 dark:text-white-300 modal-export_excel"> <i data-feather="file-text" class="hidden sm:block w-4 h-4 mr-2"></i> Export to Excel </button>
+                                    <button class="ml-2 btn btn-primary flex items-center text-white-700 dark:text-white-300 modal-export_pdf"> <i data-feather="file-text" class="hidden sm:block w-4 h-4 mr-2"></i> Export to PDF </button>
+                                </div> --}}
+                                <div class="w-full sm:w-auto mt-3 sm:mt-0 sm:ml-auto md:ml-0">
+                                    <div class="w-56 relative text-gray-700 dark:text-gray-300">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- BEGIN: html table data -->
+                    <div class="intro-y box p-1 mt-5">
+                        <div class="overflow-x-auto scrollbar-hidden">
+                            <table class="table table-striped" id="data-table" style="width: 100%">
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Nama Siswa</th>
+                                        <th>Nilai Akhir</th>
+                                        <th>Kelas</th>
+                                        <th>Jurusan</th>
+                                        <th>Semester</th>
+                                        <th>Tahun Ajar</th>
+                                        <th>Aksi</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- END: html table data -->
                 </div>
-                <!-- END: Content -->
+                <!-- END: content -->
             </div>
         </div>
-        <!-- BEGIN: JS Assets-->
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!--manggil JQuery-->
-        <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
-        <script src="{{ asset('template/dist/js/app.js') }}"></script>
-        <!-- END: JS Assets-->
 
-        {{-- CODE JS mendapatkan nilai cookie--}}
+        <!-- BEGIN: JS Assets -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!--manggil JQuery-->
+        <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=["your-google-map-api"]&libraries=places"></script>
+        <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+        <script src="{{ asset('template/dist/js/app.js') }}"></script>
         <script>
-            $(document).ready(function(){
+            $(document).ready(function() {
                 function getCookie(name){
                     var cookieName = name + "=";
                     var decodedCookie = decodeURIComponent(document.cookie);
@@ -399,7 +449,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
                 if (token)
                 {
-                    //Token ada dalam cookie, lakukan tindakan yang sesuai
+                    // token ada dalam cookie, lakukan tindakan yang sesuai
                     console.log('Token:', token);
                 }else{
                     window.location.href = "{{ route('login') }}";
@@ -412,21 +462,14 @@ License: You must have a valid license purchased only from themeforest(the above
                         'Authorization' : 'Bearer ' + token
                     }
                 }).then(response => response.json()).then(data => {
-
                     $('.nama-user').text(data.name);
                     $('.role-user').text(data.role);
-                    $('#sambutan').text(data.name);
-
-                }). catch (error => {
+                }).catch(error => {
                     console.error('Error:', error);
                 });
 
-                function logout(name){
-                    document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-                    winddow.location.href = "{{ route('login') }}";
-                }
             });
         </script>
-
+        <!-- END: JS Assets -->
     </body>
 </html>

@@ -13,19 +13,18 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('master_gurus', function (Blueprint $table) {
+        Schema::create('mastersiswa', function (Blueprint $table) {
             $table->id();
-            $table->string('nip');
-            $table->string('name');
+            $table->string('nis');
+            $table->string('nama_siswa');
             $table->enum('jenkel',['L','P'])->default('L');
-            $table->string('status_pegawai');
-            $table->string('jabatan');
-            $table->boolean('is_active')->default(true);
+            $table->string('kelas');
+            $table->string('jurusan');
+            $table->string('semester');
+            $table->string('tahun_ajar');
+            $table->string('email')->unique();
+            $table->string('password');
             $table->timestamps();
-        });
-
-        Schema::table('users', function (Blueprint $table) {
-            $table->string("nip")->nullable();
         });
     }
 
@@ -36,6 +35,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('master_gurus');
+        Schema::dropIfExists('mastersiswa');
     }
 };
