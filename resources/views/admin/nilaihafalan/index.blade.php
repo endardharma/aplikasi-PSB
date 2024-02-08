@@ -12,6 +12,7 @@
         <!-- BEGIN: CSS Assets-->
         <link rel="stylesheet" href="{{ asset('template/dist/css/app.css') }}" />
         <link href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
         <!-- END: CSS Assets-->
     </head>
     <!-- END: head -->
@@ -28,13 +29,7 @@
                 <li>
                     <a href="{{ route('dashboard') }}" class="menu">
                         <div class="menu__icon"> <i data-feather="home"></i> </div>
-                        <div class="menu__title"> Dashboard </div>  <!-- menampilkan halaman drop down <i data-feather="chevron-down" class="menu__sub-icon">-->
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ route('masterguru') }}" class="menu">
-                        <div class="menu__icon"> <i data-feather="users"></i> </div>
-                        <div class="menu__title"> Master Guru </div>
+                        <div class="menu__title"> Dashboard </i> </div>  <!-- menampilkan halaman drop down <i data-feather="chevron-down" class="menu__sub-icon">-->
                     </a>
                 </li>
                 <li>
@@ -44,37 +39,102 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('mastermapel') }}" class="menu">
-                        <div class="menu__icon"> <i data-feather="inbox"></i> </div>
-                        <div class="menu__title"> Master Mata Pelajaran </div>
+                    <a href="javascript:;" class="menu">
+                        <div class="menu__icon"> <i data-feather="users"></i> </div>
+                        <div class="menu__title"> Users <i data-feather="chevron-down" class="menu__sub-icon"></i> </div>
                     </a>
+                    <ul class="">
+                        <li>
+                            <a href="{{route('user')}}" class="menu">
+                                <div class="menu__icon"> <i data-feather="plus"></i> </div>
+                                <div class="menu__title"> Master User </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('userdetail') }}" class="menu">
+                                <div class="menu__icon"> <i data-feather="plus"></i> </div>
+                                <div class="menu__title"> User Detail </div>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
                 <li>
-                    <a href="{{route('masterkriteria') }}" class="menu">
-                        <div class="menu__icon"> <i data-feather="slack"></i> </div>
-                        <div class="menu__title"> Master Kriteria </div>
+                    <a href="javascript:;" class="menu">
+                        <div class="menu__icon"> <i data-feather="server"></i> </div>
+                        <div class="menu__title"> Jurusan <i data-feather="chevron-down" class="menu__sub-icon"></i></div>
                     </a>
+                    <ul class="">
+                        <li>
+                            <a href="{{ route('masterjurusan') }}" class="menu">
+                                <div class="menu__icon"> <i data-feather="plus"></i> </div>
+                                <div class="menu__title"> Master Jurusan </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('jurusansiswa') }}" class="menu">
+                                <div class="menu__icon"> <i data-feather="plus"></i> </div>
+                                <div class="menu__title"> Jurusan Siswa </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;" class="menu">
+                        <div class="menu__icon"> <i data-feather="layers"></i> </div>
+                        <div class="menu__title"> Kelas <i data-feather="chevron-down" class="menu__sub-icon"></i> </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="{{route('masterkelas')}}" class="menu">
+                                <div class="menu__icon"> <i data-feather="plus"></i> </div>
+                                <div class="menu__title"> Master Kelas </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('kelassiswa') }}" class="menu">
+                                <div class="menu__icon"> <i data-feather="plus"></i> </div>
+                                <div class="menu__title"> Kelas Siswa </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;" class="menu">
+                        <div class="menu__icon"> <i data-feather="slack"></i> </div>
+                        <div class="menu__title"> Kriteria <i data-feather="chevron-down" class="menu__sub-icon"></i> </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="{{route('masterkriteria')}}" class="menu">
+                                <div class="menu__icon"> <i data-feather="plus"></i> </div>
+                                <div class="menu__title"> Master Kriteria </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('periodekriteria') }}" class="menu">
+                                <div class="menu__icon"> <i data-feather="plus"></i> </div>
+                                <div class="menu__title"> Periode Kriteria </div>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
                 <li class="menu__devider my-6"></li>
                 <li>
                     <a href="javascript:;" class="menu">
                         <div class="menu__icon"> <i data-feather="edit"></i> </div>
-                        <div class="menu__title"> 
-                            Data Nilai 
-                        </div>
-                        <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
+                        <div class="menu__title"> Data Nilai <i data-feather="chevron-down" class="menu__sub-icon"></i> </div>
                     </a>
                     <ul class="">
                         <li>
                             <a href="{{route('nilairaport')}}" class="menu">
                                 <div class="menu__icon"> <i data-feather="plus"></i> </div>
-                                <div class="menu__title"> Nilai Raport</div>
+                                <div class="menu__title"> Nilai Raport </div>
                             </a>
                         </li>
                         <li>
                             <a href="{{ route('nilaiketidakhadiran') }}" class="menu">
                                 <div class="menu__icon"> <i data-feather="plus"></i> </div>
-                                <div class="menu__title"> Tingkat Ketidakhadiran Siswa</div>
+                                <div class="menu__title"> Tingkat Ketidakhadiran </div>
                             </a>
                         </li>
                         <li>
@@ -86,33 +146,32 @@
                         <li>
                             <a href="{{ route('nilaiprestasi') }}" class="menu">
                                 <div class="menu__icon"> <i data-feather="plus"></i> </div>
-                                <div class="menu__title"> Prestasi Akademik / Non-Akademik</div>
+                                <div class="menu__title"> Prestasi Akademik / Non-Akademik </div>
                             </a>
                         </li>
                         <li>
                             <a href="{{ route('nilaiketerlambatan') }}" class="menu">
                                 <div class="menu__icon"> <i data-feather="plus"></i> </div>
-                                <div class="menu__title"> Keterlambatan mMasuk Sekolah</div>
+                                <div class="menu__title"> Keterlambatan Masuk Sekolah </div>
                             </a>
                         </li>
                         <li>
                             <a href="{{ route('nilaihafalan') }}" class="menu">
                                 <div class="menu__icon"> <i data-feather="plus"></i> </div>
-                                <div class="menu__title"> Hafalan Juz Al-Qur'an</div>
+                                <div class="menu__title"> Hafalan Juz Al-Qur'an </div>
                             </a>
                         </li>
                     </ul>
                     <li>
                         <a href="javascript:;" class="menu">
                             <div class="menu__icon"> <i data-feather="clipboard"></i> </div>
-                            <div class="menu__title"> Penilaian </div>
-                            <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
+                            <div class="menu__title"> Penilaian <i data-feather="chevron-down" class="menu__sub-icon"></i></div>
                         </a>
                         <ul class="">
                             <li>
-                                <a href="{{ route('nilaisemuamapel') }}" class="menu">
+                                <a href="{{ route('nilaisemuakriteria') }}" class="menu">
                                     <div class="menu__icon"> <i data-feather="plus"></i> </div>
-                                    <div class="menu__title"> Nilai | Semua Mapel </div>
+                                    <div class="menu__title"> Nilai | Semua Kriteria </div>
                                 </a>
                             </li>
                             <li>
@@ -187,41 +246,105 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{ route('masterguru') }}" class="side-menu">
-                                <div class="side-menu__icon"> <i data-feather="users"></i> </div>
-                                <div class="side-menu__title"> Master Guru </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ route('mastersiswa') }}" class="side-menu">
+                            <a href="{{ route('mastersiswa') }}" class="side-menu ">
                                 <div class="side-menu__icon"> <i data-feather="users"></i> </div>
                                 <div class="side-menu__title"> Master Siswa </div>
                             </a>
                         </li>
                         <li>
-                            <a href="{{ route('mastermapel') }}" class="side-menu">
-                                <div class="side-menu__icon"> <i data-feather="inbox"></i> </div>
-                                <div class="side-menu__title"> Master Mata Pelajaran </div>
+                            <a href="javascript:;" class="side-menu">
+                                <div class="side-menu__icon"> <i data-feather="users"></i> </div>
+                                <div class="side-menu__title"> Users <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
+                            </div>
                             </a>
+                            <ul class="">
+                                <li>
+                                    <a href="{{route('user')}}" class="side-menu">
+                                        <div class="side-menu__icon"> <i data-feather="plus"></i> </div>
+                                        <div class="side-menu__title"> Master User </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('userdetail') }}" class="side-menu">
+                                        <div class="side-menu__icon"> <i data-feather="plus"></i> </div>
+                                        <div class="side-menu__title"> User Detail </div>
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
                         <li>
-                            <a href="{{ route('masterkriteria') }}" class="side-menu">
-                                <div class="side-menu__icon"> <i data-feather="slack"></i> </div>
-                                <div class="side-menu__title"> Master Kriteria </div>
+                            <a href="javascript:;" class="side-menu">
+                                <div class="side-menu__icon"> <i data-feather="server"></i> </div>
+                                <div class="side-menu__title"> Jurusan <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i></div>
+                            </div>
                             </a>
+                            <ul class="">
+                                <li>
+                                    <a href="{{ route('masterjurusan') }}" class="side-menu">
+                                        <div class="side-menu__icon"> <i data-feather="plus"></i> </div>
+                                        <div class="side-menu__title"> Master Jurusan </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('jurusansiswa') }}" class="side-menu">
+                                        <div class="side-menu__icon"> <i data-feather="plus"></i> </div>
+                                        <div class="side-menu__title"> Jurusan Siswa </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="side-menu ">
+                                <div class="side-menu__icon"> <i data-feather="layers"></i> </div>
+                                <div class="side-menu__title"> Kelas <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
+                            </div>
+                            </a>
+                            <ul class="">
+                                <li>
+                                    <a href="{{route('masterkelas')}}" class="side-menu ">
+                                        <div class="side-menu__icon"> <i data-feather="plus"></i> </div>
+                                        <div class="side-menu__title"> Master Kelas </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('kelassiswa') }}" class="side-menu">
+                                        <div class="side-menu__icon"> <i data-feather="plus"></i> </div>
+                                        <div class="side-menu__title"> Kelas Siswa </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="side-menu">
+                                <div class="side-menu__icon"> <i data-feather="slack"></i> </div>
+                                <div class="side-menu__title"> Kriteria <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
+                            </div>
+                            </a>
+                            <ul class="">
+                                <li>
+                                    <a href="{{route('masterkriteria')}}" class="side-menu ">
+                                        <div class="side-menu__icon"> <i data-feather="plus"></i> </div>
+                                        <div class="side-menu__title"> Master Kriteria </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('periodekriteria') }}" class="side-menu">
+                                        <div class="side-menu__icon"> <i data-feather="plus"></i> </div>
+                                        <div class="side-menu__title"> Periode Kriteria </div>
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="side-nav__devider my-6"></li>
                         <li>
                             <a href="javascript:;" class="side-menu side-menu--active">
                                 <div class="side-menu__icon"> <i data-feather="edit"></i> </div>
-                                <div class="side-menu__title">
-                                    Data Nilai
-                                    <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
+                                <div class="side-menu__title">Data Nilai<div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
                                 </div>
                             </a>
                             <ul class="">
                                 <li>
-                                    <a href="{{route('nilairaport')}}" class="side-menu">
+                                    <a href="{{ route('nilairaport') }}" class="side-menu">
                                         <div class="side-menu__icon"> <i data-feather="plus"></i> </div>
                                         <div class="side-menu__title"> Nilai Raport </div>
                                     </a>
@@ -268,13 +391,13 @@
                             </a>
                             <ul class="">
                                 <li>
-                                    <a href="{{ route('nilaisemuamapel') }}" class="side-menu">
+                                    <a href="{{ route('nilaisemuakriteria') }}" class="side-menu">
                                         <div class="side-menu__icon"> <i data-feather="plus"></i> </div>
-                                        <div class="side-menu__title"> Nilai | Semua Mapel </div>
+                                        <div class="side-menu__title"> Nilai | Semua Kriteria </div>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('nilaiakhir') }}" class="side-menu">
+                                    <a href="{{ route('nilaiakhir') }}" class="side-menu ">
                                         <div class="side-menu__icon"> <i data-feather="plus"></i> </div>
                                         <div class="side-menu__title"> Perangkingan </div>
                                     </a>
@@ -292,37 +415,33 @@
                         </h2>
                         <div class="w-full sm:w-auto flex mt-4 sm:mt-0">
                             <div class="intro-y col-span-12 flex flex-wrap sm:flex-nowrap items-center mt-2">
-                                <button class="btn btn-primary shadow-md mr-2 modal-hafalan">
+                                {{-- <button class="btn btn-primary shadow-md mr-2 modal-hafalan">
                                     <span class="w-5 h-5 flex items-center justify center"><i data-feather="user-plus" class="w-4 h-4"></i></span>
-                                </button>
+                                </button> --}}
                                 <button class="btn btn-primary shadow-md mr-2 modal-import_hafalan"> <!-- menampilkan button import data -->
-                                    <span class="w-5 h-5 flex items-center justify center"> <i class="w-4 h-3" data-feather="file-plus"></i> </span>
+                                    <span class="w-5 h-5 flex items-center justify center"> <i class="w-5 h-4" data-feather="file-plus"></i> </span>
                                 </button>
-                                <div class="w-full sm:w-auto mt-3 sm:mt-0 sm:ml-auto md:ml-0">
-                                    <div class="w-56 relative text-gray-700 dark:text-gray-300">
-                                        <input type="text" class="form-control w-56 bpx pr-10 placeholder-theme-8" placeholder="Cari.....">
-                                        <i class="w-4 h-4 absolute my-auto inset-y-0 mr-3 right-0" data-feather="search"></i>
-                                    </div>
-                                </div>
+                                <a href="{{ route('exportNilaiHafalan') }}" class="btn btn-success btn-md shadow-md mr-2"> <!-- menampilkan button export data -->
+                                    <span class="w-5 h-5 flex items-center justify center"> <i class="w-5 h-4 bi bi-file-earmark-excel"></i> </span>
+                                </a>
                             </div>
                         </div>
                     </div>
                     <!-- BEGIN: html table data -->
                     <div class="intro-y box p-1 mt-5">
-                        <div class="overflow-x-auto scrollbar-hidden">
+                        <div style="overflow-x:auto;">
                             <table id="data-table" class="table table-striped" style="width: 100%">
                                 <thead>
                                     <tr>
                                         <th>No</th>
-                                        <th>Nama Siswa</th>
+                                        <th>NIS</th>
+                                        <th>Kelas ID</th>
                                         <th>Jumlah Juz</th>
                                         <th>Makhrodul Huruf</th>
                                         <th>Ketentuan Ilmu Tajwid</th>
-                                        <th>Irama / Lagu</th>
+                                        <th>Irama/Lagu</th>
                                         <th>Fasokhah</th>
                                         <th>Nilai Hafalan</th>
-                                        <th>Kelas</th>
-                                        <th>Jurusan</th>
                                         <th>Semester</th>
                                         <th>Tahun Ajar</th>
                                         <th>Aksi</th>
@@ -333,6 +452,70 @@
                         </div>
                     </div>
                     <!-- END: html table data -->
+
+                    <!-- END: Modal Import Content -->
+                    <div id="modal-import" class="modal" tabindex="-1" aria-hidden="true" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <!-- BEGIN: Modal Header -->
+                                <div class="modal-header">
+                                    <h2 class="font-medium text-base mr-auto">
+                                        Import Data Hafalan Juz Al-Qur'an
+                                    </h2>
+                                    <a href="javascript:;" data-dismiss="modal"><i data-feather="x" class="w-8 h-8 text-gray-500"></i></a>
+                                </div>
+                                <form action="/halaman/import-hafalan" method="POST" enctype="multipart/form-data">
+                                    {{ csrf_field() }}
+                                    <!-- END: Modal Header -->
+                                    <!-- BEGIN: Modal Body -->
+                                    <div class="modal-body grid grid-cols-12 gap-4 gap-y-3">
+                                        <div class="form-group">
+                                            <input type="file" name="file" required>
+                                        </div>
+                                    </div>
+                                    <!-- END: Modal Body -->
+                                    <!-- BEGIN: Modal Footer -->
+                                    <div class="modal-footer text-right">
+                                        <button type="button" data-dismiss="modal" class="btn btn-outline-secondary w-20 mr-1">Batal</button>
+                                        <button type="submit" class="btn btn-primary w-20 btn-import">Import</button>
+                                    </div>
+                                    <!-- END: Modal Footer -->
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- BEGIN: Modal import Sukses Content -->
+                    <div id="success-import-modal-preview" class="modal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body p-0">
+                                    <div class="p-5 text-center">
+                                        <i data-feather="check-circle" class="w-16 sh-16 text-theme-10 mx-auto mt-3"></i>
+                                        <div class="text-3xl mt-5">Berhasil import data Hafalan Juz Al-Qur'an baru!</div>
+                                        <div class="text-gray-600 mt-2 import-sukses"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END: Modal Content -->
+                    <!-- BEGIN: Modal import Gagal Content -->
+                    <div id="warning-import-modal-preview" class="modal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body p-0">
+                                    <div class="p-5 text-center">
+                                        <i data-feather="x-circle" class="w-16 h-16 text-theme-23 mx-auto mt-3"></i>
+                                        <div class="text-3xl mt-5">Oops...Gagal import data Hafalan Juz Al-Qur'an baru!</div>
+                                        <div class="text-gray-600 mt-2 import-gagal"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END: Modal Content -->
+
+                    
                     <!-- BEGIN: modal create account -->
                     <div id="modal-create" class="modal" tabindex="-1" aria-hidden="true" role="dialog">
                         <div class="modal-dialog">
@@ -349,7 +532,7 @@
                                 <div class="modal-body grid grid-cols-12 gap-4 gap-y-3">
                                     <div class="col-span-12 sm:col-span-12">
                                         <label for="modal-form-1" class="form-label">Nama Siswa</label>
-                                        <input type="text" class="form-control create-name" placeholder="Masukkan Nama Siswa" required>
+                                        <input type="text" class="form-control create-nama_siswa" placeholder="Masukkan Nama Siswa" required>
                                     </div>
                                     <div class="col-span-12 sm:col-span-12">
                                         <label for="modal-form-1" class="form-label">Jumlah Juz</label>
@@ -357,19 +540,23 @@
                                     </div>
                                     <div class="col-span-12 sm:col-span-12">
                                         <label for="modal-form-1" class="form-label">Makhrodul Huruf</label>
-                                        <input type="text" class="form-control create-makhrodul_huruf" placeholder="Masukkan Makhrodul Huruf Siswa" required>
+                                        <input type="text" class="form-control create-makhrodul_huruf" placeholder="Masukkan Nilai Makhrodul Huruf Siswa" required>
                                     </div>
                                     <div class="col-span-12 sm:col-span-12">
                                         <label for="modal-form-1" class="form-label">Ketentuan Ilmu Tajwid</label>
-                                        <input type="text" class="form-control create-ketentuan_ilmu_tajwid" placeholder="Masukkan Ketentuan Ilmu Tajwid Siswa" required>
+                                        <input type="text" class="form-control create-ketentuan_ilmu_tajwid" placeholder="Masukkan Nilai Ketentuan Ilmu Tajwid Siswa" required>
                                     </div>
                                     <div class="col-span-12 sm:col-span-12">
                                         <label for="modal-form-1" class="form-label">Irama / Lagu</label>
-                                        <input type="text" class="form-control create-irama_lagu" placeholder="Masukkan Irama / Lagu Siswa" required>
+                                        <input type="text" class="form-control create-irama_lagu" placeholder="Masukkan Nilai Irama / Lagu Siswa" required>
+                                    </div>
+                                    <div class="col-span-12 sm:col-span-12">
+                                        <label for="modal-form-1" class="form-label">Fasokhah</label>
+                                        <input type="text" class="form-control create-fasokhah" placeholder="Masukkan Nilai Fasokhah Siswa" required>
                                     </div>
                                     <div class="col-span-12 sm:col-span-12">
                                         <label for="modal-form-1" class="form-label">Nilai Hafalan</label>
-                                        <input type="text" class="form-control create-nilai_hafalan" placeholder="Masukkan Nilai Hafalan Siswa" required>
+                                        <input type="text" id="nilai_hafalan" name="nilai_hafalan" max="255" class="form-control create-nilai_hafalan" placeholder="Masukkan Nilai Hafalan Siswa" required>
                                     </div>
                                     <div class="col-span-12 sm:col-span-12">
                                         <label for="modal-form-1" class="form-label">Kelas</label>
@@ -398,7 +585,7 @@
                                     </div>
                                     <div class="col-span-12 sm:col-span-12">
                                         <label for="modal-form-1" class="form-label">Tahun Ajar</label>
-                                        <select class="form-select create-tahunajar">
+                                        <select class="form-select create-tahun_ajar">
                                             <option selected disabled>--Pilih Tahun Ajar--</option>
                                             <option value="2022">2022</option>
                                             <option value="2023">2023</option>
@@ -451,7 +638,7 @@
                     </div>
                     <!-- END: modal create gagal content -->
                     <!-- BEGIN: modal update content -->
-                    <div id="modal-create" class="modal" tabindex="-1" aria-hidden="true" role="dialog">
+                    <div id="modal-update" class="modal" tabindex="-1" aria-hidden="true" role="dialog">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <!-- BEGIN: modal header -->
@@ -466,23 +653,28 @@
                                 <div class="modal-body grid grid-cols-12 gap-4 gap-y-3">
                                     <div class="col-span-12 sm:col-span-12">
                                         <label for="modal-form-1" class="form-label">Nama Siswa</label>
-                                        <input type="text" class="form-control update-name" placeholder="Masukkan Nama Siswa" required>
+                                        <input type="hidden" class="form-control update-id" required>
+                                        <input type="text" class="form-control update-nama_siswa" placeholder="Masukkan Nama Siswa" required>
                                     </div>
                                     <div class="col-span-12 sm:col-span-12">
                                         <label for="modal-form-1" class="form-label">Jumlah Juz</label>
-                                        <input type="text" class="form-control update-jumlah_juz" placeholder="Masukkan Jumlah Juz Siswa" required>
+                                        <input type="text" class="form-control update-jumlah_juz" placeholder="Masukkan Nilai Jumlah Juz Siswa" required>
                                     </div>
                                     <div class="col-span-12 sm:col-span-12">
                                         <label for="modal-form-1" class="form-label">Makhrodul Huruf</label>
-                                        <input type="text" class="form-control update-makhrodul_huruf" placeholder="Masukkan Makhrodul Huruf Siswa" required>
+                                        <input type="text" class="form-control update-makhrodul_huruf" placeholder="Masukkan Nilai Makhrodul Huruf Siswa" required>
                                     </div>
                                     <div class="col-span-12 sm:col-span-12">
                                         <label for="modal-form-1" class="form-label">Ketentuan Ilmu Tajwid</label>
-                                        <input type="text" class="form-control update-ketentuan_ilmu_tajwid" placeholder="Masukkan Ketentuan Ilmu Tajwid Siswa" required>
+                                        <input type="text" class="form-control update-ketentuan_ilmu_tajwid" placeholder="Masukkan Nilai Ketentuan Ilmu Tajwid Siswa" required>
                                     </div>
                                     <div class="col-span-12 sm:col-span-12">
                                         <label for="modal-form-1" class="form-label">Irama / Lagu</label>
-                                        <input type="text" class="form-control update-irama_lagu" placeholder="Masukkan Irama / Lagu Siswa" required>
+                                        <input type="text" class="form-control update-irama_lagu" placeholder="Masukkan Nilai Irama / Lagu Siswa" required>
+                                    </div>
+                                    <div class="col-span-12 sm:col-span-12">
+                                        <label for="modal-form-1" class="form-label">Fasokhah</label>
+                                        <input type="text" class="form-control update-fasokhah" placeholder="Masukkan Nilai Fasokhah Siswa" required>
                                     </div>
                                     <div class="col-span-12 sm:col-span-12">
                                         <label for="modal-form-1" class="form-label">Nilai Hafalan</label>
@@ -515,7 +707,7 @@
                                     </div>
                                     <div class="col-span-12 sm:col-span-12">
                                         <label for="modal-form-1" class="form-label">Tahun Ajar</label>
-                                        <select class="form-select update-tahunajar">
+                                        <select class="form-select update-tahun_ajar">
                                             <option selected disabled>--Pilih Tahun Ajar--</option>
                                             <option value="2022">2022</option>
                                             <option value="2023">2023</option>
@@ -538,7 +730,7 @@
                     </div>
                     <!-- END: modal update content -->
                     <!-- BEGIN: modal update sukses content -->
-                    <div id="success-create-modal-preview" class="modal" tabindex="-1" aria-hidden="true">
+                    <div id="success-update-modal-preview" class="modal" tabindex="-1" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-body p-0">
@@ -553,7 +745,7 @@
                     </div>
                     <!-- END: modal update sukses content -->
                     <!-- BEGIN: modal update gagal content -->
-                    <div id="warning-create-modal-preview" class="modal" tabindex="-1" aria-hidden="true">
+                    <div id="warning-update-modal-preview" class="modal" tabindex="-1" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-body p-0">
@@ -668,8 +860,311 @@
                     $('.role-user').text(data.role);
                 }).catch(error => {
                     console.error('Error:', error);
-                })
-            })
+                });
+
+                $('#data-table').DataTable({
+                    "processing": true, //menampilkan pesan loading
+                    "serverside": true,
+                    "ajax": {
+                        "url": "http://127.0.0.1:8000/api/nilai-hafalan/list",
+                        "dataType": "json",
+                        "type": "POST",
+                        "headers": {
+                            'Authorization': 'Bearer ' + token
+                        }
+                    },
+                    "columns": [
+                        { data: 'nomor_urut', className: 'text-center' },
+                        { data: 'nis', className: 'text-center' },
+                        { data: 'kelas_id', className: 'text-center' },
+                        { data: 'jumlah_juz', className: 'text-center' },
+                        { data: 'makhrodul_huruf', className: 'text-center' },
+                        { data: 'ketentuan_ilmu_tajwid', className: 'text-center' },
+                        { data: 'irama_lagu', className: 'text-center' },
+                        { data: 'fasokhah', className: 'text-center' },
+                        { data: 'nilai_hafalan', className: 'text-center' },
+                        { data: 'semester', className: 'text-center' },
+                        { data: 'tahun_ajar', className: 'text-center' },
+                        {
+                            data: null,
+                            render: function (data, type, row){
+                                // create action button
+                                // var editBtn = '<button class = "btn btn-primary btn-edit" data-id = "' + data.id + '" data-nama_siswa = "' + data.nama_siswa + '" data-jumlah_juz = "' + data.jumlah_juz + '" data-makhrodul_huruf = "' + data.makhrodul_huruf + '"data-ketentuan_ilmu_tajwid = "' + data.ketentuan_ilmu_tajwid + '"data-irama_lagu = "' + data.irama_lagu + '"data-fasokhah = "' + data.fasokhah + '"data-nilai_hafalan = "' + data.nilai_hafalan + '" data-kelas = "' + data.kelas + '" data-jurusan = "' + data.jurusan + '" data-semester = "' + data.semester + '" data-tahun_ajar = "' + data.tahun_ajar + '"><i data-feather = "edit" class = "w-4 h-4"> </i> </button>';
+                                var deleteBtn = '<button class = "btn btn-danger btn-delete" data-id="' + data.id + '"><i data-feather = "trash-2" class = "w-4 h-4"></i> </button>';
+
+                                //combine the button
+                                // var actions = editBtn + ' || ' + deleteBtn;
+                                var actions = deleteBtn;
+                                return actions;
+                            }
+                        }
+                    ],
+                    "drawCallback": function (settings){
+                        feather.replace(); //untuk memperbarui ikon - ikon SVG setelah data di perbarui
+                    }
+                });
+
+                $(".modal-hafalan").click(function(){
+                    cash('#modal-create').modal("show");
+                });
+
+                $(".btn-create").click(function() {
+                    var nama_siswa = $('.create-nama_siswa').val();
+                    var jumlah_juz = $('.create-jumlah_juz').val();
+                    var makhrodul_huruf = $('.create-makhrodul_huruf').val();
+                    var ketentuan_ilmu_tajwid = $('.create-ketentuan_ilmu_tajwid').val();
+                    var irama_lagu = $('.create-irama_lagu').val();
+                    var fasokhah = $('.create-fasokhah').val();
+                    var nilai_hafalan = $('.create-nilai_hafalan').val();
+                    var kelas = $('.create-kelas').val();
+                    var jurusan = $('.create-jurusan').val();
+                    var semester = $('.create-semester').val();
+                    var tahun_ajar = $('.create-tahun_ajar').val();
+
+                    var formData = new FormData();
+                    formData.append('nama_siswa', nama_siswa);
+                    formData.append('jumlah_juz', jumlah_juz);
+                    formData.append('makhrodul_huruf', makhrodul_huruf);
+                    formData.append('ketentuan_ilmu_tajwid', ketentuan_ilmu_tajwid);
+                    formData.append('irama_lagu', irama_lagu);
+                    formData.append('fasokhah', fasokhah);
+                    formData.append('nilai_hafalan', nilai_hafalan);
+                    formData.append('kelas', kelas);
+                    formData.append('jurusan', jurusan);
+                    formData.append('semester', semester);
+                    formData.append('tahun_ajar', tahun_ajar);
+
+                    $.ajax({
+                        url: "http://127.0.0.1:8000/api/nilai-hafalan/tambah-hafalan",
+                        type: "POST",
+                        dataType: "JSON",
+                        headers: {
+                            'Authorization': 'Bearer ' + token
+                        },
+                        data: formData,
+                        processData: false,
+                        contentType: false,
+                        success: function(response){
+                            $('.create-sukses').text(response.message);
+                            cash("#success-create-modal-preview").modal("show");
+                            console.log('Data Nilai Hafalan Berhasil di Tambahkan!');
+
+                            setTimeout(function(){
+                                cash("#success-create-modal-preview").modal("hide");
+
+                                location.reload();
+                            }, 3000); // 3000 milliseconds = 3 seconds
+                        },
+                        error: function(xhr, status, error){
+                            // Tangani kesalahan dalam permintaan Ajax itu sendiri
+                            console.log('Data Nilai Hafalan Gagal untuk di Tambahkan. Status: ' + error);
+
+                            // Tampilkan pesan kesalahan yang dikirim oleh server
+                            var response = JSON.parse(xhr.responseText);
+                            if (response.success === false && response.message) {
+                                $('.create-gagal').text(response.message);
+                                cash("#warning-create-modal-preview").modal("show");
+
+                                setTimeout(function(){
+                                    cash("#warning-create-modal-preview").modal("hide");
+                                    
+                                    location.reload();
+                                }, 5000); // 5000 milliseconds = 5 seconds
+                            } else {
+                                // Tangani kesalahan lainnya jika ada
+                                // Contoh: pesan kesalahan bawaan dari permintaan Ajax
+                                alert('Terjadi kesalahan lainnya: ' + error);
+                            }
+                        }
+                    });
+
+                    var nilai_hafalan = document.getElementById('nilai_hafalan').value;
+                    if (nilai_hafalan > 255) {
+                    alert("The nilai hafalan must not be greater than 255.");
+                    }
+                });
+                
+                $('#data-table').on('click', '.btn-edit', function(){
+                    cash("#modal-update").modal("show");
+                    var id = $(this).attr("data-id");
+                    var nama_siswa = $(this).attr("data-nama_siswa");
+                    var jumlah_juz = $(this).attr("data-jumlah_juz");
+                    var makhrodul_huruf = $(this).attr("data-makhrodul_huruf");
+                    var ketentuan_ilmu_tajwid = $(this).attr("data-ketentuan_ilmu_tajwid");
+                    var irama_lagu = $(this).attr("data-irama_lagu");
+                    var fasokhah = $(this).attr("data-fasokhah");
+                    var nilai_hafalan = $(this).attr("data-nilai_hafalan");
+                    var kelas = $(this).attr("data-kelas");
+                    var jurusan = $(this).attr("data-jurusan");
+                    var semester = $(this).attr("data-semester");
+                    var tahun_ajar = $(this).attr("data-tahun_ajar");
+
+                    $('.update-id').val(id);
+                    $('.update-nama_siswa').val(nama_siswa);
+                    $('.update-jumlah_juz').val(jumlah_juz);
+                    $('.update-makhrodul_huruf').val(makhrodul_huruf);
+                    $('.update-ketentuan_ilmu_tajwid').val(ketentuan_ilmu_tajwid);
+                    $('.update-irama_lagu').val(irama_lagu);
+                    $('.update-fasokhah').val(fasokhah);
+                    $('.update-nilai_hafalan').val(nilai_hafalan);
+                    $('.update-kelas').val(kelas);
+                    $('.update-jurusan').val(jurusan);
+                    $('.update-semester').val(semester);
+                    $('.update-tahun_ajar').val(tahun_ajar);
+                });
+
+                $(".btn-update").click(function() {
+                    // Ajax update
+                    var id = $('.update-id').val();
+                    var nama_siswa = $('.update-nama_siswa').val();
+                    var jumlah_juz = $('.update-jumlah_juz').val();
+                    var makhrodul_huruf = $('.update-makhrodul_huruf').val();
+                    var ketentuan_ilmu_tajwid = $('.update-ketentuan_ilmu_tajwid').val();
+                    var irama_lagu = $('.update-irama_lagu').val();
+                    var fasokhah = $('.update-fasokhah').val();
+                    var nilai_hafalan = $('.update-nilai_hafalan').val();
+                    var kelas = $('.update-kelas').val();
+                    var jurusan = $('.update-jurusan').val();
+                    var semester = $('.update-semester').val();
+                    var tahun_ajar = $('.update-tahun_ajar').val();
+
+                    // Validasi id
+                    if (!id || id === "")
+                    {
+                        alert("ID Nilai Hafalan harus diisi!");
+                        return;
+                    }
+                    
+                    // Kirim permintaan pembaruan produk ke API
+                    $.ajax({
+                        url: "http://127.0.0.1:8000/api/nilai-hafalan/update-hafalan/" + id,
+                        type: "PUT",
+                        beforeSend: function(xhr) {
+                            xhr.setRequestHeader('Authorization', 'Bearer ' + token);
+                        },
+                        data: {
+                            id: id,
+                            nama_siswa: nama_siswa,
+                            jumlah_juz: jumlah_juz,
+                            makhrodul_huruf: makhrodul_huruf,
+                            ketentuan_ilmu_tajwid: ketentuan_ilmu_tajwid,
+                            irama_lagu: irama_lagu,
+                            fasokhah: fasokhah,
+                            irama_lagu: irama_lagu,
+                            nilai_hafalan: nilai_hafalan,
+                            kelas: kelas,
+                            jurusan: jurusan,
+                            semester: semester,
+                            tahun_ajar: tahun_ajar,
+                        },
+                        success: function(response){
+                            //show the modal
+                            $('.update-sukses').text(response.message);
+                            cash("#success-update-modal-preview").modal("show");
+
+                            setTimeout(function() {
+                                cash("#success-update-modal-prewiew").modal("hide");
+
+                                location.reload();
+                            }, 3000); //3000 milliseconds = 3 seconds
+                        },
+                        error: function(xhr, status, error) {
+                            //tangani kesalahan dalam permintaan ajax itu sendiri
+                            console.log(error);
+
+                            //tampilkan pesan kesalahan yang dikirim oleh server
+                            var response = JSON.parse(xhr.response);
+                            if(response.success === false && response.message) {
+                                $('.update-gagal').text(response.message);
+                                cash("#warning-update-modal-preview").modal("show");
+
+                                location.reload();
+                            } else {
+                                //tangani kesalahan lainnya jika ada
+                                //contoh : pesan kesalahan bawaan dari permintaan ajax
+                                alert('Terjadi kesalahan lainnya: '+ error);
+                            }
+                        }
+                    });
+                });
+                $('#data-table').on('click', '.btn-delete', function(){
+                    var id = $(this).attr("data-id");
+
+                    cash("#delete-modal-preview").modal("show");
+                    $('.hapus-btn').show();
+                    $('.hapus-btn').click(function() {
+                        $.ajax({
+                            url: "http://127.0.0.1:8000/api/nilai-hafalan/delete-hafalan/" + id,
+                            type: "DELETE",
+                            headers: {
+                                'Authorization': 'Bearer ' + token
+                            },
+                            success: function(response) {
+                                //show the modal
+                                $('.hapus-sukses').text(response.message);
+                                cash("#success-hapus-modal-preview").modal("show");
+
+                                setTimeout(function() {
+                                    cash("#success-hapus-modal-preview").modal("hide");
+
+                                    location.reload();
+                                }, 3000); // 3000 milliseconds = 3 seconds
+                            },
+                            error: function(xhr, status, error) {
+                                //show error aler
+                                $('.hapus-gagal').text(response.meesage);
+                                cash("#warning-hapus-modal-preview").modal("show");
+
+                                setTimeout(function() {
+                                    cash("#warning-hapus-modal-preview").modal("hide");
+
+                                    location.reload();
+                                }, 5000); // 3000 milliseconds = 3 seconds
+                            }
+                        });
+                    });
+                });
+
+                $('.modal-import_hafalan').click(function() {
+                    cash("#modal-import").modal("show");
+                });
+
+                $(".btn-import").click(function()
+                {
+                    cash("#modal-import").modal("show");
+                    //ajax delete API
+                    $.ajax({
+                        success: function(response) {
+                            //show the modal
+                            $('.import-sukses').text(response.message);
+                            cash("#success-import-modal-preview").modal("show");
+
+                            setTimeout(function() {
+                                cash("#success-import-modal-preview").modal("hide");
+
+                                location.reload();
+                            }, 3000); // 3000 milliseconds = 3 seconds
+                        },
+                        error: function(xhr, status, error) {
+                            //show error aler
+                            $('.import-gagal').text(response.meesage);
+                            cash("#warning-import-modal-preview").modal("show");
+
+                            setTimeout(function() {
+                                cash("#warning-import-modal-preview").modal("hide");
+
+                                location.reload();
+                            }, 5000); // 3000 milliseconds = 3 seconds
+                        }
+                    });
+                });
+                
+                function logout(name){
+                    document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+                    winddow.location.href = "{{ route('login') }}";
+                }
+            });
+            
         </script>
         <!-- END: JS Assets -->
     </body>

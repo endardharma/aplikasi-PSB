@@ -15,13 +15,11 @@ return new class extends Migration
     {
         Schema::create('mastermapel', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('user_id')->index()->unsigned()->nullable();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('nama_mapel');
             $table->string('kelompok_mapel'); // Kelompok A/B/C
             $table->string('nama_nilai'); // Pengetahuan/Keterampilan
-            $table->string('kelas');
-            $table->string('jurusan');
-            $table->string('semester');
-            $table->string('tahun_ajar');
             $table->timestamps();
         });
     }

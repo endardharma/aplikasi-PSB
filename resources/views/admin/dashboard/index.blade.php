@@ -17,9 +17,11 @@ License: You must have a valid license purchased only from themeforest(the above
         <meta name="description" content="Icewall admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
         <meta name="keywords" content="admin template, Icewall Admin Template, dashboard template, flat admin template, responsive admin template, web app">
         <meta name="author" content="LEFT4CODE">
-        <title>Dashboard - AdminSuper</title>
+        <title>Dashboard - TeamIT</title>
         <!-- BEGIN: CSS Assets-->
         <link rel="stylesheet" href="{{ asset('template/dist/css/app.css') }}" />
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
         <!-- END: CSS Assets-->
     </head>
     <!-- END: Head -->
@@ -40,28 +42,90 @@ License: You must have a valid license purchased only from themeforest(the above
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('masterguru')}}" class="menu">
-                        <div class="menu__icon"> <i data-feather="users"></i> </div>
-                        <div class="menu__title"> Master Guru </div>
-                    </a>
-                </li>
-                <li>
                     <a href="{{ route('mastersiswa') }}" class="menu">
                         <div class="menu__icon"> <i data-feather="users"></i> </div>
                         <div class="menu__title"> Master Siswa </div>
                     </a>
                 </li>
                 <li>
-                    <a href="{{route('mastermapel')}}" class="menu">
-                        <div class="menu__icon"> <i data-feather="inbox"></i> </div>
-                        <div class="menu__title"> Master Mata Pelajaran </div>
+                    <a href="javascript:;" class="menu">
+                        <div class="menu__icon"> <i data-feather="users"></i> </div>
+                        <div class="menu__title"> Users <i data-feather="chevron-down" class="menu__sub-icon"></i> </div>
                     </a>
+                    <ul class="">
+                        <li>
+                            <a href="{{route('user')}}" class="menu">
+                                <div class="menu__icon"> <i data-feather="plus"></i> </div>
+                                <div class="menu__title"> Master User </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('userdetail') }}" class="menu">
+                                <div class="menu__icon"> <i data-feather="plus"></i> </div>
+                                <div class="menu__title"> User Detail </div>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
                 <li>
-                    <a href="{{route('masterkriteria')}}" class="menu">
-                        <div class="menu__icon"> <i data-feather="slack"></i> </div>
-                        <div class="menu__title"> Master Kriteria </div>
+                    <a href="javascript:;" class="menu">
+                        <div class="menu__icon"> <i data-feather="server"></i> </div>
+                        <div class="menu__title"> Jurusan <i data-feather="chevron-down" class="menu__sub-icon"></i></div>
                     </a>
+                    <ul class="">
+                        <li>
+                            <a href="{{ route('masterjurusan') }}" class="menu">
+                                <div class="menu__icon"> <i data-feather="plus"></i> </div>
+                                <div class="menu__title"> Master Jurusan </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('jurusansiswa') }}" class="menu">
+                                <div class="menu__icon"> <i data-feather="plus"></i> </div>
+                                <div class="menu__title"> Jurusan Siswa </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;" class="menu">
+                        <div class="menu__icon"> <i data-feather="layers"></i> </div>
+                        <div class="menu__title"> Kelas <i data-feather="chevron-down" class="menu__sub-icon"></i> </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="{{route('masterkelas')}}" class="menu">
+                                <div class="menu__icon"> <i data-feather="plus"></i> </div>
+                                <div class="menu__title"> Master Kelas </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('kelassiswa') }}" class="menu">
+                                <div class="menu__icon"> <i data-feather="plus"></i> </div>
+                                <div class="menu__title"> Kelas Siswa </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;" class="menu">
+                        <div class="menu__icon"> <i data-feather="slack"></i> </div>
+                        <div class="menu__title"> Kriteria <i data-feather="chevron-down" class="menu__sub-icon"></i> </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="{{route('masterkriteria')}}" class="menu">
+                                <div class="menu__icon"> <i data-feather="plus"></i> </div>
+                                <div class="menu__title"> Master Kriteria </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('periodekriteria') }}" class="menu">
+                                <div class="menu__icon"> <i data-feather="plus"></i> </div>
+                                <div class="menu__title"> Periode Kriteria </div>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
                 <li class="menu__devider my-6"></li>
                 <li>
@@ -114,9 +178,9 @@ License: You must have a valid license purchased only from themeforest(the above
                         </a>
                         <ul class="">
                             <li>
-                                <a href="{{ route('nilaisemuamapel') }}" class="menu">
+                                <a href="{{ route('nilaisemuakriteria') }}" class="menu">
                                     <div class="menu__icon"> <i data-feather="plus"></i> </div>
-                                    <div class="menu__title"> Nilai | Semua Mapel </div>
+                                    <div class="menu__title"> Nilai | Semua Kriteria </div>
                                 </a>
                             </li>
                             <li>
@@ -192,36 +256,100 @@ License: You must have a valid license purchased only from themeforest(the above
                             </a>
                         </li>
                         <li>
-                            <a href="{{ route('masterguru') }}" class="side-menu">
-                                <div class="side-menu__icon"> <i data-feather="users"></i> </div>
-                                <div class="side-menu__title"> Master Guru </div>
-                            </a>
-                        </li>
-                        <li>
                             <a href="{{ route('mastersiswa') }}" class="side-menu">
                                 <div class="side-menu__icon"> <i data-feather="users"></i> </div>
                                 <div class="side-menu__title"> Master Siswa </div>
                             </a>
                         </li>
                         <li>
-                            <a href="{{route('mastermapel')}}" class="side-menu">
-                                <div class="side-menu__icon"> <i data-feather="inbox"></i> </div>
-                                <div class="side-menu__title"> Master Mata Pelajaran </div>
+                            <a href="javascript:;" class="side-menu">
+                                <div class="side-menu__icon"> <i data-feather="users"></i> </div>
+                                <div class="side-menu__title"> Users <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
+                            </div>
                             </a>
+                            <ul class="">
+                                <li>
+                                    <a href="{{route('user')}}" class="side-menu">
+                                        <div class="side-menu__icon"> <i data-feather="plus"></i> </div>
+                                        <div class="side-menu__title"> Master User </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('userdetail') }}" class="side-menu">
+                                        <div class="side-menu__icon"> <i data-feather="plus"></i> </div>
+                                        <div class="side-menu__title"> User Detail </div>
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
                         <li>
-                            <a href="{{route('masterkriteria')}}" class="side-menu">
-                                <div class="side-menu__icon"> <i data-feather="slack"></i> </div>
-                                <div class="side-menu__title"> Master Kriteria </div>
+                            <a href="javascript:;" class="side-menu">
+                                <div class="side-menu__icon"> <i data-feather="server"></i> </div>
+                                <div class="side-menu__title"> Jurusan <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i></div>
+                            </div>
                             </a>
+                            <ul class="">
+                                <li>
+                                    <a href="{{ route('masterjurusan') }}" class="side-menu">
+                                        <div class="side-menu__icon"> <i data-feather="plus"></i> </div>
+                                        <div class="side-menu__title"> Master Jurusan </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('jurusansiswa') }}" class="side-menu">
+                                        <div class="side-menu__icon"> <i data-feather="plus"></i> </div>
+                                        <div class="side-menu__title"> Jurusan Siswa </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="side-menu">
+                                <div class="side-menu__icon"> <i data-feather="layers"></i> </div>
+                                <div class="side-menu__title"> Kelas <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
+                            </div>
+                            </a>
+                            <ul class="">
+                                <li>
+                                    <a href="{{route('masterkelas')}}" class="side-menu">
+                                        <div class="side-menu__icon"> <i data-feather="plus"></i> </div>
+                                        <div class="side-menu__title"> Master Kelas </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('kelassiswa') }}" class="side-menu">
+                                        <div class="side-menu__icon"> <i data-feather="plus"></i> </div>
+                                        <div class="side-menu__title"> Kelas Siswa </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="side-menu">
+                                <div class="side-menu__icon"> <i data-feather="slack"></i> </div>
+                                <div class="side-menu__title"> Kriteria <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
+                            </div>
+                            </a>
+                            <ul class="">
+                                <li>
+                                    <a href="{{route('masterkriteria')}}" class="side-menu">
+                                        <div class="side-menu__icon"> <i data-feather="plus"></i> </div>
+                                        <div class="side-menu__title"> Master Kriteria </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('periodekriteria') }}" class="side-menu">
+                                        <div class="side-menu__icon"> <i data-feather="plus"></i> </div>
+                                        <div class="side-menu__title"> Periode Kriteria </div>
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="side-nav__devider my-6"></li>
                         <li>
                             <a href="javascript:;" class="side-menu">
                                 <div class="side-menu__icon"> <i data-feather="edit"></i> </div>
-                                <div class="side-menu__title">
-                                    Data Nilai
-                                    <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
+                                <div class="side-menu__title">Data Nilai<div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
                                 </div>
                             </a>
                             <ul class="">
@@ -273,9 +401,9 @@ License: You must have a valid license purchased only from themeforest(the above
                             </a>
                             <ul class="">
                                 <li>
-                                    <a href="{{ route('nilaisemuamapel') }}" class="side-menu">
+                                    <a href="{{ route('nilaisemuakriteria') }}" class="side-menu">
                                         <div class="side-menu__icon"> <i data-feather="plus"></i> </div>
-                                        <div class="side-menu__title"> Nilai | Semua Mapel </div>
+                                        <div class="side-menu__title"> Nilai | Semua Kriteria </div>
                                     </a>
                                 </li>
                                 <li>
@@ -324,9 +452,9 @@ License: You must have a valid license purchased only from themeforest(the above
                                                     <div class="flex">
                                                         <i data-feather="users" class="report-box__icon text-theme-21"></i>
                                                     </div>
-                                                    <div class="text-base text-gray-600 mt-1"> Guru</div>
+                                                    <div class="text-base text-gray-600 mt-1"> User Detailu</div>
                                                     <div class="ml-auto">
-                                                        <div class="report-box__indicator bg-theme-10 tooltip cursor-pointer mt-2" title="terdapat 6 guru "> 6 <i data-feather="chevron-up" class="w-4 h-4 ml-0.5"></i> </div>
+                                                        <div class="report-box__indicator bg-theme-10 tooltip cursor-pointer mt-2" title="terdapat 6 User Detail "> 6 <i data-feather="chevron-up" class="w-4 h-4 ml-0.5"></i> </div>
                                                     </div>
                                                     {{-- <div class="text-3xl font-bold leading-8 mt-6">350</div> --}}
                                                 </div>

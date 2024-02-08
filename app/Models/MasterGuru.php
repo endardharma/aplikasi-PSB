@@ -10,6 +10,15 @@ class MasterGuru extends Model
     use HasFactory;
     public $table = "masterguru";
     public $timestamps = true;
+    // public function masterGuru()
+    // {
+    //     return $this->hasMany(MasterGuru::class,'jabatan');
+    // }
+
+    // public function user()
+    // {
+    //     return $this->belongsTo(User::class);
+    // }
 
     // protected $fillable =[
     //     'id',

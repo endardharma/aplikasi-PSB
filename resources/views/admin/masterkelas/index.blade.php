@@ -8,7 +8,7 @@
         <meta name="description" content="Icewall admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
         <meta name="keywords" content="admin template, Icewall Admin Template, dashboard template, flat admin template, responsive admin template, web app">
         <meta name="author" content="LEFT4CODE">
-        <title> Master Matapelajaran</title>
+        <title> Master Kelas</title>
         <!-- BEGIN: CSS Assets -->
         <link rel="stylesheet" href="{{ asset('template/dist/css/app.css') }}">
         <link href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" rel="stylesheet">
@@ -28,53 +28,112 @@
                 <li>
                     <a href="{{ route('dashboard') }}" class="menu">
                         <div class="menu__icon"> <i data-feather="home"></i> </div>
-                        <div class="menu__title"> Dashboard </div>  <!-- menampilkan halaman drop down <i data-feather="chevron-down" class="menu__sub-icon">-->
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ route('masterguru') }}" class="menu">
-                        <div class="menu__icon"> <i data-feather="users"></i> </div>
-                        <div class="menu__title"> Master Guru </div>
+                        <div class="menu__title"> Dashboard </i> </div>  <!-- menampilkan halaman drop down <i data-feather="chevron-down" class="menu__sub-icon">-->
                     </a>
                 </li>
                 <li>
                     <a href="{{ route('mastersiswa') }}" class="menu">
                         <div class="menu__icon"> <i data-feather="users"></i> </div>
-                        <div class="menu__title"> Master Siswa</div>
+                        <div class="menu__title"> Master Siswa </div>
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('mastermapel') }}" class="menu">
-                        <div class="menu__icon"> <i data-feather="inbox"></i> </div>
-                        <div class="menu__title"> Master Mata Pelajaran</div>
+                    <a href="javascript:;" class="menu">
+                        <div class="menu__icon"> <i data-feather="users"></i> </div>
+                        <div class="menu__title"> Users <i data-feather="chevron-down" class="menu__sub-icon"></i> </div>
                     </a>
+                    <ul class="">
+                        <li>
+                            <a href="{{route('user')}}" class="menu">
+                                <div class="menu__icon"> <i data-feather="plus"></i> </div>
+                                <div class="menu__title"> Master User </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('userdetail') }}" class="menu">
+                                <div class="menu__icon"> <i data-feather="plus"></i> </div>
+                                <div class="menu__title"> User Detail </div>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
                 <li>
-                    <a href="{{ route('masterkriteria') }}" class="menu">
+                    <a href="javascript:;" class="menu">
+                        <div class="menu__icon"> <i data-feather="server"></i> </div>
+                        <div class="menu__title"> Jurusan <i data-feather="chevron-down" class="menu__sub-icon"></i></div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="{{ route('masterjurusan') }}" class="menu">
+                                <div class="menu__icon"> <i data-feather="plus"></i> </div>
+                                <div class="menu__title"> Master Jurusan </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('jurusansiswa') }}" class="menu">
+                                <div class="menu__icon"> <i data-feather="plus"></i> </div>
+                                <div class="menu__title"> Jurusan Siswa </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;" class="menu">
+                        <div class="menu__icon"> <i data-feather="layers"></i> </div>
+                        <div class="menu__title"> Kelas <i data-feather="chevron-down" class="menu__sub-icon"></i> </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="{{route('masterkelas')}}" class="menu">
+                                <div class="menu__icon"> <i data-feather="plus"></i> </div>
+                                <div class="menu__title"> Master Kelas </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('kelassiswa') }}" class="menu">
+                                <div class="menu__icon"> <i data-feather="plus"></i> </div>
+                                <div class="menu__title"> Kelas Siswa </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;" class="menu">
                         <div class="menu__icon"> <i data-feather="slack"></i> </div>
-                        <div class="menu__title"> Master Krtieria</div>
+                        <div class="menu__title"> Kriteria <i data-feather="chevron-down" class="menu__sub-icon"></i> </div>
                     </a>
+                    <ul class="">
+                        <li>
+                            <a href="{{route('masterkriteria')}}" class="menu">
+                                <div class="menu__icon"> <i data-feather="plus"></i> </div>
+                                <div class="menu__title"> Master Kriteria </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('periodekriteria') }}" class="menu">
+                                <div class="menu__icon"> <i data-feather="plus"></i> </div>
+                                <div class="menu__title"> Periode Kriteria </div>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
                 <li class="menu__devider my-6"></li>
                 <li>
                     <a href="javascript:;" class="menu">
                         <div class="menu__icon"> <i data-feather="edit"></i> </div>
-                        <div class="menu__title"> 
-                            Data Nilai 
-                        </div>
-                        <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
+                        <div class="menu__title"> Data Nilai <i data-feather="chevron-down" class="menu__sub-icon"></i> </div>
                     </a>
                     <ul class="">
                         <li>
                             <a href="{{route('nilairaport')}}" class="menu">
                                 <div class="menu__icon"> <i data-feather="plus"></i> </div>
-                                <div class="menu__title"> Nilai Raport</div>
+                                <div class="menu__title"> Nilai Raport </div>
                             </a>
                         </li>
                         <li>
                             <a href="{{ route('nilaiketidakhadiran') }}" class="menu">
                                 <div class="menu__icon"> <i data-feather="plus"></i> </div>
-                                <div class="menu__title"> Tingkat Ketidakhadiran Siswa</div>
+                                <div class="menu__title"> Tingkat Ketidakhadiran </div>
                             </a>
                         </li>
                         <li>
@@ -86,33 +145,32 @@
                         <li>
                             <a href="{{ route('nilaiprestasi') }}" class="menu">
                                 <div class="menu__icon"> <i data-feather="plus"></i> </div>
-                                <div class="menu__title"> Prestasi Akademik / Non-Akademik</div>
+                                <div class="menu__title"> Prestasi Akademik / Non-Akademik </div>
                             </a>
                         </li>
                         <li>
                             <a href="{{ route('nilaiketerlambatan') }}" class="menu">
                                 <div class="menu__icon"> <i data-feather="plus"></i> </div>
-                                <div class="menu__title"> Keterlambatan mMasuk Sekolah</div>
+                                <div class="menu__title"> Keterlambatan Masuk Sekolah </div>
                             </a>
                         </li>
                         <li>
                             <a href="{{ route('nilaihafalan') }}" class="menu">
                                 <div class="menu__icon"> <i data-feather="plus"></i> </div>
-                                <div class="menu__title"> Hafalan Juz Al-Qur'an</div>
+                                <div class="menu__title"> Hafalan Juz Al-Qur'an </div>
                             </a>
                         </li>
                     </ul>
                     <li>
                         <a href="javascript:;" class="menu">
                             <div class="menu__icon"> <i data-feather="clipboard"></i> </div>
-                            <div class="menu__title"> Penilaian </div>
-                            <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
+                            <div class="menu__title"> Penilaian <i data-feather="chevron-down" class="menu__sub-icon"></i></div>
                         </a>
                         <ul class="">
-                            <<li>
-                                <a href="{{ route('nilaisemuamapel') }}" class="menu">
+                            <li>
+                                <a href="{{ route('nilaisemuakriteria') }}" class="menu">
                                     <div class="menu__icon"> <i data-feather="plus"></i> </div>
-                                    <div class="menu__title"> Nilai | Semua Mapel </div>
+                                    <div class="menu__title"> Nilai | Semua Kriteria </div>
                                 </a>
                             </li>
                             <li>
@@ -140,7 +198,7 @@
                 <div class="-intro-x breadcrumb mr-auto">
                     <a href=""> Beranda </a>
                     <i data-feather="chevron-right" class="breadcrumb__icon"></i>
-                    <a href="" class="breadcrumb--active">Master Matapelajaran</a>
+                    <a href="" class="breadcrumb--active">Master Kelas</a>
                 </div>
                 <!-- END: Breadcrumb -->
                 <!-- BEGIN: Notifications -->
@@ -186,46 +244,110 @@
                     <ul>
                         <li>
                             <a href="{{ route('dashboard') }}" class="side-menu">
-                                <div class="side-menu__icon"><i data-feather="monitor"></i></div>
-                                <div class="side-menu__title">Dashboard</div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ route('masterguru') }}" class="side-menu">
-                                <div class="side-menu__icon"><i data-feather="users"></i></div>
-                                <div class="side-menu__title">Master Guru</div>
+                                <div class="side-menu__icon"> <i data-feather="monitor"></i> </div>
+                                <div class="side-menu__title"> Dashboard </div>
                             </a>
                         </li>
                         <li>
                             <a href="{{ route('mastersiswa') }}" class="side-menu">
-                                <div class="side-menu__icon"><i data-feather="users"></i></div>
-                                <div class="side-menu__title">Master Siswa</div>
+                                <div class="side-menu__icon"> <i data-feather="users"></i> </div>
+                                <div class="side-menu__title"> Master Siswa </div>
                             </a>
                         </li>
                         <li>
-                            <a href="{{ route('mastermapel') }}" class="side-menu side-menu--active">
-                                <div class="side-menu__icon"><i data-feather="inbox"></i></div>
-                                <div class="side-menu__title">Master Matapelajaran</div>
+                            <a href="javascript:;" class="side-menu">
+                                <div class="side-menu__icon"> <i data-feather="users"></i> </div>
+                                <div class="side-menu__title"> Users <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
+                            </div>
                             </a>
+                            <ul class="">
+                                <li>
+                                    <a href="{{route('user')}}" class="side-menu">
+                                        <div class="side-menu__icon"> <i data-feather="plus"></i> </div>
+                                        <div class="side-menu__title"> Master User </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('userdetail') }}" class="side-menu">
+                                        <div class="side-menu__icon"> <i data-feather="plus"></i> </div>
+                                        <div class="side-menu__title"> User Detail </div>
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
                         <li>
-                            <a href="{{ route('masterkriteria') }}" class="side-menu">
-                                <div class="side-menu__icon"><i data-feather="slack"></i></div>
-                                <div class="side-menu__title">Master Kriteria</div>
+                            <a href="javascript:;" class="side-menu">
+                                <div class="side-menu__icon"> <i data-feather="server"></i> </div>
+                                <div class="side-menu__title"> Jurusan <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i></div>
+                            </div>
                             </a>
+                            <ul class="">
+                                <li>
+                                    <a href="{{ route('masterjurusan') }}" class="side-menu">
+                                        <div class="side-menu__icon"> <i data-feather="plus"></i> </div>
+                                        <div class="side-menu__title"> Master Jurusan </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('jurusansiswa') }}" class="side-menu">
+                                        <div class="side-menu__icon"> <i data-feather="plus"></i> </div>
+                                        <div class="side-menu__title"> Jurusan Siswa </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="side-menu side-menu--active">
+                                <div class="side-menu__icon"> <i data-feather="layers"></i> </div>
+                                <div class="side-menu__title"> Kelas <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
+                            </div>
+                            </a>
+                            <ul class="">
+                                <li>
+                                    <a href="{{route('masterkelas')}}" class="side-menu side-menu--active">
+                                        <div class="side-menu__icon"> <i data-feather="plus"></i> </div>
+                                        <div class="side-menu__title"> Master Kelas </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('kelassiswa') }}" class="side-menu">
+                                        <div class="side-menu__icon"> <i data-feather="plus"></i> </div>
+                                        <div class="side-menu__title"> Kelas Siswa </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="side-menu">
+                                <div class="side-menu__icon"> <i data-feather="slack"></i> </div>
+                                <div class="side-menu__title"> Kriteria <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
+                            </div>
+                            </a>
+                            <ul class="">
+                                <li>
+                                    <a href="{{route('masterkriteria')}}" class="side-menu">
+                                        <div class="side-menu__icon"> <i data-feather="plus"></i> </div>
+                                        <div class="side-menu__title"> Master Kriteria </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('periodekriteria') }}" class="side-menu">
+                                        <div class="side-menu__icon"> <i data-feather="plus"></i> </div>
+                                        <div class="side-menu__title"> Periode Kriteria </div>
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="side-nav__devider my-6"></li>
                         <li>
                             <a href="javascript:;" class="side-menu">
-                                <div class="side-menu__icon"><i data-feather="edit"></i></div>
-                                <div class="side-menu__title">
-                                    Data Nilai
-                                    <div class="side-menu__sub-icon"><i data-feather="chevron-down"></i></div>
+                                <div class="side-menu__icon"> <i data-feather="edit"></i> </div>
+                                <div class="side-menu__title">Data Nilai<div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
                                 </div>
                             </a>
                             <ul class="">
                                 <li>
-                                    <a href="{{route('nilairaport')}}" class="side-menu">
+                                    <a href="{{ route('nilairaport') }}" class="side-menu">
                                         <div class="side-menu__icon"> <i data-feather="plus"></i> </div>
                                         <div class="side-menu__title"> Nilai Raport </div>
                                     </a>
@@ -264,23 +386,23 @@
                         </li>
                         <li>
                             <a href="javascript:;" class="side-menu">
-                                <div class="side-menu__icon"><i data-feather="clipboard"></i></div>
+                                <div class="side-menu__icon"> <i data-feather="clipboard"></i> </div>
                                 <div class="side-menu__title">
                                     Penilaian
-                                    <div class="side-menu__sub-icon"><i data-feather="chevron-down"></i></div>
+                                    <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
                                 </div>
                             </a>
                             <ul class="">
                                 <li>
-                                    <a href="{{ route('nilaisemuamapel') }}" class="side-menu">
+                                    <a href="{{ route('nilaisemuakriteria') }}" class="side-menu">
                                         <div class="side-menu__icon"> <i data-feather="plus"></i> </div>
-                                        <div class="side-menu__title"> Nilai | Semua Mapel </div>
+                                        <div class="side-menu__title"> Nilai | Semua Krtieria </div>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="{{ route('nilaiakhir') }}" class="side-menu">
-                                        <div class="side-menu__icon"><i data-feather="plus"></i></div>
-                                        <div class="side-menu__title">Perangkingan</div>
+                                        <div class="side-menu__icon"> <i data-feather="plus"></i> </div>
+                                        <div class="side-menu__title"> Perangkingan </div>
                                     </a>
                                 </li>
                             </ul>
@@ -292,22 +414,16 @@
                 <div class="content"> 
                     <div class="intro-y flex flex-col sm:flex-row items-center mt-8">
                         <h2 class="text-lg font-medium mr-auto">
-                            List Data Matapelajaran
+                            List Data Kelas
                         </h2>
                         <div class="w-full sm:w-auto flex mt-4 sm:mt-0">
                             <div class="intro-y col-span-12 flex flex-wrap sm:flex-nowrap items-center mt-2">
-                                <button class="btn btn-primary shadow-md mr-2 modal-mapel">
+                                <button class="btn btn-primary shadow-md mr-2 modal-kelas">
                                     <span class="w-5 h-5 flex items-center justify center"><i data-feather="user-plus" class="w-4 h-3"></i></span>
                                 </button>
-                                <button class="btn btn-primary shadow-md mr-2 modal-import_mapel"> <!-- menampilkan button import data -->
+                                {{-- <button class="btn btn-primary shadow-md mr-2 modal-import_Kelas"> <!-- menampilkan button import data -->
                                     <span class="w-5 h-5 flex items-center justify center"> <i class="w-4 h-3" data-feather="file-plus"></i> </span>
-                                </button>
-                                <div class="w-full sm:w-auto mt-3 sm:mt-0 sm:ml-auto md:ml-0">
-                                    <div class="w-56 relative text-gray-700 dark:text-gray-300">
-                                        <input type="text" class="form-control w-56 bpx pr-10 placeholder-theme-8" placeholder="Cari.....">
-                                        <i data-feather="search" class="w-4 h-4 absolute my-auto inset-y-0 mr-3 right-0"></i>
-                                    </div>
-                                </div>
+                                </button> --}}
                             </div>
                         </div>
                     </div>
@@ -318,13 +434,8 @@
                                 <thead>
                                     <tr>
                                         <th>No</th>
-                                        <th>Nama Mapel</th>
-                                        <th>Kelompok Mapel</th> <!-- Kelompok A/B/C -->
-                                        <th>Nama Nilai</th> <!-- Pengetahuan/Keterampilan -->
-                                        <th>Kelas</th>
-                                        <th>Jurusan</th>
-                                        <th>Semester</th>
-                                        <th>Tahun Ajar</th>
+                                        <th>Nama Kelas</th>
+                                        <th>User_id</th> <!-- Kelompok A/B/C -->
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
@@ -340,44 +451,35 @@
                                 <!-- BEGIN: Modal Header -->
                                 <div class="modal-header">
                                     <h2 class="font-medium text-base mr-auto">
-                                        Form Tambah Data Matapelajaran
+                                        Form Tambah Data Kelas
                                     </h2>
-                                    <a href="javascript:;" data-dsimiss="modal"><i data-feather="x" class="w-8 h-8 text-gray-500"></i></a>
+                                    <a href="javascript:;" data-dismiss="modal"><i data-feather="x" class="w-8 h-8 text-gray-500"></i></a>
                                 </div>
                                 <!-- END: Modal Header -->
                                 <!-- Begin: Modal Body -->
                                 <div class="modal-body grid gri-cols-12 gap-4 gap-y-3">
                                     <div class="col-span-12 sm:col-span-12">
-                                        <label for="modal-form-1" class="form-label">Nama Mapel</label>
-                                        <input type="text" class="form-control create-name" placeholder="Masukkan Nama Matapelajaran" required>
+                                        <label for="modal-form-1" class="form-label">Nama Kelas</label>
+                                        <input type="text" class="form-control create-nama_kelas" placeholder="Masukkan Nama Kelas" required>
                                     </div>
+                                    {{-- <div class="col-span-12 sm:col-span-12">
+                                        <label for="modal-form-1" class="form-label">User ID</label>
+                                        <input type="text" class="form-control create-user_id" placeholder="Masukkan User ID" required>
+                                    </div> --}}
                                     <div class="col-span-12 sm:col-span-12">
-                                        <label for="modal-form-1" class="form-label">Kelompok Mapel</label>
-                                        <select class="form-select create-kelompok_mapel" required>
-                                            <option value="Kelompok A">Kelompok A</option>
-                                            <option value="Kelompok B">Kelompok B</option>
-                                            <option value="Kelompok C">Kelompok C</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-span-12 sm:col-span-12">
-                                        <label for="modal-form-1" class="form-label">Nama Nilai</label>
-                                        <select class="form-select create-name_nilai" required>
-                                            <option value="Pengetahuan">Peengetahuan</option>
-                                            <option value="Keterampilan">Keterampilan</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-span-12 sm:col-span-12">
-                                        <label for="modal-form-1" class="form-label">Jurusan</label>
-                                        <select class="form-select create-jurusan" required>
-                                            <option value="IPA">IPA</option>
-                                            <option value="IPS">IPS</option>
+                                        <label for="modal-form-1" class="form-label">User ID</label>
+                                        <select class="form-select create-user_id" id="user_id" name="user_id">
+                                            <option selected disabled>--Pilih User ID--</option>
+                                                @foreach ($users as $user)
+                                                    <option value="{{ $user-> name}}">{{ $user->name }}</option>
+                                                @endforeach
                                         </select>
                                     </div>
                                 </div>
                                 <!-- END: Modal Body -->
                                 <!-- BEGIN: Modal Footer -->
                                 <div class="modal-footer text-right">
-                                    <button type="button" data-dsimiss="modal" class="btn btn-outline-secondary w-20 mr-1">Batal</button>
+                                    <button type="button" data-dismiss="modal" class="btn btn-outline-secondary w-20 mr-1">Batal</button>
                                     <button type="button" class="btn btn-primary w-20 btn-create">Simpan</button>
                                 </div>
                                 <!-- END: Modal Footer -->
@@ -392,7 +494,7 @@
                                 <div class="modal-body p-0">
                                     <div class="p-5 text-center">
                                         <i data-feather="check-circle" class="w-16 h-16 text-theme-10 mx-auto mt-3"></i>
-                                        <div class="text-3xl mt-5">Berhasil Menambahkan Data Mapel Baru!</div>
+                                        <div class="text-3xl mt-5">Berhasil Menambahkan Data Kelas Baru!</div>
                                         <div class="text-gray-600 mt-2 create-sukses"></div>
                                     </div>
                                 </div>
@@ -407,7 +509,7 @@
                                 <div class="modal-body p-0">
                                     <div class="p-5 text-center">
                                         <i data-feather="check-circle" class="w-16 h-16 text-theme-10 mx-auto mt-3"></i>
-                                        <div class="text-3xl mt-5">Oops...Gagal Menambahkan Data Mapel Baru!</div>
+                                        <div class="text-3xl mt-5">Oops...Gagal Menambahkan Data Kelas Baru!</div>
                                         <div class="text-gray-600 mt-2 create-gagal"></div>
                                     </div>
                                 </div>
@@ -416,50 +518,33 @@
                     </div>
                     <!-- END: Modal Content -->
                     <!-- BEGIN: Modal Update Content -->
-                    <div id="modal-create" class="modal" tabindex="-1" aria-hidden="true" role="dialog">
+                    <div id="modal-update" class="modal" tabindex="-1" aria-hidden="true" role="dialog">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <!-- BEGIN: Modal Header -->
                                 <div class="modal-header">
                                     <h2 class="font-medium text-base mr-auto">
-                                        Form Update Data Matapelajaran
+                                        Form Update Data Kelas
                                     </h2>
-                                    <a href="javascript:;" data-dsimiss="modal"><i data-feather="x" class="w-8 h-8 text-gray-500"></i></a>
+                                    <a href="javascript:;" data-dismiss="modal"><i data-feather="x" class="w-8 h-8 text-gray-500"></i></a>
                                 </div>
                                 <!-- END: Modal Header -->
                                 <!-- Begin: Modal Body -->
                                 <div class="modal-body grid gri-cols-12 gap-4 gap-y-3">
                                     <div class="col-span-12 sm:col-span-12">
-                                        <label for="modal-form-1" class="form-label">Nama Mapel</label>
-                                        <input type="text" class="form-control update-name" placeholder="Masukkan Nama Matapelajaran" required>
+                                        <label for="modal-form-1" class="form-label">Nama Kelas</label>
+                                        <input type="hidden" class="form-control update-id" required>
+                                        <input type="text" class="form-control update-nama_kelas" placeholder="Masukkan Nama Kelas" required>
                                     </div>
                                     <div class="col-span-12 sm:col-span-12">
-                                        <label for="modal-form-1" class="form-label">Kelompok Mapel</label>
-                                        <select class="form-select update-kelompok_mapel" required>
-                                            <option value="Kelompok A">Kelompok A</option>
-                                            <option value="Kelompok B">Kelompok B</option>
-                                            <option value="Kelompok C">Kelompok C</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-span-12 sm:col-span-12">
-                                        <label for="modal-form-1" class="form-label">Nama Nilai</label>
-                                        <select class="form-select update-name_nilai" required>
-                                            <option value="Pengetahuan">Peengetahuan</option>
-                                            <option value="Keterampilan">Keterampilan</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-span-12 sm:col-span-12">
-                                        <label for="modal-form-1" class="form-label">Jurusan</label>
-                                        <select class="form-select update-jurusan" required>
-                                            <option value="IPA">IPA</option>
-                                            <option value="IPS">IPS</option>
-                                        </select>
+                                        <label for="modal-form-1" class="form-label">User ID</label>
+                                        <input type="text" class="form-control update-user_id" placeholder="Masukkan User ID" readonly>
                                     </div>
                                 </div>
                                 <!-- END: Modal Body -->
                                 <!-- BEGIN: Modal Footer -->
                                 <div class="modal-footer text-right">
-                                    <button type="button" data-dsimiss="modal" class="btn btn-outline-secondary w-20 mr-1">Batal</button>
+                                    <button type="button" data-dismiss="modal" class="btn btn-outline-secondary w-20 mr-1">Batal</button>
                                     <button type="button" class="btn btn-primary w-20 btn-update">Simpan</button>
                                 </div>
                                 <!-- END: Modal Footer -->
@@ -474,7 +559,7 @@
                                 <div class="modal-body p-0">
                                     <div class="p-5 text-center">
                                         <i data-feather="check-circle" class="w-16 sh-16 text-theme-10 mx-auto mt-3"></i>
-                                        <div class="text-3xl mt-5">Berhasil update data mapel baru!</div>
+                                        <div class="text-3xl mt-5">Berhasil update data Kelas baru!</div>
                                         <div class="text-gray-600 mt-2 update-sukses"></div>
                                     </div>
                                 </div>
@@ -489,7 +574,7 @@
                                 <div class="modal-body p-0">
                                     <div class="p-5 text-center">
                                         <i data-feather="x-circle" class="w-16 h-16 text-theme-23 mx-auto mt-3"></i>
-                                        <div class="text-3xl mt-5">Oops...Gagal update data mapel baru!</div>
+                                        <div class="text-3xl mt-5">Oops...Gagal update data Kelas baru!</div>
                                         <div class="text-gray-600 mt-2 update-gagal"></div>
                                     </div>
                                 </div>
@@ -504,15 +589,15 @@
                                 <div class="modal-body p-0">
                                     <div class="p-5 text-center">
                                         <i data-feather="x-circle" class="w-16 h-16 text-theme-24 mx-auto mt-3"></i>
-                                        <div class="text-3xl mt-5">Apa kamu yakin ingin hapus data mapel ini ?</div>
+                                        <div class="text-3xl mt-5">Apa kamu yakin ingin hapus data Kelas ini ?</div>
                                         <div class="text-gray-600 mt-2">
-                                            Apa kamu yakin akan menghapus data mapel ini ?
+                                            Apa kamu yakin akan menghapus data Kelas ini ?
                                             <br>
                                             Data yang dihapus tidak akan bisa dikembalikan
                                         </div>
                                     </div>
                                     <div class="px-5 pb-8 text-center">
-                                        <button type="button" data-dsimiss="modal" class="btn btn-outline-secondary w-24 dark:border-dark-5 dark:text-gray-300 mr-1">Batalkan</button>
+                                        <button type="button" data-dismiss="modal" class="btn btn-outline-secondary w-24 dark:border-dark-5 dark:text-gray-300 mr-1">Batalkan</button>
                                         <button type="button" class="btn btn-danger w-24 hapus-btn">Hapus</button>
                                     </div>
                                 </div>
@@ -521,13 +606,13 @@
                     </div>
                     <!-- END: Modal Content -->
                     <!-- BEGIN: Modal Hapus Sukses Content -->
-                    <div id="success-update-modal-preview" class="modal" tabindex="-1" aria-hidden="true">
+                    <div id="success-hapus-modal-preview" class="modal" tabindex="-1" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-body p-0">
                                     <div class="p-5 text-center">
                                         <i data-feather="check-circle" class="w-16 sh-16 text-theme-10 mx-auto mt-3"></i>
-                                        <div class="text-3xl mt-5">Hapus Data Mapel Berhasil!</div>
+                                        <div class="text-3xl mt-5">Hapus Data Kelas Berhasil!</div>
                                         <div class="text-gray-600 mt-2 hapus-sukses"></div>
                                     </div>
                                 </div>
@@ -536,7 +621,7 @@
                     </div>
                     <!-- END: Modal Content -->
                     <!-- BEGIN: Modal Hapus Gagal Content -->
-                    <div id="success-update-modal-preview" class="modal" tabindex="-1" aria-hidden="true">
+                    <div id="success-hapus-modal-preview" class="modal" tabindex="-1" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-body p-0">
@@ -600,18 +685,12 @@
                     console.error('Error:', error);
                 });
 
-                //Modal Create Master Mapel
-                //Modal form create portofolio
-                $(".modal-mapel").click(function() {
-                    cash("modal-create").modal("show");
-                });
-
-                //Panggil ajax master mapel
+                //Panggil ajax master Kelas
                 $('#data-table').DataTable({
                     "processing":true,
                     "serverside": true,
                     "ajax": {
-                        "url": "http://127.0.0.1:8000/api/master-mapel/list",
+                        "url": "http://127.0.0.1:8000/api/master-kelas/list",
                         "dataType": "json",
                         "type": "POST",
                         "headers": {
@@ -620,18 +699,13 @@
                     },
                     "columns": [
                         { data: 'nomor_urut', className: 'text-center'},
-                        { data: 'name', className: 'text-center'},
-                        { data: 'kelompok_mapel', className: 'text-center'},
-                        { data: 'name_nilai', className: 'text-center'},
-                        { data: 'kelas', className: 'text-center'},
-                        { data: 'jurusan', className: 'text-center'},
-                        { data: 'semester', className: 'text-center'},
-                        { data: 'tahun_ajar', className: 'text-center'},
+                        { data: 'nama_kelas', className: 'text-center'},
+                        { data: 'user_id', className: 'text-center'},
                         {
                             data: null,
                             render: function (data, type, row) {
                                 // create action buttons
-                                var editBtn = '<button class="btn btn-primary btn-edit" data-id="' + data.id + '" data-name="' + data.name + '" data-kelompok_mapel="' + data.kelompok_mapel +'" data-name_nilai="' + data.name_nilai + '" data-kelas = "' + data.kelas + '" data-jurusan = "' + data.jurusan + '" data-semester = "' + data.semester + '" data-tahunajar = "' + data.tahunajar + '"><i data-feather="edit" class="w-4 h-4"></i></button>';
+                                var editBtn = '<button class="btn btn-primary btn-edit" data-id="' + data.id + '" data-nama_kelas="' + data.nama_kelas + '" data-user_id="' + data.user_id +'" ><i data-feather="edit" class="w-4 h-4"></i></button>';
                                 var deleteBtn = '<button class="btn btn-danger btn-delete" data-id="'+ data.id + '"><i data-feather="trash-2" class="w-4 h-4"></i></button>';
 
                                 var actions = editBtn + ' || ' + deleteBtn;
@@ -643,6 +717,177 @@
                         feather.replace(); //untuk memperbarui ikon - ikon SVG setelah data di perbarui
                     }
                 });
+
+                //Modal Create Master Kelas
+                //Modal form create portofolio
+                $(".modal-kelas").click(function() {
+                    cash("#modal-create").modal("show");
+                });
+
+                $(".btn-create").click(function()
+                {
+                    var nama_kelas = $('.create-nama_kelas').val();
+                    var user_id = $('.create-user_id').val();
+
+                    var formData = new FormData();
+                    formData.append('nama_kelas', nama_kelas);
+                    formData.append('user_id', user_id);
+
+                    $.ajax({
+                        url: "http://127.0.0.1:8000/api/master-kelas/tambah-kelas",
+                        type: 'POST',
+                        dataType: 'json',
+                        headers: {
+                            "Authorization": "Bearer " + token
+                        },
+                        data: formData,
+                        processData: false,
+                        contentType: false,
+                        success: function(response) {
+                            // Show the modal
+                            $('.create-sukses').text(response.message);
+                            cash("#success-create-modal-preview").modal("show");
+                            console.log('Data Kelas Berhasil di Tambahkan!');
+
+                            setTimeout(function() {
+                                cash("#success-update-modal-preview").modal("hide");
+
+                                location.reload();
+                            }, 3000); // 3000 milliseconds = 3 seconds
+                        },
+                        error: function(xhr, status, error) {
+                            // Tangani kesalahan dalam permintaan Ajax itu sendiri
+                            console.log('Data Kelas Gagal untuk di Tambahkan. Status: ' + error);
+
+                            // Tampilkan pesan kesalahan yang dikirim oleh server
+                            var response = JSON.parse(xhr.responseText);
+                            if (response.success === false && response.message) {
+                                $('.create-gagal').text(response.message);
+                                cash("#warning-update-modal-preview").modal("show");
+
+                                setTimeout(function() {
+                                    cash("#warning-update-modal-preview").modal("hide");
+
+                                    location.reload();
+                                }, 5000); // 5000 milliseconds = 5 seconds
+                            } else {
+                                // Tangani kesalahan lainnya jika ada
+                                // Contoh: pesan kesalahan bawaan dari permintaan Ajax
+                                alert('Terjadi kesalahan lainnya: ' + error);
+                            }
+                        }
+                    });
+                });
+
+                $('#data-table').on('click', '.btn-edit', function() {
+                    cash("#modal-update").modal("show");
+                    
+                    var id = $(this).attr("data-id");
+                    var nama_kelas = $(this).attr("data-nama_kelas");
+                    var user_id = $(this).attr("data-user_id");
+                    console.log(id);
+
+                    $('.update-id').val(id);
+                    $('.update-nama_kelas').val(nama_kelas);
+                    $('.update-user_id').val(user_id);
+                });
+
+                $(".btn-update").click(function() 
+                {
+                    var id = $('.update-id').val();
+                    var nama_kelas = $('.update-nama_kelas').val();
+                    var user_id = $('.update-user_id').val();
+                    
+                    if (!id || id === "") {
+                        alert("ID Kelas harus diisi!");
+                        
+                        return;
+                    }
+
+                    $.ajax({
+                        url: "http://127.0.0.1:8000/api/master-kelas/update-kelas/" + id,
+                        type: "PUT",
+                        beforeSend: function(xhr) {
+                            xhr.setRequestHeader('Authorization', 'Bearer ' + token);
+                        },
+                        data: {
+                            id: id,
+                            nama_kelas: nama_kelas,
+                            user_id: user_id,
+                        },
+                        success: function(response){
+                            //show the modal
+                            $('.update-sukses').text(response.message);
+                            cash("#success-update-modal-preview").modal("show");
+
+                            setTimeout(function() {
+                                cash("#success-update-modal-prewiew").modal("hide");
+
+                                location.reload();
+                            }, 3000); //3000 milliseconds = 3 seconds
+                        },
+                        error: function(xhr, status, error) {
+                            //tangani kesalahan dalam permintaan ajax itu sendiri
+                            console.log(error);
+
+                            //tampilkan pesan kesalahan yang dikirim oleh server
+                            var response = JSON.parse(xhr.response);
+                            if(response.success === false && response.message) {
+                                $('.update-gagal').text(response.message);
+                                cash("#warning-update-modal-preview").modal("show");
+
+                                location.reload();
+                            } else {
+                                //tangani kesalahan lainnya jika ada
+                                //contoh : pesan kesalahan bawaan dari permintaan ajax
+                                alert('Terjadi kesalahan lainnya: '+ error);
+                            }
+                        }
+                    });
+                });
+
+                $('#data-table').on('click', '.btn-delete', function() {
+                    var id = $(this).attr("data-id");
+
+                    cash("#delete-modal-preview").modal("show");
+                    $('.hapus-btn').show();
+                    $('.hapus-btn').click(function() {
+                        //ajax delete API
+                        $.ajax({
+                            url: "http://127.0.0.1:8000/api/master-kelas/hapus-Kelas/" + id,
+                            type: 'DELETE',
+                            headers: {
+                                'Authorization': 'Bearer ' + token
+                            },
+                            success: function(response) {
+                                //show the modal
+                                $('.hapus-sukses').text(response.message);
+                                cash("#success-hapus-modal-preview").modal("show");
+
+                                setTimeout(function() {
+                                    cash("#success-hapus-modal-preview").modal("hide");
+
+                                    location.reload();
+                                }, 3000); // 3000 milliseconds = 3 seconds
+                            },
+                            error: function(xhr, status, error) {
+                                //show error aler
+                                $('.hapus-gagal').text(response.meesage);
+                                cash("#warning-hapus-modal-preview").modal("show");
+
+                                setTimeout(function() {
+                                    cash("#warning-hapus-modal-preview").modal("hide");
+
+                                    location.reload();
+                                }, 5000); // 3000 milliseconds = 3 seconds
+                            }
+                        });
+                    });
+                });
+                function logout(name){
+                    document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+                    winddow.location.href = "{{ route('login') }}";
+                }
 
             });
         </script>

@@ -14,16 +14,21 @@ return new class extends Migration
     public function up()
     {
         Schema::create('mastersiswa', function (Blueprint $table) {
-            $table->id();
-            $table->string('nis');
+            $table->string('nis', 15)->primary();
+            $table->bigInteger('user_id')->index()->unsigned()->nullable();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->string('nik', 18)->unique();
+            $table->string('nisn', 15)->unique();
             $table->string('nama_siswa');
+            $table->string('tempat_lahir');
+            $table->string('tgl_lahir');
             $table->enum('jenkel',['L','P'])->default('L');
-            $table->string('kelas');
-            $table->string('jurusan');
-            $table->string('semester');
-            $table->string('tahun_ajar');
-            $table->string('email')->unique();
-            $table->string('password');
+            $table->string('agama');
+            $table->string('nama_ayah');
+            $table->string('nama_ibu');
+            $table->string('pekerjaan_ayah');
+            $table->string('pekerjaan_ibu');
+            $table->string('alamat');
             $table->timestamps();
         });
     }

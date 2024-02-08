@@ -15,15 +15,18 @@ return new class extends Migration
     {
         Schema::create('nilaihafalan', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_siswa');
-            $table->integer('jumlah_juz');
-            $table->integer('makhrodul_huruf');
-            $table->integer('ketentuan_ilmu_tajdwid');
-            $table->integer('irama_lagu');
-            $table->integer('fasokhah');
-            $table->float('nilai_hafalan');
-            $table->string('kelas');
-            $table->string('jurusan');
+            $table->string('nis')->index()->nullable();
+            $table->foreign('nis')->references('nis')->on('mastersiswa')->onDelete('cascade');
+            $table->bigInteger('kelas_id')->index()->unsigned()->nullable();
+            $table->foreign('kelas_id')->references('id')->on('master_kelas')->onDelete('cascade');
+
+            $table->double('jumlah_juz');
+            $table->double('makhrodul_huruf');
+            $table->double('ketentuan_ilmu_tajwid');
+            $table->double('irama_lagu');
+            $table->double('fasokhah');
+            $table->double('nilai_hafalan');
+            
             $table->string('semester');
             $table->string('tahun_ajar');
             $table->timestamps();

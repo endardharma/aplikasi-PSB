@@ -15,11 +15,14 @@ return new class extends Migration
     {
         Schema::create('nilaiketerlambatan', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_siswa');
+            $table->string('nis')->index()->nullable();
+            $table->foreign('nis')->references('nis')->on('mastersiswa')->onDelete('cascade');
+            $table->bigInteger('kelas_id')->index()->unsigned()->nullable();
+            $table->foreign('kelas_id')->references('id')->on('master_kelas')->onDelete('cascade');
+
             $table->integer('jumlah_keterlambatan');
-            $table->float('nilai_keterlambatan');
-            $table->string('kelas');
-            $table->string('jurusan');
+            $table->double('nilai_keterlambatan');
+
             $table->string('semester');
             $table->string('tahun_ajar');
             $table->timestamps();

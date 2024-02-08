@@ -15,11 +15,14 @@ return new class extends Migration
     {
         Schema::create('nilaisikap', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_siswa');
+            $table->string('nis')->index()->nullable();
+            $table->foreign('nis')->references('nis')->on('mastersiswa')->onDelete('cascade');
+            $table->bigInteger('kelas_id')->index()->unsigned()->nullable();
+            $table->foreign('kelas_id')->references('id')->on('master_kelas')->onDelete('cascade');
+
             $table->string('keterangan_sikap');
-            $table->float('nilai_sikap');
-            $table->string('kelas');
-            $table->string('jurusan');
+            $table->double('nilai_sikap');
+
             $table->string('semester');
             $table->string('tahun_ajar');
             $table->timestamps();

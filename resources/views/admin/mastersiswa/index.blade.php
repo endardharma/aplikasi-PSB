@@ -11,6 +11,7 @@
         <title> Master Siswa </title>
         <!-- BEGIN: CSS Assets -->
         <link rel="stylesheet" href="{{ asset('template/dist/css/app.css') }}">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
         <!-- END: CSS Assets -->
     </head>
@@ -29,13 +30,7 @@
                 <li>
                     <a href="{{ route('dashboard') }}" class="menu">
                         <div class="menu__icon"> <i data-feather="home"></i> </div>
-                        <div class="menu__title"> Dashboard</div>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ route('masterguru') }}" class="menu">
-                        <div class="menu__icon"> <i data-feather="users"></i> </div>
-                        <div class="menu__title"> Master Guru </div>
+                        <div class="menu__title"> Dashboard </i> </div>  <!-- menampilkan halaman drop down <i data-feather="chevron-down" class="menu__sub-icon">-->
                     </a>
                 </li>
                 <li>
@@ -45,37 +40,102 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('mastermapel') }}" class="menu">
-                        <div class="menu__icon"> <i data-feather="inbox"></i> </div>
-                        <div class="menu__title"> Master Mata Pelajaran </div>
+                    <a href="javascript:;" class="menu">
+                        <div class="menu__icon"> <i data-feather="users"></i> </div>
+                        <div class="menu__title"> Users <i data-feather="chevron-down" class="menu__sub-icon"></i> </div>
                     </a>
+                    <ul class="">
+                        <li>
+                            <a href="{{route('user')}}" class="menu">
+                                <div class="menu__icon"> <i data-feather="plus"></i> </div>
+                                <div class="menu__title"> Master User </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('userdetail') }}" class="menu">
+                                <div class="menu__icon"> <i data-feather="plus"></i> </div>
+                                <div class="menu__title"> User Detail </div>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
                 <li>
-                    <a href="{{ route('masterkriteria') }}" class="menu">
-                        <div class="menu__icon"> <i data-feather="slack"></i> </div>
-                        <div class="menu__title"> Master Kriteria </div>
+                    <a href="javascript:;" class="menu">
+                        <div class="menu__icon"> <i data-feather="server"></i> </div>
+                        <div class="menu__title"> Jurusan <i data-feather="chevron-down" class="menu__sub-icon"></i></div>
                     </a>
+                    <ul class="">
+                        <li>
+                            <a href="{{ route('masterjurusan') }}" class="menu">
+                                <div class="menu__icon"> <i data-feather="plus"></i> </div>
+                                <div class="menu__title"> Master Jurusan </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('jurusansiswa') }}" class="menu">
+                                <div class="menu__icon"> <i data-feather="plus"></i> </div>
+                                <div class="menu__title"> Jurusan Siswa </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;" class="menu">
+                        <div class="menu__icon"> <i data-feather="layers"></i> </div>
+                        <div class="menu__title"> Kelas <i data-feather="chevron-down" class="menu__sub-icon"></i> </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="{{route('masterkelas')}}" class="menu">
+                                <div class="menu__icon"> <i data-feather="plus"></i> </div>
+                                <div class="menu__title"> Master Kelas </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('kelassiswa') }}" class="menu">
+                                <div class="menu__icon"> <i data-feather="plus"></i> </div>
+                                <div class="menu__title"> Kelas Siswa </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;" class="menu">
+                        <div class="menu__icon"> <i data-feather="slack"></i> </div>
+                        <div class="menu__title"> Kriteria <i data-feather="chevron-down" class="menu__sub-icon"></i> </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="{{route('masterkriteria')}}" class="menu">
+                                <div class="menu__icon"> <i data-feather="plus"></i> </div>
+                                <div class="menu__title"> Master Kriteria </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('periodekriteria') }}" class="menu">
+                                <div class="menu__icon"> <i data-feather="plus"></i> </div>
+                                <div class="menu__title"> Periode Kriteria </div>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
                 <li class="menu__devider my-6"></li>
                 <li>
                     <a href="javascript:;" class="menu">
                         <div class="menu__icon"> <i data-feather="edit"></i> </div>
-                        <div class="menu__title"> 
-                            Data Nilai 
-                        </div>
-                        <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
+                        <div class="menu__title"> Data Nilai <i data-feather="chevron-down" class="menu__sub-icon"></i> </div>
                     </a>
                     <ul class="">
                         <li>
                             <a href="{{route('nilairaport')}}" class="menu">
                                 <div class="menu__icon"> <i data-feather="plus"></i> </div>
-                                <div class="menu__title"> Nilai Raport</div>
+                                <div class="menu__title"> Nilai Raport </div>
                             </a>
                         </li>
                         <li>
                             <a href="{{ route('nilaiketidakhadiran') }}" class="menu">
                                 <div class="menu__icon"> <i data-feather="plus"></i> </div>
-                                <div class="menu__title"> Tingkat Ketidakhadiran Siswa</div>
+                                <div class="menu__title"> Tingkat Ketidakhadiran </div>
                             </a>
                         </li>
                         <li>
@@ -87,33 +147,32 @@
                         <li>
                             <a href="{{ route('nilaiprestasi') }}" class="menu">
                                 <div class="menu__icon"> <i data-feather="plus"></i> </div>
-                                <div class="menu__title"> Prestasi Akademik / Non-Akademik</div>
+                                <div class="menu__title"> Prestasi Akademik / Non-Akademik </div>
                             </a>
                         </li>
                         <li>
-                            <a href="side-menu-light-users-layout-1.html" class="menu">
+                            <a href="{{ route('nilaiketerlambatan') }}" class="menu">
                                 <div class="menu__icon"> <i data-feather="plus"></i> </div>
-                                <div class="menu__title"> Keterlambatan mMasuk Sekolah</div>
+                                <div class="menu__title"> Keterlambatan Masuk Sekolah </div>
                             </a>
                         </li>
                         <li>
                             <a href="{{ route('nilaihafalan') }}" class="menu">
                                 <div class="menu__icon"> <i data-feather="plus"></i> </div>
-                                <div class="menu__title"> Hafalan Juz Al-Qur'an</div>
+                                <div class="menu__title"> Hafalan Juz Al-Qur'an </div>
                             </a>
                         </li>
                     </ul>
                     <li>
                         <a href="javascript:;" class="menu">
                             <div class="menu__icon"> <i data-feather="clipboard"></i> </div>
-                            <div class="menu__title"> Penilaian </div>
-                            <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
+                            <div class="menu__title"> Penilaian <i data-feather="chevron-down" class="menu__sub-icon"></i></div>
                         </a>
                         <ul class="">
                             <li>
-                                <a href="{{ route('nilaisemuamapel') }}" class="menu">
+                                <a href="{{ route('nilaisemuakriteria') }}" class="menu">
                                     <div class="menu__icon"> <i data-feather="plus"></i> </div>
-                                    <div class="menu__title"> Nilai | Semua Mapel </div>
+                                    <div class="menu__title"> Nilai | Semua Kriteria </div>
                                 </a>
                             </li>
                             <li>
@@ -190,71 +249,135 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{ route('masterguru') }}" class="side-menu">
-                                <div class="side-menu__icon"> <i data-feather="users"></i> </div>
-                                <div class="side-menu__title"> Master Guru </div>
-                            </a>
-                        </li>
-                        <li>
                             <a href="{{ route('mastersiswa') }}" class="side-menu side-menu--active">
                                 <div class="side-menu__icon"> <i data-feather="users"></i> </div>
-                                <div class="side-menu__title"> Master Siswa</div>
+                                <div class="side-menu__title"> Master Siswa </div>
                             </a>
                         </li>
                         <li>
-                            <a href="{{ route('mastermapel') }}" class="side-menu">
-                                <div class="side-menu__icon"> <i data-feather="inbox"></i> </div>
-                                <div class="side-menu__title"> Master Mata Pelajaran </div>
+                            <a href="javascript:;" class="side-menu">
+                                <div class="side-menu__icon"> <i data-feather="users"></i> </div>
+                                <div class="side-menu__title"> Users <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
+                            </div>
                             </a>
+                            <ul class="">
+                                <li>
+                                    <a href="{{route('user')}}" class="side-menu">
+                                        <div class="side-menu__icon"> <i data-feather="plus"></i> </div>
+                                        <div class="side-menu__title"> Master User </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('userdetail') }}" class="side-menu">
+                                        <div class="side-menu__icon"> <i data-feather="plus"></i> </div>
+                                        <div class="side-menu__title"> User Detail </div>
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
                         <li>
-                            <a href="{{ route('masterkriteria')}}" class="side-menu">
+                            <a href="javascript:;" class="side-menu">
+                                <div class="side-menu__icon"> <i data-feather="server"></i> </div>
+                                <div class="side-menu__title"> Jurusan <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i></div>
+                            </div>
+                            </a>
+                            <ul class="">
+                                <li>
+                                    <a href="{{ route('masterjurusan') }}" class="side-menu">
+                                        <div class="side-menu__icon"> <i data-feather="plus"></i> </div>
+                                        <div class="side-menu__title"> Master Jurusan </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('jurusansiswa') }}" class="side-menu">
+                                        <div class="side-menu__icon"> <i data-feather="plus"></i> </div>
+                                        <div class="side-menu__title"> Jurusan Siswa </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="side-menu ">
+                                <div class="side-menu__icon"> <i data-feather="layers"></i> </div>
+                                <div class="side-menu__title"> Kelas <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
+                            </div>
+                            </a>
+                            <ul class="">
+                                <li>
+                                    <a href="{{route('masterkelas')}}" class="side-menu ">
+                                        <div class="side-menu__icon"> <i data-feather="plus"></i> </div>
+                                        <div class="side-menu__title"> Master Kelas </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('kelassiswa') }}" class="side-menu">
+                                        <div class="side-menu__icon"> <i data-feather="plus"></i> </div>
+                                        <div class="side-menu__title"> Kelas Siswa </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="side-menu">
                                 <div class="side-menu__icon"> <i data-feather="slack"></i> </div>
-                                <div class="side-menu__title"> Master Kriteria </div>
+                                <div class="side-menu__title"> Kriteria <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
+                            </div>
                             </a>
+                            <ul class="">
+                                <li>
+                                    <a href="{{route('masterkriteria')}}" class="side-menu ">
+                                        <div class="side-menu__icon"> <i data-feather="plus"></i> </div>
+                                        <div class="side-menu__title"> Master Kriteria </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('periodekriteria') }}" class="side-menu">
+                                        <div class="side-menu__icon"> <i data-feather="plus"></i> </div>
+                                        <div class="side-menu__title"> Periode Kriteria </div>
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="side-nav__devider my-6"></li>
                         <li>
                             <a href="javascript:;" class="side-menu">
                                 <div class="side-menu__icon"> <i data-feather="edit"></i> </div>
-                                <div class="side-menu__title"> 
-                                    Data Nilai
-                                    <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div> <!-- membuat tampilan dropdown -->
+                                <div class="side-menu__title">Data Nilai<div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
                                 </div>
                             </a>
-                            <ul class=""> 
+                            <ul class="">
                                 <li>
-                                    <a href="{{route('nilairaport')}}" class="side-menu"> <!-- membuat fungsi dropdown berjalan -->
+                                    <a href="{{ route('nilairaport') }}" class="side-menu">
                                         <div class="side-menu__icon"> <i data-feather="plus"></i> </div>
                                         <div class="side-menu__title"> Nilai Raport </div>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('nilaiketidakhadiran') }}" class="side-menu"> <!-- membuat fungsi dropdown berjalan -->
+                                    <a href="{{ route('nilaiketidakhadiran') }}" class="side-menu">
                                         <div class="side-menu__icon"> <i data-feather="plus"></i> </div>
                                         <div class="side-menu__title"> Tingkat Ketidakhadiran </div>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('nilaisikap') }}" class="side-menu"> <!-- membuat fungsi dropdown berjalan -->
+                                    <a href="{{ route('nilaisikap') }}" class="side-menu">
                                         <div class="side-menu__icon"> <i data-feather="plus"></i> </div>
                                         <div class="side-menu__title"> Sikap </div>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('nilaiprestasi') }}" class="side-menu"> <!-- membuat fungsi dropdown berjalan -->
+                                    <a href="{{ route('nilaiprestasi') }}" class="side-menu">
                                         <div class="side-menu__icon"> <i data-feather="plus"></i> </div>
                                         <div class="side-menu__title"> Prestasi Akademik / Non-Akademik </div>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="side-menu-light-crud-data-list.html" class="side-menu"> <!-- membuat fungsi dropdown berjalan -->
+                                    <a href="{{ route('nilaiketerlambatan') }}" class="side-menu">
                                         <div class="side-menu__icon"> <i data-feather="plus"></i> </div>
                                         <div class="side-menu__title"> Keterlambatan Masuk Sekolah </div>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('nilaihafalan') }}" class="side-menu"> <!-- membuat fungsi dropdown berjalan -->
+                                    <a href="{{ route('nilaihafalan') }}" class="side-menu">
                                         <div class="side-menu__icon"> <i data-feather="plus"></i> </div>
                                         <div class="side-menu__title"> Hafalan Juz Al-Qur'an </div>
                                     </a>
@@ -271,9 +394,9 @@
                             </a>
                             <ul class="">
                                 <li>
-                                    <a href="{{ route('nilaisemuamapel') }}" class="side-menu">
+                                    <a href="{{ route('nilaisemuakriteria') }}" class="side-menu">
                                         <div class="side-menu__icon"> <i data-feather="plus"></i> </div>
-                                        <div class="side-menu__title"> Nilai | Semua Mapel </div>
+                                        <div class="side-menu__title"> Nilai | Semua Kriteria </div>
                                     </a>
                                 </li>
                                 <li>
@@ -300,13 +423,16 @@
                                     <span class="w-5 h-5 flex items-center justify center"> <i class="w-4 h-3" data-feather="user-plus"></i> </span>
                                 </button>
                                 <button class="btn btn-primary shadow-md mr-2 modal-import_siswa"> <!-- menampilkan button import data -->
-                                    <span class="w-5 h-5 flex items-center justify center"> <i class="w-4 h-3" data-feather="file-plus"></i> </span>
+                                    <span class="w-5 h-5 flex items-center justify center"> <i class="w-5 h-4" data-feather="file-plus"></i> </span>
                                 </button>
-                                <div class="w-full sm:w-auto mt-3 sm:mt-0 sm:ml-auto md:ml-0">
+                                <a href="{{ route('exportSiswa') }}" class="btn btn-success btn-md shadow-md mr-2"> <!-- menampilkan button export data -->
+                                    <span class="w-5 h-5 flex items-center justify center"> <i class="w-5 h-4 bi bi-file-earmark-excel"></i> </span>
+                                </a>
+                                {{-- <div class="w-full sm:w-auto mt-3 sm:mt-0 sm:ml-auto md:ml-0">
                                     <div class="w-56 relative text-gray-700 dark:text-gray-300">
                                         <input type="text" class="form-control w-56 bpx pr-10 placeholder-theme-8" placeholder="Cari.....">
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>
@@ -314,18 +440,25 @@
 
                     <!-- BEGIN: HTML Table Data -->
                     <div class="intro-y box p-1 mt-5"> <!-- menampilkan layer -->
-                        <div class="overflow-x-auto scrollbar-hidden">
+                        <div style="overflow-x:auto ">
                             <table id="data-table" class="table table-striped" style="width:100%">
                                 <thead>
                                     <tr>
                                         <th>No</th>
                                         <th>NIS</th>
+                                        <th>User ID</th>
+                                        <th>NIK</th>
+                                        <th>NISN</th>
                                         <th>Nama Siswa</th>
+                                        <th>Tempat Lahir</th>
+                                        <th>Tanggal Lahir</th>
                                         <th>Jenis Kelamin</th>
-                                        <th>Kelas</th>
-                                        <th>Jurusan</th>
-                                        <th>Semester</th>
-                                        <th>Tahun Ajar</th>
+                                        <th>Agama</th>
+                                        <th>Nama Ayah</th>
+                                        <th>Nama Ibu</th>
+                                        <th>Pekerjaan Ayah</th>
+                                        <th>Pekerjaan Ibu</th>
+                                        <th>Alamat</th>
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
@@ -352,20 +485,41 @@
                                 <!-- BEGIN: Modal Body -->
                                 <div class="modal-body grid grid-cols-12 gap-4 gay-y-3">
                                     <div class="col-span-12 sm:col-span-12">
-                                        <label for="modal-form-1" class="form-label">Nama Siswa</label>
-                                        <input type="text" class="form-control create-name" placeholder="Masukkan Nama Siswa" requireds>
-                                    </div>
-                                    <div class="col-span-12 sm:col-span-12">
-                                        <label for="modal-form-1" class="form-label">Email Siswa</label>
-                                        <input type="text" class="form-control create-email" placeholder="Masukkan Email Siswa" requireds>
-                                    </div>
-                                    <div class="col-span-12 sm:col-span-12">
-                                        <label for="modal-form-1" class="form-label">Password </label>
-                                        <input type="text" class="form-control create-password" placeholder="Masukkan Password" requireds>
-                                    </div>
-                                    <div class="col-span-12 sm:col-span-12">
                                         <label for="modal-form-1" class="form-label">NIS</label>
-                                        <input type="text" class="form-control create-nis" placeholder="Masukkan NIS (< 8 angka)" requireds>
+                                        <input type="number" class="form-control create-nis" placeholder="Masukkan NIS" requireds>
+                                    </div>
+                                    {{-- <div class="col-span-12 sm:col-span-12">
+                                        <label for="modal-form-1" class="form-label">User ID</label>
+                                        <input type="text" class="form-control create-user_id" placeholder="Masukkan User ID" requireds>
+                                    </div> --}}
+                                    <div class="col-span-12 sm:col-span-12">
+                                        <label for="modal-form-1" class="form-label">User ID</label>
+                                        <select class="form-select create-user_id" id="user_id" name="user_id">
+                                            <option selected disabled>--Pilih User ID--</option>
+                                                @foreach ($users as $user)
+                                                    <option value="{{ $user-> name}}">{{ $user->name }}</option>
+                                                @endforeach
+                                        </select>
+                                    </div>
+                                    <div class="col-span-12 sm:col-span-12">
+                                        <label for="modal-form-1" class="form-label">NIK</label>
+                                        <input type="number" class="form-control create-nik" placeholder="Masukkan NIK" requireds>
+                                    </div>
+                                    <div class="col-span-12 sm:col-span-12">
+                                        <label for="modal-form-1" class="form-label">NISN</label>
+                                        <input type="number" class="form-control create-nisn" placeholder="Masukkan NISN" requireds>
+                                    </div>
+                                    <div class="col-span-12 sm:col-span-12">
+                                        <label for="modal-form-1" class="form-label">Nama Siswa</label>
+                                        <input type="text" class="form-control create-nama_siswa" placeholder="Masukkan Nama Siswa" requireds>
+                                    </div>
+                                    <div class="col-span-12 sm:col-span-12">
+                                        <label for="modal-form-1" class="form-label">Tempat Lahir</label>
+                                        <input type="text" class="form-control create-tempat_lahir" placeholder="Masukkan Tempat Lahir" requireds>
+                                    </div>
+                                    <div class="col-span-12 sm:col-span-12">
+                                        <label for="modal-form-1" class="form-label">Tanggal Lahir</label>
+                                        <input type="date" class="form-control create-tgl_lahir" placeholder="Masukkan Tanggal Lahir" requireds>
                                     </div>
                                     <div class="col-span-12 sm:col-span-12">
                                         <label for="modal-form-1" class="form-label">Jenis Kelamin</label>
@@ -376,41 +530,36 @@
                                         </select>
                                     </div>
                                     <div class="col-span-12 sm:col-span-12">
-                                        <label for="modal-form-1" class="form-label">Kelas</label>
-                                        <select class="form-select create-kelas">
+                                        <label for="modal-form-1" class="form-label">Agama</label>
+                                        <select class="form-select create-agama">
                                             <option selected disabled>--Pilih Kelas--</option>
-                                            <option value="10">10</option>
-                                            <option value="11">11</option>
-                                            <option value="12">12</option>
+                                            <option value="islam">Islam</option>
+                                            <option value="kristen_protestan">Kristen Protestan</option>
+                                            <option value="kristen_katolik">Kristen Katolik</option>
+                                            <option value="hindu">Hindu</option>
+                                            <option value="budha">Budha</option>
+                                            <option value="konghucu">Konghucu</option>
                                         </select>
                                     </div>
                                     <div class="col-span-12 sm:col-span-12">
-                                        <label for="modal-form-1" class="form-label">Jurusan</label>
-                                        <select class="form-select create-jurusan">
-                                            <option selected disabled>--Pilih Jurusan--</option>
-                                            <option value="ipa">IPA</option>
-                                            <option value="ips">IPS</option>
-                                        </select>
+                                        <label for="modal-form-1" class="form-label">Nama Ayah</label>
+                                        <input type="text" class="form-control create-nama_ayah" placeholder="Masukkan Nama Ayah" requireds>
                                     </div>
                                     <div class="col-span-12 sm:col-span-12">
-                                        <label for="modal-form-1" class="form-label">Semester</label>
-                                        <select class="form-select create-semester">
-                                            <option selected disabled>--Pilih Semester--</option>
-                                            <option value="ganjil">Ganjil</option>
-                                            <option value="genap">Genap</option>
-                                        </select>
+                                        <label for="modal-form-1" class="form-label">Nama Ibu</label>
+                                        <input type="text" class="form-control create-nama_ibu" placeholder="Masukkan Nama Ibu" requireds>
                                     </div>
                                     <div class="col-span-12 sm:col-span-12">
-                                        <label for="modal-form-1" class="form-label">Tahun Ajar</label>
-                                        <select class="form-select create-semester">
-                                            <option selected disabled>--Pilih Tahun Ajar--</option>
-                                            <option value="2022">2022</option>
-                                            <option value="2023">2023</option>
-                                            <option value="2024">2024</option>
-                                            <option value="2025">2025</option>
-                                            <option value="2026">2026</option>
-                                            <option value="2027">2027</option>
-                                        </select>
+                                        <label for="modal-form-1" class="form-label">Pekerjaan Ayah</label>
+                                        <input type="text" class="form-control create-pekerjaan_ayah" placeholder="Masukkan Pekerjaan Ayah" requireds>
+                                    </div>
+                                    <div class="col-span-12 sm:col-span-12">
+                                        <label for="modal-form-1" class="form-label">Pekerjaan Ibu</label>
+                                        <input type="text" class="form-control create-pekerjaan_ibu" placeholder="Masukkan Pekerjaan Ibu" requireds>
+                                    </div>
+                                    <div class="col-span-12 sm:col-span-12">
+                                        <label for="modal-form-1" class="form-label">Alamat</label>
+                                        <textarea name="alamat" id="alamat" rows="3" class="form-control create-alamat" placeholder="Masukkan Alamat" ></textarea>
                                     </div>
                                 </div>
                                 <!-- END: Modal Body -->
@@ -431,8 +580,8 @@
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-body p-0">
-                                    <div class="p-5 text center">
-                                        <i data-feather="check-circle" class="w-16 h-16-text-theme-10 mx-auto mt-3"></i>
+                                    <div class="p-5 text-center">
+                                        <i data-feather="check-circle" class="w-16 h-16 text-theme-10 mx-auto mt-3"></i>
                                         <div class="text-3x1 mt-5">Berhasil Menambahkan Data Siswa Baru!</div>
                                         <div class="text-gray-600 mt-2 create-sukses"></div>
                                     </div>
@@ -458,6 +607,69 @@
                     </div>
                     <!-- END: Modal Create Gagal Content -->
 
+                    <!-- END: Modal Import Content -->
+                    <div id="modal-import" class="modal" tabindex="-1" aria-hidden="true" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <!-- BEGIN: Modal Header -->
+                                <div class="modal-header">
+                                    <h2 class="font-medium text-base mr-auto">
+                                        Import Data Siswa
+                                    </h2>
+                                    <a href="javascript:;" data-dismiss="modal"><i data-feather="x" class="w-8 h-8 text-gray-500"></i></a>
+                                </div>
+                                {{-- <form action="http://127.0.0.1:8000/api/master-kriteria/import-kriteria" method="POST" enctype="multipart/form-data"> --}}
+                                <form action="/halaman/import-siswa" method="POST" enctype="multipart/form-data">
+                                    {{ csrf_field() }}
+                                    <!-- END: Modal Header -->
+                                    <!-- BEGIN: Modal Body -->
+                                    <div class="modal-body grid grid-cols-12 gap-4 gap-y-3">
+                                        <div class="form-group">
+                                            <input type="file" name="file" required>
+                                        </div>
+                                    </div>
+                                    <!-- END: Modal Body -->
+                                    <!-- BEGIN: Modal Footer -->
+                                    <div class="modal-footer text-right">
+                                        <button type="button" data-dismiss="modal" class="btn btn-outline-secondary w-20 mr-1">Batal</button>
+                                        <button type="submit" class="btn btn-primary w-20 btn-import">Import</button>
+                                    </div>
+                                    <!-- END: Modal Footer -->
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- BEGIN: Modal import Sukses Content -->
+                    <div id="success-import-modal-preview" class="modal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body p-0">
+                                    <div class="p-5 text-center">
+                                        <i data-feather="check-circle" class="w-16 sh-16 text-theme-10 mx-auto mt-3"></i>
+                                        <div class="text-3xl mt-5">Berhasil import data siswa baru!</div>
+                                        <div class="text-gray-600 mt-2 import-sukses"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END: Modal Content -->
+                    <!-- BEGIN: Modal import Gagal Content -->
+                    <div id="warning-import-modal-preview" class="modal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body p-0">
+                                    <div class="p-5 text-center">
+                                        <i data-feather="x-circle" class="w-16 h-16 text-theme-23 mx-auto mt-3"></i>
+                                        <div class="text-3xl mt-5">Oops...Gagal import data siswa baru!</div>
+                                        <div class="text-gray-600 mt-2 import-gagal"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END: Modal Content -->
+
                     <!-- BEGIN: Modal Update Content -->
                     <div id="modal-update" class="modal" tabindex="-1" aria-hidden="true" role="dialog">
                         <div class="modal-dialog">
@@ -474,21 +686,32 @@
                                 <!-- BEGIN: Modal Body -->
                                 <div class="modal-body grid grid-cols-12 gap-4 gay-y-3">
                                     <div class="col-span-12 sm:col-span-12">
-                                        <label for="modal-form-1" class="form-label">Nama Siswa</label>
-                                        <input type="hidden" class="form-control update-id" required>
-                                        <input type="text" class="form-control create-name" placeholder="Masukkan Nama Siswa" requireds>
-                                    </div>
-                                    <div class="col-span-12 sm:col-span-12">
-                                        <label for="modal-form-1" class="form-label">Email Siswa</label>
-                                        <input type="text" class="form-control update-email" placeholder="Masukkan Email Siswa" requireds>
-                                    </div>
-                                    <div class="col-span-12 sm:col-span-12">
-                                        <label for="modal-form-1" class="form-label">Password </label>
-                                        <input type="text" class="form-control update-password" placeholder="Masukkan Password" requireds>
-                                    </div>
-                                    <div class="col-span-12 sm:col-span-12">
                                         <label for="modal-form-1" class="form-label">NIS</label>
-                                        <input type="text" class="form-control update-nis" placeholder="Masukkan NIS (< 8 angka)" requireds>
+                                        <input type="number" class="form-control update-nis" placeholder="Masukkan NIS" requireds>
+                                    </div>
+                                    <div class="col-span-12 sm:col-span-12">
+                                        <label for="modal-form-1" class="form-label">User ID</label>
+                                        <input type="text" class="form-control update-user_id" placeholder="Masukkan User ID" readonly>
+                                    </div>
+                                    <div class="col-span-12 sm:col-span-12">
+                                        <label for="modal-form-1" class="form-label">NIK</label>
+                                        <input type="number" class="form-control update-nik" placeholder="Masukkan NIK" requireds>
+                                    </div>
+                                    <div class="col-span-12 sm:col-span-12">
+                                        <label for="modal-form-1" class="form-label">NISN</label>
+                                        <input type="number" class="form-control update-nisn" placeholder="Masukkan NISN" requireds>
+                                    </div>
+                                    <div class="col-span-12 sm:col-span-12">
+                                        <label for="modal-form-1" class="form-label">Nama Siswa</label>
+                                        <input type="text" class="form-control update-nama_siswa" placeholder="Masukkan Nama Siswa" requireds>
+                                    </div>
+                                    <div class="col-span-12 sm:col-span-12">
+                                        <label for="modal-form-1" class="form-label">Tempat Lahir</label>
+                                        <input type="text" class="form-control update-tempat_lahir" placeholder="Masukkan Tempat Lahir" requireds>
+                                    </div>
+                                    <div class="col-span-12 sm:col-span-12">
+                                        <label for="modal-form-1" class="form-label">Tanggal Lahir</label>
+                                        <input type="date" class="form-control update-tgl_lahir" placeholder="Masukkan Tanggal Lahir" requireds>
                                     </div>
                                     <div class="col-span-12 sm:col-span-12">
                                         <label for="modal-form-1" class="form-label">Jenis Kelamin</label>
@@ -499,41 +722,36 @@
                                         </select>
                                     </div>
                                     <div class="col-span-12 sm:col-span-12">
-                                        <label for="modal-form-1" class="form-label">Kelas</label>
-                                        <select class="form-select update-kelas">
+                                        <label for="modal-form-1" class="form-label">Agama</label>
+                                        <select class="form-select update-agama">
                                             <option selected disabled>--Pilih Kelas--</option>
-                                            <option value="10">10</option>
-                                            <option value="11">11</option>
-                                            <option value="12">12</option>
+                                            <option value="islam">Islam</option>
+                                            <option value="kristen_protestan">Kristen Protestan</option>
+                                            <option value="kristen_katolik">Kristen Katolik</option>
+                                            <option value="hindu">Hindu</option>
+                                            <option value="budha">Budha</option>
+                                            <option value="konghucu">Konghucu</option>
                                         </select>
                                     </div>
                                     <div class="col-span-12 sm:col-span-12">
-                                        <label for="modal-form-1" class="form-label">Jurusan</label>
-                                        <select class="form-select update-jurusan">
-                                            <option selected disabled>--Pilih Jurusan--</option>
-                                            <option value="ipa">IPA</option>
-                                            <option value="ips">IPS</option>
-                                        </select>
+                                        <label for="modal-form-1" class="form-label">Nama Ayah</label>
+                                        <input type="text" class="form-control update-nama_ayah" placeholder="Masukkan Nama Ayah" requireds>
                                     </div>
                                     <div class="col-span-12 sm:col-span-12">
-                                        <label for="modal-form-1" class="form-label">Semester</label>
-                                        <select class="form-select update-semester">
-                                            <option selected disabled>--Pilih Semester--</option>
-                                            <option value="ganjil">Ganjil</option>
-                                            <option value="genap">Genap</option>
-                                        </select>
+                                        <label for="modal-form-1" class="form-label">Nama Ibu</label>
+                                        <input type="text" class="form-control update-nama_ibu" placeholder="Masukkan Nama Ibu" requireds>
                                     </div>
                                     <div class="col-span-12 sm:col-span-12">
-                                        <label for="modal-form-1" class="form-label">Tahun Ajar</label>
-                                        <select class="form-select update-tahunajar">
-                                            <option selected disabled>--Pilih Tahun Ajar--</option>
-                                            <option value="2022">2022</option>
-                                            <option value="2023">2023</option>
-                                            <option value="2024">2024</option>
-                                            <option value="2025">2025</option>
-                                            <option value="2026">2026</option>
-                                            <option value="2027">2027</option>
-                                        </select>
+                                        <label for="modal-form-1" class="form-label">Pekerjaan Ayah</label>
+                                        <input type="text" class="form-control update-pekerjaan_ayah" placeholder="Masukkan Pekerjaan Ayah" requireds>
+                                    </div>
+                                    <div class="col-span-12 sm:col-span-12">
+                                        <label for="modal-form-1" class="form-label">Pekerjaan Ibu</label>
+                                        <input type="text" class="form-control update-pekerjaan_ibu" placeholder="Masukkan Pekerjaan Ibu" requireds>
+                                    </div>
+                                    <div class="col-span-12 sm:col-span-12">
+                                        <label for="modal-form-1" class="form-label">Alamat</label>
+                                        <textarea name="alamat" id="alamat" rows="3" class="form-control update-alamat" placeholder="Masukkan Alamat" ></textarea>
                                     </div>
                                 </div>
                                 <!-- END: Modal Body -->
@@ -686,7 +904,7 @@
                     console.error('Error:', error);
                 });
 
-                // 2. Membuat Form Modal Create Master Guru
+                // 2. Membuat Form Modal Create User Detail
                 // 2.1 Menampilkan Modal FormCreate Portofolio
                 $(".modal-siswa").click(function(){
                     cash('#modal-create').modal("show");
@@ -695,52 +913,63 @@
                 // 2.2 Button Simpan Portofolio / btn-create
                 $(".btn-create").click(function() {
                     //Ajax Update
-                    var name = $('.create-name').val();
-                    var email = $('.create-email').val();
-                    var password = $('.create-password').val();
                     var nis = $('.create-nis').val();
+                    var user_id = $('.create-user_id').val();
+                    var nik = $('.create-nik').val();
+                    var nisn = $('.create-nisn').val();
+                    var nama_siswa = $('.create-nama_siswa').val();
+                    var tempat_lahir = $('.create-tempat_lahir').val();
+                    var tgl_lahir = $('.create-tgl_lahir').val();
                     var jenkel = $('.create-jenkel').val();
-                    var kelas = $('.create-kelas').val();
-                    var jurusan = $('.create-jurusan').val();
-                    var semester = $('.create-semester').val();
-                    var tahunajar = $('.create-tahunajar').val();
+                    var agama = $('.create-agama').val();
+                    var nama_ayah = $('.create-nama_ayah').val();
+                    var nama_ibu = $('.create-nama_ibu').val();
+                    var pekerjaan_ayah = $('.create-pekerjaan_ayah').val();
+                    var pekerjaan_ibu = $('.create-pekerjaan_ibu').val();
+                    var alamat = $('.create-alamat').val();
 
                     var formData = new FormData();
-                    formData.append('name', name);
-                    formData.append('email', email);
-                    formData.append('password', password);
                     formData.append('nis', nis);
+                    formData.append('user_id', user_id);
+                    formData.append('nik', nik);
+                    formData.append('nisn', nisn);
+                    formData.append('nama_siswa', nama_siswa);
+                    formData.append('tempat_lahir', tempat_lahir);
+                    formData.append('tgl_lahir', tgl_lahir);
                     formData.append('jenkel', jenkel);
-                    formData.append('kelas', kelas);
-                    formData.append('jurusan', jurusan);
-                    formData.append('semester', semester);
-                    formData.append('tahunajar', tahunajar);
+                    formData.append('agama', agama);
+                    formData.append('nama_ayah', nama_ayah);
+                    formData.append('nama_ibu', nama_ibu);
+                    formData.append('pekerjaan_ayah', pekerjaan_ayah);
+                    formData.append('pekerjaan_ibu', pekerjaan_ibu);
+                    formData.append('alamat', alamat);
 
                     // 2.3 Kirim permintaan pembaruan produk ke API
                     $.ajax({
                         url: "http://127.0.0.1:8000/api/master-siswa/tambah-siswa",
                         type: 'POST',
+                        dataType: 'json',
                         headers: {
-                            "Authorization": "Bearer" + token
+                            "Authorization": "Bearer " + token
                         },
                         data: formData,
                         processData: false,
                         contentType: false,
-                        success: function(response){
-                            // show the modal
+                        success: function(response) {
+                            // Show the modal
                             $('.create-sukses').text(response.message);
-                            cash("#success-update-modal-preview").modal("show");
-                            console.log('Data Siswa Berhasil di Tambahkan!');
+                            cash("#success-create-modal-preview").modal("show");
+                            console.log('Data Guru Berhasil di Tambahkan!');
 
-                            setTimeout(function () {
-                                cash("success-update-modal-preview").modal("hide");
+                            setTimeout(function() {
+                                cash("#success-create-modal-preview").modal("hide");
 
                                 location.reload();
-                            }, 3000); // 3000 milliSecond = 3 Seconds
+                            }, 3000); // 3000 milliseconds = 3 seconds
                         },
                         error: function(xhr, status, error) {
                             // Tangani kesalahan dalam permintaan Ajax itu sendiri
-                            console.log(error);
+                            console.log('Data Guru Gagal untuk di Tambahkan. Status: ' + error);
 
                             // Tampilkan pesan kesalahan yang dikirim oleh server
                             var response = JSON.parse(xhr.responseText);
@@ -752,11 +981,11 @@
                                     cash("#warning-update-modal-preview").modal("hide");
 
                                     location.reload();
-                                }, 5000); // 5000 milliSeconds = 5 senconds
+                                }, 5000); // 5000 milliseconds = 5 seconds
                             } else {
                                 // Tangani kesalahan lainnya jika ada
-                                // Contoh : pesan kesalahan bawaan dari permintaan Ajax
-                                alert('Terjadi Kesalahan Lainnya: '+error);
+                                // Contoh: pesan kesalahan bawaan dari permintaan Ajax
+                                alert('Terjadi kesalahan lainnya: ' + error);
                             }
                         }
                     });
@@ -777,18 +1006,25 @@
                     "columns": [
                         { data: 'nomor_urut', className: 'text-center' },
                         { data: 'nis', className: 'text-center' },
-                        { data: 'name', className: 'text-center' },
+                        { data: 'user_id', className: 'text-center' },
+                        { data: 'nik', className: 'text-center' },
+                        { data: 'nisn', className: 'text-center' },
+                        { data: 'nama_siswa', className: 'text-center' },
+                        { data: 'tempat_lahir', className: 'text-center' },
+                        { data: 'tgl_lahir', className: 'text-center' },
                         { data: 'jenkel', className: 'text-center' },
-                        { data: 'kelas', className: 'text-center' },
-                        { data: 'jurusan', className: 'text-center' },
-                        { data: 'semester', className: 'text-center' },
-                        { data: 'tahunajar', className: 'text-center' },
+                        { data: 'agama', className: 'text-center' },
+                        { data: 'nama_ayah', className: 'text-center' },
+                        { data: 'nama_ibu', className: 'text-center' },
+                        { data: 'pekerjaan_ayah', className: 'text-center' },
+                        { data: 'pekerjaan_ibu', className: 'text-center' },
+                        { data: 'alamat', className: 'text-center' },
                         {
                             data: null,
                             render: function (data, type, row){
                                 // create action button
-                                var editBtn = '<button class = "btn btn-primary btn-edit" data-id = "' + data.id + '" data-name = "' + data.name + '" data-jenkel = "' + data.jenkel + '" data-kelas = "' + data.kelas + '" data-jurusan = "' + data.jurusan + '" data-semester = "' + data.semester + '" data-tahunajar = "' + data.tahunajar + '" data-email = "' + data.email + '" data-nis = "' + data.nis + '"><i data-feather = "edit" class = "w-4 h-4"> </i> </button>';
-                                var deleteBtn = '<button clas = "btn btn-danger btn-delete" data-id="' + data.id + '"><i data-feather = "trash-2" class = "w-4 h-4"></i> </button>';
+                                var editBtn = '<button class = "btn btn-primary btn-edit" data-nis = "' + data.nis + '" data-user_id = "' + data.user_id + '" data-nik = "' + data.nik + '" data-nisn = "' + data.nisn + '" data-nama_siswa = "' + data.nama_siswa + '" data-tempat_lahir = "' + data.tempat_lahir + '" data-tgl_lahir = "' + data.tgl_lahir + '" data-jenkel = "' + data.jenkel + '" data-agama = "' + data.agama + '" data-nama_ayah = "' + data.nama_ayah + '" data-nama_ibu = "' + data.nama_ibu + '" data-pekerjaan_ayah = "' + data.pekerjaan_ayah + '" data-pekerjaan_ibu = "' + data.pekerjaan_ibu + '" data-alamat = "' + data.alamat + '"><i data-feather = "edit" class = "w-4 h-4"> </i> </button>';
+                                var deleteBtn = '<button class = "btn btn-danger btn-delete" data-ni="' + data.ni + '"><i data-feather = "trash-2" class = "w-4 h-4"></i> </button>';
 
                                 //combine the button
                                 var actions = editBtn + ' || ' + deleteBtn;
@@ -804,63 +1040,86 @@
                 // 2.5 handle button click event / btn-edit
                 $('#data-table').on('click', '.btn-edit', function() {
                     cash ("#modal-update").modal("show");
-                    var id = $(this).attr("data-id");
-                    var name = $(this).attr("data-nama");
-                    var email = $(this).attr("data-email");
-                    var password = $(this).attr("data-password");
-                    var jenkel = $(this).attr("data-jenkel");
-                    var kelas = $(this).attr("data-kelas");
-                    var jurusan = $(this).attr("data-jurusan");
-                    var semester = $(this).attr("data-semester");
-                    var tahunajar = $(this).attr("data-tahunajar");
                     var nis = $(this).attr("data-nis");
+                    var user_id = $(this).attr("data-user_id");
+                    var nik = $(this).attr("data-nik");
+                    var nisn = $(this).attr("data-nisn");
+                    var nama_siswa = $(this).attr("data-nama_siswa");
+                    var tempat_lahir = $(this).attr("data-tempat_lahir");
+                    var tgl_lahir = $(this).attr("data-tgl_lahir");
+                    var jenkel = $(this).attr("data-jenkel");
+                    var agama = $(this).attr("data-agama");
+                    var nama_ayah = $(this).attr("data-nama_ayah");
+                    var nama_ibu = $(this).attr("data-nama_ibu");
+                    var pekerjaan_ayah = $(this).attr("data-pekerjaan_ayah");
+                    var pekerjaan_ibu = $(this).attr("data-pekerjaan_ibu");
+                    var alamat = $(this).attr("data-alamat");
 
                     // handle edit action
-                    $('.update-id').val(id);
-                    $('.update-name').val(name);
-                    $('.update-jenkel').val(jenkel);
-                    $('.update-kelas').val(kelas);
-                    $('.update-jurusan').val(jurusan);
-                    $('.update-semester').val(semester);
-                    $('.update-tahunajar').val(tahunajar);
                     $('.update-nis').val(nis);
+                    $('.update-user_id').val(user_id);
+                    $('.update-nik').val(nik);
+                    $('.update-nisn').val(nisn);
+                    $('.update-nama_siswa').val(nama_siswa);
+                    $('.update-tempat_lahir').val(tempat_lahir);
+                    $('.update-tgl_lahir').val(tgl_lahir);
+                    $('.update-jenkel').val(jenkel);
+                    $('.update-agama').val(agama);
+                    $('.update-nama_ayah').val(nama_ayah);
+                    $('.update-nama_ibu').val(nama_ibu);
+                    $('.update-pekerjaan_ayah').val(pekerjaan_ayah);
+                    $('.update-pekerjaan_ibu').val(pekerjaan_ibu);
+                    $('.update-alamat').val(alamat);
                 });
 
                 // 2.6 tombol update admin
                 $(".btn-update").click(function() {
                     //ajax update
-                    var id = $('.update-id').val();
                     var nis = $('.update-nis').val();
-                    var name = $('.update-name').val();
+                    var user_id = $('.update-user_id').val();
+                    var nik = $('.update-nik').val();
+                    var nisn = $('.update-nisn').val();
+                    var nama_siswa = $('.update-nama_siswa').val();
+                    var tempat_lahir = $('.update-tempat_lahir').val();
+                    var tgl_lahir = $('.update-tgl_lahir').val();
                     var jenkel = $('.update-jenkel').val();
-                    var kelas = $('.update-kelas').val();
-                    var jurusan = $('.update-jurusan').val();
-                    var semester = $('.update-semester').val();
-                    var tahunajar = $('.update-tahunajar').val();
-                    var email = $('.update-email').val();
-                    var password = $('.update-password').val();
+                    var agama = $('.update-agama').val();
+                    var nama_ayah = $('.update-nama_ayah').val();
+                    var nama_ibu = $('.update-nama_ibu').val();
+                    var pekerjaan_ayah = $('.update-pekerjaan_ayah').val();
+                    var pekerjaan_ibu = $('.update-pekerjaan_ibu').val();
+                    var alamat = $('.update-alamat').val();
 
-                    var formData = new FormData();
-                    formData.append('nis', nis);
-                    formData.append('name', name);
-                    formData.append('jenkel', jenkel);
-                    formData.append('kelas', kelas);
-                    formData.append('jurusan', jurusan);
-                    formData.append('semester', semetser);
-                    formData.append('tahunajar', tahunajar);
-                    formData.append('email', email);
-                    formData.append('password', password);
+                    // Validasi id
+                    if (!nis || nis === "") {
+                        alert("NIS siswa harus diisi!");
+                        
+                        return;
+                    }
 
                     // 2.7 kirim permintaan pembaruan produk ke API
                     $.ajax({
-                        url: "http://127.0.0.1:8000/appi/master-siswa/update-siswa?id=" + id,
-                        type: 'POST',
-                        headers: {
-                            "Authorization": "Bearer" + token
+                        url: "http://127.0.0.1:8000/api/master-siswa/update-siswa/" + nis,
+                        type: "PUT",
+                        beforeSend: function(xhr) {
+                            xhr.setRequestHeader('Authorization', 'Bearer ' + token);
                         },
-                        data: formData,
-                        processData: false,
-                        contentType: false,
+                        data: {
+                            nis: nis,
+                            user_id: user_id,
+                            nik: nik,
+                            nisn: nisn,
+                            nama_siswa: nama_siswa,
+                            tempat_lahir: tempat_lahir,
+                            tgl_lahir: tgl_lahir,
+                            jenkel: jenkel,
+                            agama: agama,
+                            nama_ayah: nama_ayah,
+                            nama_ibu: nama_ibu,
+                            pekerjaan_ayah: pekerjaan_ayah,
+                            pekerjaan_ibu: pekerjaan_ibu,
+                            alamat: alamat,
+                        },
                         success: function(response){
                             //show the modal
                             $('.update-sukses').text(response.message);
@@ -893,17 +1152,18 @@
                 });
 
                 // 2.7 button hapus data
-                $('#data-table').on('click', 'btn-delete', function() {
-                    var id = $(thins).attr("data-id");
+                $('#data-table').on('click', '.btn-delete', function() {
+                    var id = $(this).attr("data-id");
+
                     cash("#delete-modal-preview").modal("show");
                     $('.hapus-btn').show();
                     $('.hapus-btn').click(function() {
                         //ajax delete API
                         $.ajax({
-                            url: "http://127.0.0.1:8000/api/master-siswa/hapus/" + id,
+                            url: "http://127.0.0.1:8000/api/master-siswa/hapus-siswa/" + id,
                             type: 'DELETE',
                             headers: {
-                                'Authorization': 'Bearer' + token
+                                'Authorization': 'Bearer ' + token
                             },
                             success: function(response) {
                                 //show the modal
@@ -930,6 +1190,41 @@
                         });
                     });
                 });
+
+                $('.modal-import_siswa').click(function() {
+                    cash("#modal-import").modal("show");
+                });
+
+                $(".btn-import").click(function()
+                {
+                    cash("#modal-import").modal("show");
+                    //ajax delete API
+                    $.ajax({
+                        success: function(response) {
+                            //show the modal
+                            $('.import-sukses').text(response.message);
+                            cash("#success-import-modal-preview").modal("show");
+
+                            setTimeout(function() {
+                                cash("#success-import-modal-preview").modal("hide");
+
+                                location.reload();
+                            }, 3000); // 3000 milliseconds = 3 seconds
+                        },
+                        error: function(xhr, status, error) {
+                            //show error aler
+                            $('.import-gagal').text(response.meesage);
+                            cash("#warning-import-modal-preview").modal("show");
+
+                            setTimeout(function() {
+                                cash("#warning-import-modal-preview").modal("hide");
+
+                                location.reload();
+                            }, 5000); // 3000 milliseconds = 3 seconds
+                        }
+                    });
+                });
+
                 function logout(name){
                     document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
                     winddow.location.href = "{{ route('login') }}";

@@ -14,15 +14,12 @@ return new class extends Migration
     public function up()
     {
         Schema::create('masterkriteria', function (Blueprint $table) {
-            $table->id();
-            $table->string('kode_kriteria');
+            $table->string('kode_kriteria', 5)->primary();
+            $table->bigInteger('user_id')->index()->unsigned()->nullable();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('nama_kriteria');
-            $table->float('bobot_kriteria');
+            $table->float('bobot_kriteria')->default(0);
             $table->string('atribut_kriteria');
-            $table->string('kelas');
-            $table->string('jurusan');
-            $table->string('semester');
-            $table->string('tahun_ajar');
             $table->timestamps();
         });
     }

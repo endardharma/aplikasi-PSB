@@ -15,11 +15,14 @@ return new class extends Migration
     {
         Schema::create('nilaiprestasi', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_siswa');
+            $table->string('nis')->index()->nullable();
+            $table->foreign('nis')->references('nis')->on('mastersiswa')->onDelete('cascade');
+            $table->bigInteger('kelas_id')->index()->unsigned()->nullable();
+            $table->foreign('kelas_id')->references('id')->on('master_kelas')->onDelete('cascade');
+
             $table->string('keterangan_prestasi');
-            $table->float('nilai_prestasi');
-            $table->string('kelas');
-            $table->string('jurusan');
+            $table->double('nilai_prestasi');
+            
             $table->string('semester');
             $table->string('tahun_ajar');
             $table->timestamps();
